@@ -14,7 +14,7 @@
 
 /*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 
-let zeile: number = 0;
+let zeile: number = 0;  
 let a: number = 1; //Anzahl Reis
 
 document.addEventListener("DOMContentLoaded", function(): void {
