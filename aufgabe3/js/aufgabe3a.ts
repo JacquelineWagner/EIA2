@@ -2,13 +2,17 @@
 //Aufgabe: 3b
 //Name: Jacqueline Wagner
 //Matrikel: 254786
-//Datum: 06.04.2017
+//Datum: 09.04.2017
 //    
-    
+
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.*/
 
-/*Diese Aufgabe wurde in Zusammenarbeit mit Jacqueline und Selina erstellt*/
+//Leider ist diese Aufgabe nicht vollständig aufgrund fehlender Verständis meinerseits. 
+//Ich hab es auch nicht geschafft die Aufgabe in der Gruppe zulösen und wäre deshalb sehr dankbar, 
+//wenn wir diese Aufgabe im Praltikum nochmal besprechen könnten
+
+/*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 
 let zeile: number = 0;
 let a: number = 1; //Anzahl Reis
@@ -36,26 +40,17 @@ document.addEventListener("DOMContentLoaded", function(): void {
             countField++;
         }
     }
-    
- /********************************************************************************************************
-Aufgabe 3a
-********************************************************************************************************/
-let x: number = 0;
-let divList: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
 
-divList[x].addEventListener("click", ClickEvent); 
-    
-      function ClickEvent(): void {
-      let s: CSSStyleDeclaration = divList[x].style;
-    s.borderStyle = "solid";
-    s.borderColor = "red";
-    s.backgroundColor= "red",
+    //   Aufgabe 3a
+ 
+    let x: number = 0;
+    let divList: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
 
-    console.log("Hallo");}
+    for (x; x < 8; x++) {
+        divList[x].addEventListener("click", clickEvent);
+    }
+
 });
-   
-    
-
 
 //Divs erzeugen
 function Div(): void {
@@ -100,9 +95,21 @@ function white(_number: number): void {
     }
 }
 
+//Aufgabe 3a
 
+let x: number = 0;
+let divList: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
+let state: boolean = true;
 
-
-
-
-  
+function clickEvent(): void {
+    for (x; x < 8; x++) {
+        if (state == true) {
+            divList[x].style.borderColor = "yellow";
+            state = false;
+        }
+        else {
+            divList[x].style.borderColor = "black";
+            state = true;
+        }
+    }
+}

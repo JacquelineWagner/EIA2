@@ -2,11 +2,14 @@
 //Aufgabe: 3b
 //Name: Jacqueline Wagner
 //Matrikel: 254786
-//Datum: 06.04.2017
+//Datum: 09.04.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.*/
-/*Diese Aufgabe wurde in Zusammenarbeit mit Jacqueline und Selina erstellt*/
+//Leider ist diese Aufgabe nicht vollst�ndig aufgrund fehlender Verst�ndis meinerseits. 
+//Ich hab es auch nicht geschafft die Aufgabe in der Gruppe zul�sen und w�re deshalb sehr dankbar, 
+//wenn wir diese Aufgabe im Praltikum nochmal besprechen k�nnten
+/*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 var zeile = 0;
 var a = 1; //Anzahl Reis
 document.addEventListener("DOMContentLoaded", function () {
@@ -29,18 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
             countField++;
         }
     }
-    /********************************************************************************************************
-   Aufgabe 3a
-   ********************************************************************************************************/
+    //   Aufgabe 3a
     var x = 0;
     var divList = document.getElementsByTagName("div");
-    divList[x].addEventListener("click", ClickEvent);
-    function ClickEvent() {
-        var s = divList[x].style;
-        s.borderStyle = "solid";
-        s.borderColor = "red";
-        s.backgroundColor = "red",
-            console.log("Hallo");
+    for (x; x < 8; x++) {
+        divList[x].addEventListener("click", clickEvent);
     }
 });
 //Divs erzeugen
@@ -82,4 +78,20 @@ function white(_number) {
         currentDiv.style.textAlign = "center";
     }
 }
-//# sourceMappingURL=aufgabe2.js.map
+//Aufgabe 3a
+var x = 0;
+var divList = document.getElementsByTagName("div");
+var state = true;
+function clickEvent() {
+    for (x; x < 8; x++) {
+        if (state == true) {
+            divList[x].style.borderColor = "yellow";
+            state = false;
+        }
+        else {
+            divList[x].style.borderColor = "black";
+            state = true;
+        }
+    }
+}
+//# sourceMappingURL=aufgabe3a.js.map
