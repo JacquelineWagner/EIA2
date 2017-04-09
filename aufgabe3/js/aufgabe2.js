@@ -1,14 +1,12 @@
-/*
-Aufgabe: 3
-Name: Jacqueline Wagner
-Datum: 06.04.2017
-Matrikel: 254786
-
-Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
-Er wurde nicht kopiert und auch nicht diktiert.*/
-//let n: number = 64; //Anzahl der Felder
-//let i: number = 0;
-//let x: number = 0; // gerade Zahlen sind wei�, ungerade sind schwarz.
+//
+//Aufgabe: 3b
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 06.04.2017
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.*/
+/*Diese Aufgabe wurde in Zusammenarbeit mit Jacqueline und Selina erstellt*/
 var zeile = 0;
 var a = 1; //Anzahl Reis
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,27 +29,20 @@ document.addEventListener("DOMContentLoaded", function () {
             countField++;
         }
     }
+    /********************************************************************************************************
+   Aufgabe 3a
+   ********************************************************************************************************/
+    var x = 0;
+    var divList = document.getElementsByTagName("div");
+    divList[x].addEventListener("click", ClickEvent);
+    function ClickEvent() {
+        var s = divList[x].style;
+        s.borderStyle = "solid";
+        s.borderColor = "red";
+        s.backgroundColor = "red",
+            console.log("Hallo");
+    }
 });
-//Schwarze Divs
-function black(_number) {
-    var div = document.getElementsByTagName("div");
-    var currentDiv = div[_number];
-    if (div.length != 0) {
-        currentDiv.style.backgroundColor = "black";
-        currentDiv.style.color = "white";
-        currentDiv.style.textAlign = "center";
-    }
-}
-//Wei�e Divs
-function white(_number) {
-    var div = document.getElementsByTagName("div");
-    var currentDiv = div[_number];
-    if (div.length != 0) {
-        currentDiv.style.backgroundColor = "white";
-        currentDiv.style.color = "black";
-        currentDiv.style.textAlign = "center";
-    }
-}
 //Divs erzeugen
 function Div() {
     var div = document.createElement("div");
@@ -71,18 +62,24 @@ function Div() {
     div.innerText = "" + a;
     a = a * 2;
 }
-var div = document.getElementsByTagName("div");
-var currentDiv = div[0];
-currentDiv.addEventListener("click", clickOnField);
-function clickOnField() {
-    var state = true;
-    var _number;
-    var divs = document.getElementsByTagName("div");
+//Schwarze Divs
+function black(_number) {
+    var div = document.getElementsByTagName("div");
     var currentDiv = div[_number];
-    if (state) {
-        currentDiv.style.backgroundColor = "blue";
-        state = false;
-        console.log("hey");
+    if (div.length != 0) {
+        currentDiv.style.backgroundColor = "black";
+        currentDiv.style.color = "white";
+        currentDiv.style.textAlign = "center";
+    }
+}
+//Wei�e Divs
+function white(_number) {
+    var div = document.getElementsByTagName("div");
+    var currentDiv = div[_number];
+    if (div.length != 0) {
+        currentDiv.style.backgroundColor = "white";
+        currentDiv.style.color = "black";
+        currentDiv.style.textAlign = "center";
     }
 }
 //# sourceMappingURL=aufgabe2.js.map
