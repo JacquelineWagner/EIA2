@@ -10,18 +10,18 @@
 //Ich hab es auch nicht geschafft die Aufgabe in der Gruppe zul�sen und w�re deshalb sehr dankbar, 
 //wenn wir diese Aufgabe im Praltikum nochmal besprechen k�nnten
 /*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
-var zeile = 0;
-var a = 1; //Anzahl Reis
+let zeile = 0;
+let a = 1; //Anzahl Reis
 document.addEventListener("DOMContentLoaded", function () {
     //Aussehen von Body bleibt immer gleich 
-    var b = document.body.style;
+    let b = document.body.style;
     b.width = "450px";
     b.margin = "50px";
     b.backgroundColor = "#F7F7F7";
-    var countField = 0;
+    let countField = 0;
     //Schachbrett
-    for (var i = 0; i < 8; i++) {
-        for (var j = 0; j < 8; j++) {
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
             Div();
             if (i % 2 == j % 2) {
                 white(countField);
@@ -33,19 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     //   Aufgabe 3a
-    var x = 0;
-    var divList = document.getElementsByTagName("div");
+    let x = 0;
+    let divList = document.getElementsByTagName("div");
     for (x; x < 8; x++) {
         divList[x].addEventListener("click", clickEvent);
     }
 });
 //Divs erzeugen
 function Div() {
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     document.body.appendChild(div);
     div.className = "DivBox";
     //Aussehen von Divs
-    var s = div.style;
+    let s = div.style;
     s.borderStyle = "solid";
     s.borderColor = "#000000";
     s.borderWidth = "1px";
@@ -60,8 +60,8 @@ function Div() {
 }
 //Schwarze Divs
 function black(_number) {
-    var div = document.getElementsByTagName("div");
-    var currentDiv = div[_number];
+    let div = document.getElementsByTagName("div");
+    let currentDiv = div[_number];
     if (div.length != 0) {
         currentDiv.style.backgroundColor = "black";
         currentDiv.style.color = "white";
@@ -70,8 +70,8 @@ function black(_number) {
 }
 //Wei�e Divs
 function white(_number) {
-    var div = document.getElementsByTagName("div");
-    var currentDiv = div[_number];
+    let div = document.getElementsByTagName("div");
+    let currentDiv = div[_number];
     if (div.length != 0) {
         currentDiv.style.backgroundColor = "white";
         currentDiv.style.color = "black";
@@ -79,9 +79,9 @@ function white(_number) {
     }
 }
 //Aufgabe 3a
-var x = 0;
-var divList = document.getElementsByTagName("div");
-var state = true;
+let x = 0;
+let divList = document.getElementsByTagName("div");
+let state = true;
 function clickEvent() {
     for (x; x < 8; x++) {
         if (state == true) {
