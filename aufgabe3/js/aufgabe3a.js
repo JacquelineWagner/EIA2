@@ -32,12 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
             countField++;
         }
     }
-    //   Aufgabe 3a
-    let x = 0;
-    let divList = document.getElementsByTagName("div");
-    for (x; x < 8; x++) {
-        divList[x].addEventListener("click", clickEvent);
+    //Aufgabe 3a
+    for (let i = 0; i < 8; i++) {
+        var total = 0;
+        console.log("Schleife");
+        let fields = document.getElementsByTagName("div");
+        fields[i].addEventListener("click", function () {
+            fields[i].classList.toggle("selection");
+            console.log(fields[i]);
+            let selected = document.getElementsByClassName("selection");
+            console.log(selected);
+            if (selected.length == 0) {
+                document.getElementById("Summe").style.display = "none";
+            }
+            else {
+                document.getElementById("Summe").style.display = "inline-block";
+            }
+            document.getElementById("Summe").textContent = "Summe der K�rner - " + "Dezimal: " + total.toString() + ";" + " Hexadezimal: " + total.toString(16);
+            for (let i = 0; i < selected.length; i++) {
+                total += Number(selected[i].textContent);
+            }
+        });
     }
+    document.addEventListener("mousemove", function (Event) {
+        document.getElementById("Summe").style.left = (Event.clientX + 10) + "px";
+        document.getElementById("Summe").style.top = (Event.clientY + 10) + "px";
+    });
 });
 //Divs erzeugen
 function Div() {
@@ -76,22 +96,6 @@ function white(_number) {
         currentDiv.style.backgroundColor = "white";
         currentDiv.style.color = "black";
         currentDiv.style.textAlign = "center";
-    }
-}
-//Aufgabe 3a
-let x = 0;
-let divList = document.getElementsByTagName("div");
-let state = true;
-function clickEvent() {
-    for (x; x < 8; x++) {
-        if (state == true) {
-            divList[x].style.borderColor = "yellow";
-            state = false;
-        }
-        else {
-            divList[x].style.borderColor = "black";
-            state = true;
-        }
     }
 }
 //# sourceMappingURL=aufgabe3a.js.map

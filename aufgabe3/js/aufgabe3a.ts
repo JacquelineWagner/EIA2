@@ -14,7 +14,7 @@
 
 /*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 
-let zeile: number = 0;  
+let zeile: number = 0;
 let a: number = 1; //Anzahl Reis
 
 document.addEventListener("DOMContentLoaded", function(): void {
@@ -41,14 +41,42 @@ document.addEventListener("DOMContentLoaded", function(): void {
         }
     }
 
-    //   Aufgabe 3a
- 
-    let x: number = 0;
-    let divList: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
+    //Aufgabe 3a
 
-    for (x; x < 8; x++) {
-        divList[x].addEventListener("click", clickEvent);
+    for (let i: number = 0; i < 8; i++) {
+        var total: number = 0;
+
+        console.log("Schleife");
+        let fields: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
+        fields[i].addEventListener("click", function() {
+            fields[i].classList.toggle("selection");
+
+            console.log(fields[i]);
+
+            let selected: NodeListOf<Element> = document.getElementsByClassName("selection");
+
+            console.log(selected);
+
+            if (selected.length == 0) {
+                document.getElementById("Summe").style.display = "none";
+            }
+
+            else {
+                document.getElementById("Summe").style.display = "inline-block";
+            }
+
+            document.getElementById("Summe").textContent = "Summe der Körner - " + "Dezimal: " + total.toString() + ";" + " Hexadezimal: " + total.toString(16);
+
+
+            for (let i: number = 0; i < selected.length; i++) {
+                total += Number(selected[i].textContent);
+            }
+        });
     }
+    document.addEventListener("mousemove", function(Event) {
+        document.getElementById("Summe").style.left = (Event.clientX + 10) + "px";
+        document.getElementById("Summe").style.top = (Event.clientY + 10) + "px";
+    });
 
 });
 
@@ -95,21 +123,4 @@ function white(_number: number): void {
     }
 }
 
-//Aufgabe 3a
 
-let x: number = 0;
-let divList: NodeListOf<HTMLElement> = document.getElementsByTagName("div");
-let state: boolean = true;
-
-function clickEvent(): void {
-    for (x; x < 8; x++) {
-        if (state == true) {
-            divList[x].style.borderColor = "yellow";
-            state = false;
-        }
-        else {
-            divList[x].style.borderColor = "black";
-            state = true;
-        }
-    }
-}
