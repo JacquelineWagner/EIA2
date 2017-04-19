@@ -6,9 +6,6 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.*/
-//Leider ist diese Aufgabe nicht vollst�ndig aufgrund fehlender Verst�ndis meinerseits. 
-//Ich hab es auch nicht geschafft die Aufgabe in der Gruppe zul�sen und w�re deshalb sehr dankbar, 
-//wenn wir diese Aufgabe im Praltikum nochmal besprechen k�nnten
 /*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 let zeile = 0;
 let a = 1; //Anzahl Reis

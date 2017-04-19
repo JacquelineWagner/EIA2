@@ -8,9 +8,7 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.*/
 
-//Leider ist diese Aufgabe nicht vollständig aufgrund fehlender Verständis meinerseits. 
-//Ich hab es auch nicht geschafft die Aufgabe in der Gruppe zulösen und wäre deshalb sehr dankbar, 
-//wenn wir diese Aufgabe im Praltikum nochmal besprechen könnten
+
 
 /*Diese Aufgabe wurde in Zusammenarbeit mit Jana und Selina erstellt*/
 
