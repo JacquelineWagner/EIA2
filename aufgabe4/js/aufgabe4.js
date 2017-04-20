@@ -2,7 +2,8 @@
 //Aufgabe: 4
 //Name: Jacqueline Wagner
 //Matrikel: 254786
-//Datum: 13.04.2017
+//Datum: 20
+//20.04.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.*/
@@ -20,24 +21,40 @@ var L4_Canvas;
         crc2.fillRect(0, 0, canvas.width, canvas.height);
         crc2.fillStyle = "#43A3FA";
         crc2.fillRect(0, 0, canvas.width, 90);
-        berg1(0, 90);
-        berg2(40, 90);
-        berg1(65, 90);
-        sonne(360, 30);
-        haus(220, 143);
-        baum(320, 150);
-        vogel(220, 36);
-        vogel(284, 58);
-        wolke(140, 40);
-        vogel(180, 62);
-        blume1(200, 200);
-        blume1(100, 150);
-        blume2(120, 180);
-        blume2(60, 220);
-        blume3(370, 200);
-        blume3(300, 180);
+        drawberg1(0, 90);
+        drawberg2(40, 90);
+        drawberg1(65, 90);
+        drawsonne(360, 30);
+        drawhaus(220, 143);
+        drawbaum(320, 150);
+        drawvogel(220, 36);
+        drawvogel(284, 58);
+        drawwolke(140, 40);
+        drawvogel(180, 62);
+        drawblume1(200, 200);
+        drawblume1(100, 150);
+        drawblume2(120, 180);
+        drawblume2(60, 220);
+        drawblume3(370, 200);
+        drawblume3(300, 180);
+        for (var i = 0; i < 40; i++) {
+            let zufallBlumen = Math.floor((Math.random() * 3) + 0);
+            let _x = (Math.random() * (230 - 0)) + 0;
+            let _y = (Math.random() * (300 - 150)) + 100;
+            switch (zufallBlumen) {
+                case 0:
+                    drawblume1(_x, _y);
+                    break;
+                case 1:
+                    drawblume2(_x, _y);
+                    break;
+                case 2:
+                    drawblume3(_x, _y);
+                    break;
+            }
+        }
     }
-    function blume3(_x, _y) {
+    function drawblume3(_x, _y) {
         //        Stiel + Blatt
         crc2.beginPath();
         crc2.moveTo(_x - 0.5, _y + 5);
@@ -80,7 +97,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function blume2(_x, _y) {
+    function drawblume2(_x, _y) {
         //        Stiel 
         crc2.beginPath();
         crc2.moveTo(_x - 0.5, _y - 5);
@@ -145,7 +162,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function blume1(_x, _y) {
+    function drawblume1(_x, _y) {
         //        Stiel 
         crc2.beginPath();
         crc2.moveTo(_x, _y);
@@ -197,7 +214,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function vogel(_x, _y) {
+    function drawvogel(_x, _y) {
         crc2.beginPath();
         crc2.moveTo(_x, _y);
         crc2.strokeStyle = "#000000";
@@ -210,7 +227,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function wolke(_x, _y) {
+    function drawwolke(_x, _y) {
         crc2.beginPath();
         crc2.moveTo(_x, _y);
         crc2.strokeStyle = "#ffffff";
@@ -228,7 +245,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function baum(_x, _y) {
+    function drawbaum(_x, _y) {
         //        Stamm
         crc2.beginPath();
         crc2.moveTo(_x, _y);
@@ -258,7 +275,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function haus(_x, _y) {
+    function drawhaus(_x, _y) {
         //        Geb�ude
         crc2.beginPath();
         crc2.moveTo(_x, _y);
@@ -314,7 +331,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function berg1(_x, _y) {
+    function drawberg1(_x, _y) {
         crc2.beginPath();
         crc2.moveTo(_x, _y);
         crc2.strokeStyle = "#666666";
@@ -329,7 +346,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function berg2(_x, _y) {
+    function drawberg2(_x, _y) {
         crc2.beginPath();
         crc2.moveTo(_x, _y);
         crc2.strokeStyle = "#666666";
@@ -340,7 +357,7 @@ var L4_Canvas;
         crc2.fill();
         crc2.stroke();
     }
-    function sonne(_x, _y) {
+    function drawsonne(_x, _y) {
         crc2.beginPath();
         crc2.strokeStyle = "#FFFF00";
         crc2.fillStyle = "#FFFF00";
