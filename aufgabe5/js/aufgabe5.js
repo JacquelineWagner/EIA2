@@ -7,6 +7,7 @@ var L5_Animation;
     let n = 10;
     let canvas;
     canvas = document.getElementsByTagName("canvas")[0];
+    let imgData;
     function init(_event) {
         console.log("Hallo");
         let canvas;
@@ -22,7 +23,7 @@ var L5_Animation;
         drawberg1(65, 90);
         drawsonne(360, 30);
         drawhaus(220, 143);
-        drawbaum(320, 150);
+        drawbaum(320, 120);
         drawvogel(220, 36);
         drawvogel(284, 58);
         drawwolke(140, 40);
@@ -33,7 +34,8 @@ var L5_Animation;
         drawblume2(60, 220);
         drawblume3(370, 200);
         drawblume3(300, 180);
-        drawBiene(320, 150);
+        drawBienenkorb(320, 150);
+        //        zuf�llige Position der Blumen
         for (var i = 0; i < 40; i++) {
             let zufallBlumen = Math.floor((Math.random() * 3) + 0);
             let _x = (Math.random() * (230 - 0)) + 0;
@@ -50,50 +52,168 @@ var L5_Animation;
                     break;
             }
         }
+        //        Bild wird gespeichert
+        imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < n; i++) {
-            x[i] = Math.random() * 200;
-            y[i] = Math.random() * 200;
+            x[i] = 320;
+            y[i] = 150;
             drawBiene(x[i], y[i]);
         }
-        window.setTimeout(animate, 20);
+        window.setTimeout(animate, 30);
+        //        neue Biene wird erzeugt
+        canvas.addEventListener("click", weitereBiene);
+        canvas.addEventListener("push", weitereBiene);
     }
     //*************Funktionen
+    //neue Biene wird erzeugt
+    function weitereBiene() {
+        x.push(320);
+        y.push(150);
+        n++;
+        console.log("neue Biene");
+    }
+    //Bienen werden animiert
     function animate() {
         console.log("Animate called");
-        //copy();
-        //                      crc2.fillStyle = "#ff0000";
-        //                       crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
-        //              
-        for (let i = 0; i < n; i++) {
-            copy();
-            x[i] += Math.random() * 4 - 2;
-            y[i] += Math.random() * 4 - 2;
-            drawBiene(x[i], y[i]);
-            put();
-        }
-        window.setTimeout(animate, 20);
-    }
-    function copy() {
-        let canvas;
-        canvas = document.getElementsByTagName("canvas")[0];
-        let imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
-    }
-    function put() {
-        let canvas;
-        canvas = document.getElementsByTagName("canvas")[0];
-        let imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
+        //        Bild einf�gen
         crc2.putImageData(imgData, 0, 0);
+        //zuf�llige Position
+        for (let i = 0; i < n; i++) {
+            x[i] += Math.random() * 5 - 3;
+            y[i] += Math.random() * 4 - 2;
+            if (x[i] < 0) {
+                x[i] = 400;
+            }
+            if (y[i] < 0) {
+                y[i] = 250;
+            }
+            if (y[i] > 250) {
+                y[i] = 0;
+            }
+            drawBiene(x[i], y[i]);
+        }
+        window.setTimeout(animate, 30);
     }
-    function drawBiene(_x, _y) {
-        //        Stiel + Blatt
+    function drawBienenkorb(_x, _y) {
         crc2.beginPath();
         crc2.moveTo(_x, _y);
-        crc2.strokeStyle = "black";
+        crc2.fillStyle = "#DD9A43";
+        crc2.fillRect(_x - 13.5, _y + 2 + 10, 20, -17);
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.moveTo(_x, _y - 5);
+        crc2.fillStyle = "#DD9A43";
+        crc2.arc(_x - 5, _y - 5, 10, 0, Math.PI, true);
+        crc2.moveTo(_x - 5.7, _y + 1);
+        crc2.closePath();
+        crc2.fill();
+        crc2.beginPath();
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x - 15, _y - 3, 4, 0, (Math.PI) * 2, false);
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x - 15, _y + 2, 4, 0, (Math.PI) * 2, false);
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x - 15, _y + 8, 4, 0, (Math.PI) * 2, false);
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x + 5, _y - 3, 4, 0, (Math.PI) * 2, false);
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x + 5, _y + 2, 4, 0, (Math.PI) * 2, false);
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x + 5, _y + 8, 4, 0, (Math.PI) * 2, false);
+        crc2.fillStyle = "#DD9A43";
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.moveTo(_x - 10, _y + 4);
+        crc2.fillStyle = "#2C190A";
+        crc2.arc(_x - 10, _y + 4, 3, 0, Math.PI * 2, true);
+        crc2.closePath();
+        crc2.fill();
+    }
+    function drawBiene(_x, _y) {
+        //       K�rper
+        crc2.beginPath();
+        crc2.moveTo(_x, _y);
         crc2.fillStyle = "yellow";
-        crc2.arc(_x, _y, 6, 0, Math.PI * 2, false);
+        crc2.arc(_x - 7, _y, 3, (Math.PI / 180) * 90, (Math.PI / 180) * 270, false);
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x - 9, _y, 3, 0, (Math.PI) * 2, false);
+        crc2.fillStyle = "#ffff00";
+        crc2.fill();
+        crc2.closePath();
+        //Kopf
+        crc2.beginPath();
+        crc2.moveTo(_x + 16, _y - 3);
+        crc2.arc(_x - 12, _y - 2, 3, 0, (Math.PI) * 2, false);
+        crc2.fillStyle = "#ffff00";
+        crc2.fill();
+        crc2.closePath();
+        //        Auge
+        crc2.beginPath();
+        crc2.moveTo(_x, _y);
+        crc2.fillStyle = "black";
+        crc2.arc(_x - 13, _y - 2.8, 1, 0, (Math.PI) * 2, false);
+        crc2.fillStyle = "black";
+        crc2.fill();
+        crc2.closePath();
+        //        Mund
+        crc2.beginPath();
+        crc2.moveTo(_x - 14.5, _y);
+        crc2.strokeStyle = "#000000";
+        crc2.fillStyle = "#000000";
+        crc2.lineTo(_x - 12, _y - 1);
         crc2.closePath();
         crc2.fill();
         crc2.stroke();
+        //       F�hler
+        crc2.beginPath();
+        crc2.moveTo(_x - 11, _y - 8);
+        crc2.strokeStyle = "#000000";
+        crc2.fillStyle = "#000000";
+        crc2.lineTo(_x - 12, _y - 5);
+        crc2.closePath();
+        crc2.fill();
+        crc2.stroke();
+        crc2.beginPath();
+        crc2.moveTo(_x - 13, _y - 8);
+        crc2.strokeStyle = "#000000";
+        crc2.fillStyle = "#000000";
+        crc2.lineTo(_x - 14, _y - 5);
+        crc2.closePath();
+        crc2.fill();
+        crc2.stroke();
+        //        Streifen
+        crc2.beginPath();
+        crc2.beginPath();
+        crc2.moveTo(_x, _y);
+        crc2.rect(_x - 9, _y - 3, 2, 6);
+        crc2.fillStyle = "#000000";
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.beginPath();
+        crc2.moveTo(_x, _y);
+        crc2.rect(_x - 5.8, _y - 2.5, 2, 5);
+        crc2.fillStyle = "#000000";
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.moveTo(_x + 17, _y - 4);
+        crc2.arc(_x - 1.5, _y, 1, 0, (Math.PI) * 2, false);
+        crc2.fillStyle = "#000000";
+        crc2.fill();
+        crc2.closePath();
+        //       Fl�gel
+        crc2.beginPath();
+        crc2.moveTo(_x - 8, _y);
+        crc2.fillStyle = "#A2DAF7";
+        crc2.arc(_x - 6, _y - 4, 3, (Math.PI / 180) * 90, (Math.PI / 180) * 270, true);
+        crc2.fill();
+        crc2.closePath();
     }
     function drawblume3(_x, _y) {
         //        Stiel + Blatt
