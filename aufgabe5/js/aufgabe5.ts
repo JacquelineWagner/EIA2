@@ -179,7 +179,7 @@ namespace L5_Animation {
         crc2.moveTo(_x -10 , _y + 4);
         crc2.fillStyle = "#2C190A";
         crc2.arc(_x  - 10, _y + 4 , 3, 0, Math.PI * 2, true);
-        crc2.closePath();
+        crc2.closePath(); 
         crc2.fill();
         
 
