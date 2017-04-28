@@ -1,3 +1,17 @@
+//
+//Aufgabe: 5
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 20
+//26.04.2017
+//    
+
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.*/
+
+
+
+
 namespace L5_Animation {
     window.addEventListener("load", init);
 
