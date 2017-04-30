@@ -6,7 +6,8 @@
 //26.04.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
-//Er wurde nicht kopiert und auch nicht diktiert.*/
+//Er wurde nicht kopiert und auch nicht diktiert.
+//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 var L5_Animation;
 (function (L5_Animation) {
     window.addEventListener("load", init);
