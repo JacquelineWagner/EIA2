@@ -1,3 +1,20 @@
+//
+//Aufgabe: 6
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 20
+//07.05.2017
+//    
+
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
+
+
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+//In Zusammenarbeit mit Selina Mazzaro und Jana Burger.*/
+
+
+
 namespace StudiVZ {
     interface StudentData {
         name: string;
@@ -7,6 +24,7 @@ namespace StudiVZ {
         matrikel: number;
         comment: string;
     }
+
     var students: StudentData[] = [];
     var stop: boolean = false;
 
@@ -16,7 +34,7 @@ namespace StudiVZ {
         switch (action) {
             case "n":
             case "N":
-                var input: string = prompt("Eingabe (jeweils mit Komma getrennt) von\nMatrikelnummer, Name, Vorname, Alter, Geschlecht (0 oder 1) und Kommentar");
+                var input: string = prompt("Eingabe (jeweils mit Komma getrennt) von\nMatrikelnummer, \nName, \nVorname, \nAlter, \nGeschlecht 0 = m oder 1 = w und \nKommentar");
                 alert(saveData(input));
                 break;
             case "a":
@@ -33,28 +51,47 @@ namespace StudiVZ {
     function saveData(_input: string): string {
         let data: string[] = _input.split(",");
 
+        let _matrikel: number = (parseInt(data[0]));
+        let _name: string = data[1];
+        let _firstname: string = data[2];
+        let _age: number = (parseInt(data[3]));
+        let _comment: string = data[5];
+
         if (data.length < 4) {
-            return "Angaben nicht vollständig!";
+            return "Angaben nicht vollstaendig!";
         }
-
-        if (isNaN(parseInt(data[0]))) {
+        if (isNaN(_matrikel)) {
             return "Matrikelnummer ist keine Nummer";
         }
-
-
-        if (data[1]) {
-            return "Matrikelnummer ist keine Nummer";
+        if (isNaN(_age)) {
+            return "Das Alter ist keine Nummer";
         }
 
-        let sexBoolean: boolean = false;
-
-        if (parseInt(data[4]) == 0) {
-
-
+        if (parseInt(data[4]) != 0 && parseInt(data[4]) != 1) {
+            return "Geschlecht bitte als 0 für w oder 1 für m eingeben.";
         }
-        return "Hier fehlt noch der richtige Code...";
+
+        let check: StudentData = {
+            matrikel: _matrikel,
+            name: _name,
+            firstname: _firstname,
+            age: _age,
+            sex: parseInt(data[4]) == 0,
+            comment: _comment
+        };
+        students.push(check);
+        let stringSex: string = check.sex ? "m" : "w";
+        return "Bitte ueberpruefen Sie Ihre Daten nach der Richtigkeit und bestaetigen Sie mit OK:\nMatrikelnummer: " + check.matrikel + "\nName: " + check.name + "\nVorname: " + check.firstname + "\nAlter: " + check.age + "\nGeschlecht: " + stringSex + "\nKommentar: " + check.comment;
     }
+
     function queryData(_matrikel: number): string {
-        return "Hier fehlt noch der richtige Code...";
+        for (let i: number = 0; i < students.length; i++) {
+            if (students[i].matrikel == _matrikel) {
+                let stringSex: string = students[i].sex ? "m" : "w";
+                let s: StudentData = students[i];
+                return "Unter Ihrer Matrikelnummer sind Folgende Daten gespeichert: \nMatrikelnummer: " + s.matrikel + "\nName: " + s.name + "\nVorname: " + s.firstname + "\nAlter: " + s.age + "\nGeschlecht: " + stringSex + "\nKommentar: " + s.comment;
+            }
+        }
+        return "Ihre Matrikelnummer ist nicht registriert. Bitte tragen Sie sich vor der Abfrage ein.";
     }
 }
