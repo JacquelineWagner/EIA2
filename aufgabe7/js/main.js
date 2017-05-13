@@ -65,6 +65,14 @@ var a07_Canvas;
         imgData = a07_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
         flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new a07_Canvas.Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
         for (let i = 0; i < 10; i++) {
             beeData.push(new a07_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
         }

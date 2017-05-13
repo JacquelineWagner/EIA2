@@ -82,6 +82,15 @@ namespace a07_Canvas {
 
 
 
+
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
         flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
         flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
 
