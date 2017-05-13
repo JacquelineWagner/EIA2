@@ -1,3 +1,18 @@
+//
+//Aufgabe: 7
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 20
+//13.05.2017
+//    
+
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
+
+
+//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
+
+
 namespace a07_Canvas {
     export var crc2: CanvasRenderingContext2D;
     var canvas: HTMLCanvasElement;
@@ -63,38 +78,32 @@ namespace a07_Canvas {
 
         console.log(flower);
 
-        //        for (var i: number = 0; i < 2; i++) {
-        //            let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-        //            let _x: number = (Math.random() * (240 + 20)) + 0;
-        //            let _y: number = (Math.random() * (240 - 130)) + 130;
-        //
-        //            let s: Flower = new Flower(0, 0, "");
-        //
-        //            s.blume(_x - 25, _y - 6, 5);
-        //            s.blume(_x - 10, _y + 5, 6);
-        //            s.blume(_x + 10, _y - 5, 4);
-        //            s.tulpe(_x + 40, _y - 5);
-        //            s.blume3(370, 200);
-        //        }
+        for (var i: number = 0; i < 2; i++) {
+            let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+            let _x: number = (Math.random() * (240 + 20)) + 0;
+            let _y: number = (Math.random() * (240 - 130)) + 130;
+
+            let s: Flower = new Flower(0, 0, "");
+
+            s.blume(_x - 25, _y - 6, 5);
+            s.blume(_x - 10, _y + 5, 6);
+            s.blume(_x + 10, _y - 5, 4);
+            s.tulpe(_x + 40, _y - 5);
+            s.blume3(370, 200);
+        }
 
 
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
 
 
+        for (let i: number = 0; i < 4; i++) {
 
+            flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
 
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Flower((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-
-
+        }
 
         for (let i: number = 0; i < 10; i++) {
             beeData.push(new Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));

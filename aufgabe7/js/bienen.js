@@ -1,3 +1,13 @@
+//
+//Aufgabe: 7
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 20
+//13.05.2017
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
+//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 var a07_Canvas;
 (function (a07_Canvas) {
     class Bee {
