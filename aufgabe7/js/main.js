@@ -1,14 +1,14 @@
 var a07_Canvas;
 (function (a07_Canvas) {
     var canvas;
-    let blume;
-    let tulpe;
-    let flower = [tulpe, blume];
+    let flower = [];
     let beeData = [];
     let n = 10;
     let imgData;
     window.addEventListener("load", init);
     function init(_event) {
+        let x;
+        let y;
         canvas = document.getElementsByTagName("canvas")[0];
         a07_Canvas.crc2 = canvas.getContext("2d");
         //Wiese
@@ -31,17 +31,34 @@ var a07_Canvas;
         drawwolke(140, 40);
         drawvogel(180, 62);
         drawBienenkorb(320, 150);
-        for (var i = 0; i < 2; i++) {
-            let randomFlower = Math.floor((Math.random() * 3) + 0);
-            let _x = (Math.random() * (240 + 20)) + 0;
-            let _y = (Math.random() * (240 - 130)) + 130;
-            let s = new a07_Canvas.Flower(0, 0, 0, 0);
-            s.blume(_x - 25, _y - 6, 5);
-            s.blume(_x - 10, _y + 5, 6);
-            s.blume(_x + 10, _y - 5, 4);
-            s.tulpe(_x + 40, _y - 5);
-            s.blume3(370, 200);
+        //Flowers
+        for (let i = 0; i < n; i++) {
+            y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
+            switch (Math.floor((Math.random() * 4) + 0)) {
+                case 0:
+                    new a07_Canvas.Flower(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "blume");
+                    break;
+                case 1:
+                    new a07_Canvas.Flower(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "tulpe");
+                    break;
+                default:
+                    break;
+            }
         }
+        console.log(flower);
+        //        for (var i: number = 0; i < 2; i++) {
+        //            let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+        //            let _x: number = (Math.random() * (240 + 20)) + 0;
+        //            let _y: number = (Math.random() * (240 - 130)) + 130;
+        //
+        //            let s: Flower = new Flower(0, 0, "");
+        //
+        //            s.blume(_x - 25, _y - 6, 5);
+        //            s.blume(_x - 10, _y + 5, 6);
+        //            s.blume(_x + 10, _y - 5, 4);
+        //            s.tulpe(_x + 40, _y - 5);
+        //            s.blume3(370, 200);
+        //        }
         /**************************************************************************************************************************
         *Aufgabe 6a
         **************************************************************************************************************************/
@@ -52,18 +69,14 @@ var a07_Canvas;
         window.setTimeout(animate, 30);
         canvas.addEventListener("click", addBee);
         canvas.addEventListener("push", addBee);
-        for (let i = 0; i < 5; i++) {
-            let z = Math.random() * (2 - 1 + 1) + 1;
-            if (z == 1 || 2) {
-                let s = new a07_Canvas.Flower(0, 0, 0, Math.random() * (2 - 1 + 1) + 1);
-                s.draw();
-            }
-        }
-        window.setTimeout(animateFolwer, 0);
     }
     //Funktionen 
     function animate() {
         a07_Canvas.crc2.putImageData(imgData, 0, 0);
+        for (let i = 0; i < flower.length; i++) {
+            let s = flower[i];
+            s.update();
+        }
         for (let i = 0; i < beeData.length; i++) {
             beeData[i].update();
         }
@@ -72,13 +85,6 @@ var a07_Canvas;
     function addBee() {
         beeData.push(new a07_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
         n++;
-    }
-    function animateFolwer() {
-        a07_Canvas.crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < flower.length; i++) {
-            flower[i].update();
-        }
-        window.setTimeout(animate, 20);
     }
     /********************************************************************************************************
     *Aufgabe 4

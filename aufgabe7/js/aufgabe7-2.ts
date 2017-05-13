@@ -92,18 +92,33 @@ namespace a07_Canvas {
     export class Flower {
         x: number;
         y: number;
-        size: number;
-        color: string;
-        pointColor: string;
-        flowerType: number;
+        flowerType: string;
 
-        constructor(_x: number, _y: number, _size: number, _flowerType: number) {
+        constructor(_x: number, _y: number, _flowerType: string) {
             this.x = _x;
             this.y = _y;
-            this.size = _size;
             this.flowerType = _flowerType;
+            this.draw();
         }
 
+
+        draw(): void {
+            switch (this.flowerType) {
+                case "blume":
+                    this.blume(this.x - 25, this.y - 6, 5);
+                    break;
+                case "tulpe":
+                    this.tulpe(this.x + 40, this.y - 5);
+                    break;
+            }
+
+        }
+        
+        
+
+        update(): void {
+            this.draw();
+        }
 
         blume3(_x: number, _y: number): void {
             //        Stiel + Blatt
@@ -289,20 +304,6 @@ namespace a07_Canvas {
 
         }
 
-        draw(): void {
-            switch (this.flowerType) {
-                case 1:
-                    this.blume(this.x - 25, this.y - 6, 5);
-                    break;
-                case 2:
-                    this.tulpe(this.x + 40, this.y - 5);
-                    break;
-            }
 
-        }
-
-        update(): void {
-            this.draw();
-        }
     }
 }

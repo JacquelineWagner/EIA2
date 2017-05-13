@@ -80,11 +80,24 @@ var a07_Canvas;
     }
     a07_Canvas.Bee = Bee;
     class Flower {
-        constructor(_x, _y, _size, _flowerType) {
+        constructor(_x, _y, _flowerType) {
             this.x = _x;
             this.y = _y;
-            this.size = _size;
             this.flowerType = _flowerType;
+            this.draw();
+        }
+        draw() {
+            switch (this.flowerType) {
+                case "blume":
+                    this.blume(this.x - 25, this.y - 6, 5);
+                    break;
+                case "tulpe":
+                    this.tulpe(this.x + 40, this.y - 5);
+                    break;
+            }
+        }
+        update() {
+            this.draw();
         }
         blume3(_x, _y) {
             //        Stiel + Blatt
@@ -245,19 +258,6 @@ var a07_Canvas;
             a07_Canvas.crc2.closePath();
             a07_Canvas.crc2.fill();
             a07_Canvas.crc2.stroke();
-        }
-        draw() {
-            switch (this.flowerType) {
-                case 1:
-                    this.blume(this.x - 25, this.y - 6, 5);
-                    break;
-                case 2:
-                    this.tulpe(this.x + 40, this.y - 5);
-                    break;
-            }
-        }
-        update() {
-            this.draw();
         }
     }
     a07_Canvas.Flower = Flower;
