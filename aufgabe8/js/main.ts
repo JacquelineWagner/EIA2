@@ -24,7 +24,7 @@ namespace a08_Canvas {
     export let n: number = 10;
     let imgData: ImageData;
 
- 
+
 
 
 
@@ -86,21 +86,24 @@ namespace a08_Canvas {
             let _x: number = (Math.random() * (240 + 20)) + 0;
             let _y: number = (Math.random() * (240 - 130)) + 130;
 
-            //            let s: Blumen = new Blumen(0, 0, "");
 
-            let blume1: Blumen = new Blume1(_x, _y, "blume1");
-            let tulpe: Blumen = new Tulpe(_x, _y, "tulpe");
-            let blume3: Blumen = new Blume3(_x, _y, "blume3");
 
-            blume1.draw();
+            let blume1: Blumen = new Blume1(_x + 10, _y, "blume1");
             flower.push(blume1);
-            //            blume1.draw();
-            //            blume1.draw();
-            tulpe.draw();
+            blume1.draw();
+
+
+
+            let tulpe: Blumen = new Tulpe(_x - 15, _y, "tulpe");
             flower.push(tulpe);
-            blume3.draw();
+            tulpe.draw();
+
+
+
+            let blume3: Blumen = new Blume3(_x + 20, _y, "blume3");
             flower.push(blume3);
-            //            blume3.draw();
+            blume3.draw();
+
 
 
 
@@ -120,8 +123,8 @@ namespace a08_Canvas {
         //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
         //        flower.push(new Blumen((Math.random() * (240  0random() * (240 - 130)) + 130, "blume3"));
 
-        
-        
+
+
         for (let i: number = 0; i < 5; i++) {
 
             var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
