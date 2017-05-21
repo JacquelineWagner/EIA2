@@ -35,7 +35,7 @@ export class Blume1 extends Blumen {
         
        
         blume1(_x: number, _y: number, _size: number): void {
-            //        Stiel 
+//            //        Stiel 
             crc2.beginPath();
             crc2.moveTo(_x, _y);
             crc2.strokeStyle = "#013713";

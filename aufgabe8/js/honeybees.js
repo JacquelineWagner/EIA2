@@ -66,9 +66,9 @@ var a08_Canvas;
             }
         }
         setRandomPosition() {
-            let randomflower = Math.round(Math.random() * a08_Canvas.flower.length - 1);
-            this.xPosition = a08_Canvas.flower[randomflower].x;
-            this.yPosition = a08_Canvas.flower[randomflower].y;
+            let randomFlower = Math.round(Math.random() * (a08_Canvas.flower.length - 1));
+            this.xPosition = a08_Canvas.flower[randomFlower].x;
+            this.yPosition = a08_Canvas.flower[randomFlower].y;
         }
         setAnfangPosition() {
             this.x = 325;

@@ -22,7 +22,7 @@ var a08_Canvas;
             }
         }
         blume1(_x, _y, _size) {
-            //        Stiel 
+            //            //        Stiel 
             a08_Canvas.crc2.beginPath();
             a08_Canvas.crc2.moveTo(_x, _y);
             a08_Canvas.crc2.strokeStyle = "#013713";

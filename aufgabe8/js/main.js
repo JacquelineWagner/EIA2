@@ -3,7 +3,7 @@
 //Name: Jacqueline Wagner
 //Matrikel: 254786
 //Datum: 20
-//13.05.2017
+//21.05.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
@@ -43,19 +43,20 @@ var a08_Canvas;
         s.drawbaum(320, 120);
         s.drawBienenkorb(320, 150);
         //        //Flowers
-        for (let i = 0; i < a08_Canvas.n; i++) {
-            y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
-            switch (Math.floor((Math.random() * 4) + 0)) {
-                case 0:
-                    new a08_Canvas.Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "blume");
-                    break;
-                case 1:
-                    new a08_Canvas.Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "tulpe");
-                    break;
-                default:
-                    break;
-            }
-        }
+        //        for (let i: number = 0; i < n; i++) {
+        //            y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
+        //
+        //            switch (Math.floor((Math.random() * 4) + 0)) {
+        //                case 0:
+        //                    new Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "blume");
+        //                    break;
+        //                case 1:
+        //                    new Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "tulpe");
+        //                    break;
+        //                default:
+        //                    break;
+        //            }
+        //        }
         console.log(a08_Canvas.flower);
         for (var i = 0; i < 10; i++) {
             let randomFlower = Math.floor((Math.random() * 3) + 0);
@@ -66,24 +67,23 @@ var a08_Canvas;
             let tulpe = new a08_Canvas.Tulpe(_x, _y, "tulpe");
             let blume3 = new a08_Canvas.Blume3(_x, _y, "blume3");
             blume1.draw();
-            blume1.draw();
-            blume1.draw();
+            a08_Canvas.flower.push(blume1);
+            //            blume1.draw();
+            //            blume1.draw();
             tulpe.draw();
+            a08_Canvas.flower.push(tulpe);
             blume3.draw();
-            blume3.draw();
+            a08_Canvas.flower.push(blume3);
         }
         imgData = a08_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < 3; i++) {
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-            console.log(a08_Canvas.flower);
-        }
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
+        //        flower.push(new Blumen((Math.random() * (240  0random() * (240 - 130)) + 130, "blume3"));
         for (let i = 0; i < 5; i++) {
             var r = new a08_Canvas.Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
             a08_Canvas.beeData.push(r);

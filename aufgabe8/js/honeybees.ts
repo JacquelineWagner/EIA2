@@ -65,7 +65,7 @@ namespace a08_Canvas {
 
         move(): void {
             let xMove: number = this.xPosition - this.x;
-            let yMove: number = this.yPosition- this.y;
+            let yMove: number = this.yPosition - this.y;
             if (Math.abs(xMove) < 0.5 && Math.abs(yMove) < 0.5)
                 this.setRandomPosition();
             else {
@@ -75,9 +75,10 @@ namespace a08_Canvas {
         }
 
         setRandomPosition(): void {
-            let randomflower: number = Math.round(Math.random() * flower.length - 1);
-            this.xPosition = flower[randomflower].x;
-            this.yPosition = flower[randomflower].y;
+            let randomFlower: number = Math.round(Math.random() * (flower.length - 1));
+            this.xPosition = flower[randomFlower].x;
+            this.yPosition = flower[randomFlower].y;
+         
         }
         setAnfangPosition(): void {
             this.x = 325;
