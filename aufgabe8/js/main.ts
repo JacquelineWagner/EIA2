@@ -18,10 +18,10 @@ namespace a08_Canvas {
     var canvas: HTMLCanvasElement;
 
 
-    let flower: Blumen[] = [];
+    export let flower: Blumen[] = [];
 
-    let beeData: Bienen[] = [];
-    let n: number = 10;
+    export let beeData: Bienen[] = [];
+    export let n: number = 10;
     let imgData: ImageData;
 
     window.addEventListener("load", init);
@@ -59,7 +59,7 @@ namespace a08_Canvas {
 
 
 
-        //Flowers
+        //        //Flowers
         for (let i: number = 0; i < n; i++) {
             y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
 
@@ -82,7 +82,7 @@ namespace a08_Canvas {
             let _x: number = (Math.random() * (240 + 20)) + 0;
             let _y: number = (Math.random() * (240 - 130)) + 130;
 
-            let s: Blumen = new Blumen(0, 0, "");
+            //            let s: Blumen = new Blumen(0, 0, "");
 
             let blume1: Blumen = new Blume1(_x, _y, "blume1");
             let tulpe: Blumen = new Tulpe(_x, _y, "tulpe");
@@ -96,48 +96,62 @@ namespace a08_Canvas {
             blume3.draw();
 
 
+
         }
 
 
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
 
 
-
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-
-
-
-        for (let i: number = 0; i < 10; i++) {
-            beeData.push(new DummeBienen(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        for (let i: number = 0; i < 3; i++) {
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
+            flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
+            console.log(flower);
         }
-        window.setTimeout(animate, 30);
+        for (let i: number = 0; i < 5; i++) {
+
+            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+            beeData.push(r);
+
+            var b: DummeBienen = new DummeBienen(325, 120, Math.random() * 10 + 5, "yellow");
+            beeData.push(b);
+        }
+
+
+
+
+
+
+
+
+        window.setTimeout(animate, 20);
         canvas.addEventListener("click", addBee);
         canvas.addEventListener("push", addBee);
 
     }
 
-    //Funktionen 
+
+
+
+
+
+    //Funktionen
+
 
     function animate(): void {
         crc2.putImageData(imgData, 0, 0);
 
-        for (let i: number = 0; i < flower.length; i++) {
-            let s: Blumen = flower[i];
-            s.update();
-
-
-        }
 
 
 
         for (let i: number = 0; i < beeData.length; i++) {
+            let b: Bienen = beeData[i];
             beeData[i].update();
         }
 

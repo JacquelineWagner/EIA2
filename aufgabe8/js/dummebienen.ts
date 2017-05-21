@@ -1,22 +1,16 @@
 namespace a08_Canvas {
 
-    export class Honeybees extends Bienen {
+    export class DummeBienen extends Bienen {
 
-        xPosition: number;
-        yPosition: number;
-        speed: number;
-
-        constructor(_x: number, _y: number, _size: number, _color: string) {
-            super(_x, _y, _size, _color);
-            this.speed = 0.03;
-            this.setAnfangPosition();
-            this.setRandomPosition();
+         constructor(_x: number, _y: number, _size: number, _color: string) {
+             super (_x, _y, _size, _color);
+           
         }
 
-        //        update(): void {
-        //            this.move();
-        //            this.draw();
-        //        }
+//        update(): void {
+//            this.move(); 
+//            this.draw();
+//        }
 
         draw(): void {
             //Flügel
@@ -63,36 +57,33 @@ namespace a08_Canvas {
             crc2.stroke();
         }
 
-        move(): void {
-            let xMove: number = this.xPosition - this.x;
-            let yMove: number = this.yPosition- this.y;
-            if (Math.abs(xMove) < 0.5 && Math.abs(yMove) < 0.5)
-                this.setRandomPosition();
-            else {
-                this.x += xMove * this.speed;
-                this.y += yMove * this.speed;
+         move(): void {
+            this.x += Math.random() * 5 - 3;
+            this.y += Math.random() * 4 - 2;
+
+            if (this.x < 0) {
+                this.x = 400;
+            }
+            if (this.y < 0) {
+                this.y = 250;
+            }
+            if (this.y > 300) {
+                this.y = 0;
             }
         }
 
         setRandomPosition(): void {
-            let randomflower: number = Math.round(Math.random() * flower.length - 1);
-            this.xPosition = flower[randomflower].x;
-            this.yPosition = flower[randomflower].y;
+            this.x = Math.random() * 200;
+            this.y = Math.random() * 200;
         }
-        setAnfangPosition(): void {
-            this.x = 325;
-            this.y = 120;
-        }
-
-
 
         setRandomStyle(): void {
             this.size = Math.random() * 30 + 10;
             this.color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
         }
+        
 
-
-    }
+        }
 
 
 

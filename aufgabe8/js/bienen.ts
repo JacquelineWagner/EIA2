@@ -22,6 +22,7 @@ namespace a08_Canvas {
         constructor(_x: number, _y: number, _size: number, _color: string) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
+            this.setRandomStyle();
             this.x = _x;
             this.y = _y;
             this.size = _size;
@@ -44,6 +45,11 @@ namespace a08_Canvas {
           setRandomPosition(): void {
 //        Move Funktion
         }
+        setRandomStyle(): void {
+            //setRandomStyle Funktion
+
+        }
+
        
     }
 

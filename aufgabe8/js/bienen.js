@@ -14,6 +14,7 @@ var a08_Canvas;
         constructor(_x, _y, _size, _color) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
+            this.setRandomStyle();
             this.x = _x;
             this.y = _y;
             this.size = _size;
@@ -31,6 +32,9 @@ var a08_Canvas;
         }
         setRandomPosition() {
             //        Move Funktion
+        }
+        setRandomStyle() {
+            //setRandomStyle Funktion
         }
     }
     a08_Canvas.Bienen = Bienen;

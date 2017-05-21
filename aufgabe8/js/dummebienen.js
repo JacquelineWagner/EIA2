@@ -1,14 +1,11 @@
 var a08_Canvas;
 (function (a08_Canvas) {
-    class Honeybees extends a08_Canvas.Bienen {
+    class DummeBienen extends a08_Canvas.Bienen {
         constructor(_x, _y, _size, _color) {
             super(_x, _y, _size, _color);
-            this.speed = 0.03;
-            this.setAnfangPosition();
-            this.setRandomPosition();
         }
         //        update(): void {
-        //            this.move();
+        //            this.move(); 
         //            this.draw();
         //        }
         draw() {
@@ -56,29 +53,27 @@ var a08_Canvas;
             a08_Canvas.crc2.stroke();
         }
         move() {
-            let xMove = this.xPosition - this.x;
-            let yMove = this.yPosition - this.y;
-            if (Math.abs(xMove) < 0.5 && Math.abs(yMove) < 0.5)
-                this.setRandomPosition();
-            else {
-                this.x += xMove * this.speed;
-                this.y += yMove * this.speed;
+            this.x += Math.random() * 5 - 3;
+            this.y += Math.random() * 4 - 2;
+            if (this.x < 0) {
+                this.x = 400;
+            }
+            if (this.y < 0) {
+                this.y = 250;
+            }
+            if (this.y > 300) {
+                this.y = 0;
             }
         }
         setRandomPosition() {
-            let randomflower = Math.round(Math.random() * a08_Canvas.flower.length - 1);
-            this.xPosition = a08_Canvas.flower[randomflower].x;
-            this.yPosition = a08_Canvas.flower[randomflower].y;
-        }
-        setAnfangPosition() {
-            this.x = 325;
-            this.y = 120;
+            this.x = Math.random() * 200;
+            this.y = Math.random() * 200;
         }
         setRandomStyle() {
             this.size = Math.random() * 30 + 10;
             this.color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
         }
     }
-    a08_Canvas.Honeybees = Honeybees;
+    a08_Canvas.DummeBienen = DummeBienen;
 })(a08_Canvas || (a08_Canvas = {}));
-//# sourceMappingURL=honeybees.js.map
+//# sourceMappingURL=dummebienen.js.map

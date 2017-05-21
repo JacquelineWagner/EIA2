@@ -15,7 +15,7 @@ var a08_Canvas;
         //                case "tulpe":
         //                    this.tulpe(this.x + 40, this.y - 5);
         //                    break;
-        //            }
+        //            }  
         //
         //        }
         //        

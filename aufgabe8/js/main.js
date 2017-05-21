@@ -11,9 +11,9 @@
 var a08_Canvas;
 (function (a08_Canvas) {
     var canvas;
-    let flower = [];
-    let beeData = [];
-    let n = 10;
+    a08_Canvas.flower = [];
+    a08_Canvas.beeData = [];
+    a08_Canvas.n = 10;
     let imgData;
     window.addEventListener("load", init);
     function init(_event) {
@@ -42,8 +42,8 @@ var a08_Canvas;
         s.drawhaus(220, 143);
         s.drawbaum(320, 120);
         s.drawBienenkorb(320, 150);
-        //Flowers
-        for (let i = 0; i < n; i++) {
+        //        //Flowers
+        for (let i = 0; i < a08_Canvas.n; i++) {
             y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
             switch (Math.floor((Math.random() * 4) + 0)) {
                 case 0:
@@ -56,12 +56,12 @@ var a08_Canvas;
                     break;
             }
         }
-        console.log(flower);
+        console.log(a08_Canvas.flower);
         for (var i = 0; i < 10; i++) {
             let randomFlower = Math.floor((Math.random() * 3) + 0);
             let _x = (Math.random() * (240 + 20)) + 0;
             let _y = (Math.random() * (240 - 130)) + 130;
-            let s = new a08_Canvas.Blumen(0, 0, "");
+            //            let s: Blumen = new Blumen(0, 0, "");
             let blume1 = new a08_Canvas.Blume1(_x, _y, "blume1");
             let tulpe = new a08_Canvas.Tulpe(_x, _y, "tulpe");
             let blume3 = new a08_Canvas.Blume3(_x, _y, "blume3");
@@ -73,36 +73,39 @@ var a08_Canvas;
             blume3.draw();
         }
         imgData = a08_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-        flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-        for (let i = 0; i < 10; i++) {
-            beeData.push(new a08_Canvas.DummeBienen(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        for (let i = 0; i < 3; i++) {
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
+            a08_Canvas.flower.push(new a08_Canvas.Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
+            console.log(a08_Canvas.flower);
         }
-        window.setTimeout(animate, 30);
+        for (let i = 0; i < 5; i++) {
+            var r = new a08_Canvas.Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+            a08_Canvas.beeData.push(r);
+            var b = new a08_Canvas.DummeBienen(325, 120, Math.random() * 10 + 5, "yellow");
+            a08_Canvas.beeData.push(b);
+        }
+        window.setTimeout(animate, 20);
         canvas.addEventListener("click", addBee);
         canvas.addEventListener("push", addBee);
     }
-    //Funktionen 
+    //Funktionen
     function animate() {
         a08_Canvas.crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < flower.length; i++) {
-            let s = flower[i];
-            s.update();
-        }
-        for (let i = 0; i < beeData.length; i++) {
-            beeData[i].update();
+        for (let i = 0; i < a08_Canvas.beeData.length; i++) {
+            let b = a08_Canvas.beeData[i];
+            a08_Canvas.beeData[i].update();
         }
         window.setTimeout(animate, 20);
     }
     function addBee() {
-        beeData.push(new a08_Canvas.DummeBienen(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
-        n++;
+        a08_Canvas.beeData.push(new a08_Canvas.DummeBienen(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        a08_Canvas.n++;
     }
 })(a08_Canvas || (a08_Canvas = {}));
 //# sourceMappingURL=main.js.map

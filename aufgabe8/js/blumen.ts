@@ -20,7 +20,7 @@ export class Blumen {
 //                case "tulpe":
 //                    this.tulpe(this.x + 40, this.y - 5);
 //                    break;
-//            }
+//            }  
 //
 //        }
 //        
