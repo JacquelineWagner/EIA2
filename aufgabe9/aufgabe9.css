@@ -1,0 +1,125 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat|Pacifico');
+
+* {
+	display: block;
+	vertical-align: top;
+	font-family: 'Montserrat', sans-serif;
+	background: #FAFAFA;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	width: 80%;
+}
+
+header {
+	background: #3ED0F5;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+#H1 {
+	font-family: 'Pacifico', sans-serif;
+	color: white;
+	font-size: 2em;
+	background: #3ED0F5;
+	text-align: center;
+}
+
+main div {
+	padding-top: 10em;
+	padding-left: 15em;
+	width: 50%
+}
+
+.auswahl {
+	margin-bottom: 2em;
+	/* 	position: relative; */
+	/* float: left; */
+	/* margin-right: 2em; */
+}
+
+aside {
+	margin-top: 10em; float : right;
+	width: 30%;
+	float: right;
+}
+
+input[type="radio"], input[type="checkbox"], label {
+	display: inline;
+}
+
+label::after {
+	content: "";
+	display: block;
+}
+
+head {
+	display: none;
+}
+
+input:invalid {
+	/* 	background: #F0C060; */
+	
+}
+
+input:valid {
+	background: white;
+}
+
+input:required {
+	/* 	background: #aaaaaa; */
+	
+}
+
+fieldset {
+	width: 400px;
+}
+
+.Bestellung {
+	width: 400px;
+}
+
+button {
+	color: white;
+	background: #3ED0F5;
+}
+
+svg, figure, button, option {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+legend {
+	color: #3ED0F5;
+}
+
+
+
+
+/*Smartphone*/
+@media screen and (max-width: 570px) {
+
+-webkit-column-count:1;
+-moz-column-count:1;
+
+html {}
+
+
+aside {
+margin-right: 15em;
+	position: fixed;
+	padding-left: 5em;
+}
+
+
+main {
+	padding-top: 7em;
+	margin-left: -10em;
+}
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Online-Eisdealer</title>
+<link rel="stylesheet" href="aufgabe9.css" type="text/css"
+	media="screen" />
+	
+	<script src="js/FormElements.js"></script>
+<!-- <script src="js/FormElements.js" type="text/javascript" charset="utf-8"></script> -->
+</head>
+<header>
+	<p id="H1">Online-Eisdealer</p>
+
+
+</header>
+
+<body>
+	<!-- -->
+	<aside>
+		<fieldset class="Bestellung">
+			<legend> Bestellübersicht </legend>
+		</fieldset>
+	<button>Prüfen</button>
+
+	</aside>
+
+
+	<main>
+	<div id="main">
+	
+	<!--Eissorten-->
+		<fieldset class="auswahl">
+			<legend> Eissorten, je Kugel 1€ </legend>
+			Vanille <input type="number" name="Stepper" step="1" min="0" max="10"
+				value="0" /> Schokolade <input type="number" name="Stepper"
+				step="1" min="0" max="10" value="0" /> Erdbeere <input
+				type="number" name="Stepper" step="1" min="0" max="10" value="0" />
+			Nuss <input type="number" name="Stepper" step="1" min="0" max="10"
+				value="0" /> Zitrone <input type="number" name="Stepper" step="1"
+				min="0" max="10" value="0" /> Himbeere <input type="number"
+				name="Stepper" step="1" min="0" max="10" value="0" />
+
+
+		</fieldset>
+
+		<!--Toppings -->
+		<fieldset class="auswahl">
+			<legend> Toppings, je 0,50€ </legend>
+			<p>
+				<input type="checkbox" name="Checkbox1" value="check1" id="check1" />
+				<label for="check1">Sahne</label>
+			</p>
+			<p>
+				<input type="checkbox" name="Checkbox2" value="check2" id="check2" />
+				<label for="check2">Streusel</label>
+			</p>
+			<p>
+				<input type="checkbox" name="Checkbox3" value="check3" id="check3" />
+				<label for="check3">Schokosoße</label>
+			</p>
+			<p>
+				<input type="checkbox" name="Checkbox4" value="check4" id="check4" />
+				<label for="check4">Karamelsoße</label>
+			</p>
+			<p>
+				<input type="checkbox" name="Checkbox5" value="check5" id="check5" />
+				<label for="check5">Früchte-Mix</label>
+			</p>
+		</fieldset>
+
+		<!--Darreichungsform-->
+
+
+
+		<fieldset class="auswahl">
+			<legend> Darreichungsform </legend>
+			<p>
+			<input type="radio" name="Radiogroup" value="radio1" id="radio1" /> 
+			<label for="radio1">Becher</label>
+				
+			</p>
+			<p>
+			<input type="radio" name="Radiogroup" value="radio1" id="radio1" />
+			<label for="radio1">Waffel</label>
+
+			</p>
+
+		</fieldset>
+
+
+<!--Lieferung-->
+		<fieldset class="auswahl">
+			<legend> Lieferung </legend>
+			<select name="Select" id="select">
+				<option value="option1">Standart 0€</option>
+				<optgroup label=""></optgroup>
+				<option value="option3">Express 3€</option>
+			</select>
+		</fieldset>
+
+
+<!--Adresse-->
+		<fieldset class="auswahl">
+			<legend> Adresse </legend>
+
+			<input type="text" name="Vorname" placeholder="Vorname" required />
+			<input type="text" name="Nachname" placeholder="Nachname" required />
+			<!-- 		<hr/> -->
+			<!-- 		Password -->
+			<!-- 		<input type="password" name="Password" placeholder="type password here"/> -->
+
+			<input type="text" name="Postleitzahl" pattern="[0-9]{5}"
+				placeholder="Postleitzahl" /> <input type="text" name="Ort"
+				placeholder="Ort" required />
+				
+				
+			<hr />
+			Mail <input type="email" name="Mail" placeholder="place @ between" />
+			
+			
+			<hr />
+			Nachricht
+			<textarea name="Area" cols="30" rows="3" placeholder="long text here"></textarea>
+		
+		</fieldset>
+	</div>
+	
+	</main>
+
+</body>
+</html>
