@@ -17,7 +17,7 @@ namespace Form {
     let inputs: HTMLInputElement[] = [];
     let fieldsetTopping: HTMLElement;
     let fieldsetEissorte: HTMLElement;
-
+   
     function init(_event: Event): void {
 
         fieldsetEissorte = document.getElementById("Eissorten");
