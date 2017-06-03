@@ -1,20 +1,22 @@
 var Form;
 (function (Form) {
     window.addEventListener("load", init);
+    //     Arra    
     let eissorten = ["Vanille", "Schokolade", "Himbeere", "Erdbeere", "Nuss",
         "Zitrone"];
     let toppings = ["Sahne", "Schokosauce", "Karamelsauce", "Streusel",
         "Fruechte-Mix"];
     let bestellung = [];
-    //    let step: HTMLInputElement = document.createElement("input");            
-    //    let div: HTMLDivElement = document.createElement("div");    
-    //      
+    //    Preise
+    let eissortenPrice = 1;
+    let toppingPrice = 0.50;
     let inputs = [];
     let fieldsetTopping;
     let fieldsetEissorte;
     function init(_event) {
         fieldsetEissorte = document.getElementById("Eissorten");
         fieldsetTopping = document.getElementById("toppings");
+        //        Eissorten
         for (let i = 0; i < eissorten.length; i++) {
             let input = document.createElement("input");
             let label = document.createElement("label");
@@ -27,6 +29,7 @@ var Form;
             input.className = "checkbox";
             console.log(eissorten[i]);
         }
+        //        Toppings
         for (let i = 0; i < toppings.length; i++) {
             let input = document.createElement("input");
             let label = document.createElement("label");
@@ -38,10 +41,15 @@ var Form;
             input.className = "checkbox";
             console.log(toppings[i]);
         }
-        //        step.addEventListener("click", clickEvent);
+        document.getElementById("button").addEventListener("click", clickEvent);
+        //        priceEissorte();
     }
+    //    function priceEissorte(): void {
+    //        if (inputs > 0) {
+    //            }
+    //    }
     function clickEvent(_event) {
-        console.log("hallo");
+        console.log("Bestellung �berpr�fen");
     }
 })(Form || (Form = {}));
 //namespace Form {

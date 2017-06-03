@@ -2,6 +2,7 @@ namespace Form {
 
     window.addEventListener("load", init);
 
+    //     Arra    
     let eissorten: string[] = ["Vanille", "Schokolade", "Himbeere", "Erdbeere", "Nuss",
         "Zitrone"];
 
@@ -10,20 +11,28 @@ namespace Form {
 
     let bestellung: string[] = [];
 
+    //    Preise
+    let eissortenPrice: number = 1;
+    let toppingPrice: number = 0.50;
 
-    //    let step: HTMLInputElement = document.createElement("input");            
-    //    let div: HTMLDivElement = document.createElement("div");    
-    //      
+
+
+
     let inputs: HTMLInputElement[] = [];
     let fieldsetTopping: HTMLElement;
     let fieldsetEissorte: HTMLElement;
-   
+
+
+
+
     function init(_event: Event): void {
 
         fieldsetEissorte = document.getElementById("Eissorten");
         fieldsetTopping = document.getElementById("toppings");
 
 
+
+        //        Eissorten
         for (let i: number = 0; i < eissorten.length; i++) {
             let input: HTMLInputElement = document.createElement("input");
             let label: HTMLLabelElement = document.createElement("label");
@@ -42,7 +51,7 @@ namespace Form {
 
         }
 
-
+        //        Toppings
         for (let i: number = 0; i < toppings.length; i++) {
 
             let input: HTMLInputElement = document.createElement("input");
@@ -61,12 +70,21 @@ namespace Form {
 
         }
 
-        //        step.addEventListener("click", clickEvent);
+        document.getElementById("button").addEventListener("click", clickEvent);
+
+//        priceEissorte();
+
     }
 
 
+//    function priceEissorte(): void {
+//        if (inputs > 0) {
+//            }
+//    }
+
+
     function clickEvent(_event: MouseEvent): void {
-        console.log("hallo");
+        console.log("Bestellung überprüfen");
     }
 
 }
