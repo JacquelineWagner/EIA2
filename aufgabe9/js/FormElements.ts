@@ -1,3 +1,14 @@
+//  
+//Aufgabe: 9
+//Name: Jacqueline Wagner
+//Matrikel: 254786
+//Datum: 04.06.2017
+//    
+//
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
+//Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jacqueline und Selina erstellt*/
+
+
 namespace Form {
 
     window.addEventListener("load", init);
@@ -18,7 +29,8 @@ namespace Form {
 
 
 
-    let inputs: HTMLInputElement[] = [];
+    let inputsEissorten: HTMLInputElement[] = [];
+    let inputsToppings: HTMLInputElement[] = [];
     let fieldsetTopping: HTMLElement;
     let fieldsetEissorte: HTMLElement;
 
@@ -27,8 +39,23 @@ namespace Form {
 
     function init(_event: Event): void {
 
+        let fieldsets: NodeListOf<HTMLFieldSetElement> = document.getElementsByTagName("fieldset");
+        let button: HTMLElement = document.getElementById("button");
+
+
+        for (let i: number = 0; i < fieldsets.length; i++) {
+            let fieldset: HTMLFieldSetElement = fieldsets[i];
+            fieldset.addEventListener("change", Bestelluebersicht);
+            fieldset.addEventListener("change", showSum);
+            button.addEventListener("click", clickButton);
+        }
+
         fieldsetEissorte = document.getElementById("Eissorten");
         fieldsetTopping = document.getElementById("toppings");
+
+
+
+
 
 
 
@@ -40,12 +67,13 @@ namespace Form {
 
             input.setAttribute("type", "number");
             input.setAttribute("value", "0");
+            input.min = "0";
             label.innerText = eissorten[i];
             label.appendChild(input);
-            inputs.push(input);
+            inputsEissorten.push(input);
             fieldsetEissorte.appendChild(label);
 
-            input.className = "checkbox";
+            input.className = "stepper";
 
             console.log(eissorten[i]);
 
@@ -61,7 +89,7 @@ namespace Form {
             input.setAttribute("type", "checkbox");
             label.innerText = toppings[i];
             label.appendChild(input);
-            inputs.push(input);
+            inputsToppings.push(input);
             fieldsetTopping.appendChild(label);
 
             input.className = "checkbox";
@@ -69,22 +97,67 @@ namespace Form {
             console.log(toppings[i]);
 
         }
-
-        document.getElementById("button").addEventListener("click", clickEvent);
-
-//        priceEissorte();
-
     }
 
 
-//    function priceEissorte(): void {
-//        if (inputs > 0) {
-//            }
-//    }
+
+    function Bestelluebersicht(_event: Event): void {
+
+        console.log(_event);
+        let bestellung: HTMLElement = document.getElementById("bestellbox");
+        bestellung.innerText = "";
+
+        for (let i: number = 0; i < inputsEissorten.length; i++) {
+            if (parseInt(inputsEissorten[i].value) > 0) {
+                bestellung.innerText += eissorten[i] + " " + ": " + (parseInt(inputsEissorten[i].value) * 1) + "\n";
+            }
+        }
+
+        for (let i: number = 0; i < inputsToppings.length; i++) {
+            if (inputsToppings[i].checked) {
+                bestellung.innerText += toppings[i] + " " + "\n";
+            }
+        }
+    }
 
 
-    function clickEvent(_event: MouseEvent): void {
-        console.log("Bestellung überprüfen");
+
+    function showSum(_event: Event): void {
+        let summe: number = 0;
+
+        for (let i: number = 0; i < inputsEissorten.length; i++) {
+            summe += parseInt(inputsEissorten[i].value);
+        }
+
+        for (let i: number = 0; i < inputsToppings.length; i++) {
+            if (inputsToppings[i].checked)
+                summe += 0.5;
+        }
+        console.log(summe);
+
+        document.getElementById("gesamtsumme").innerText = summe.toString() + " â‚¬";
+
+    }
+    function clickButton(_event: Event): void {
+
+        let proof: HTMLInputElement[] = [];
+        for (let i: number = 0; i < 5; i++) {
+            let inputs: HTMLInputElement = <HTMLInputElement>document.getElementsByClassName("proof")[i];
+            proof.push(inputs);
+            console.log(inputs);
+        }
+
+        for (let i: number = 0; i < proof.length; i++) {
+            console.log(proof.length);
+            if (proof[i].validity.valid == false) {
+                alert("Die Eingaben sind nicht korrekt. Bitte erneut ueberpruefen!");
+                location.reload();
+            }
+            else {
+                alert("Vielen Dank fuer Ihre Bestellung! Bis zum naechsten Mal");
+                location.reload();
+            }
+        }
     }
 
 }
@@ -101,40 +174,3 @@ namespace Form {
 
 
 
-//namespace Form {
-//    window.addEventListener("load", init);
-//
-//    function init(_event: Event): void {
-//        console.log("Init");
-//        let fieldsets: NodeListOf<HTMLFieldSetElement> = document.getElementsByTagName("fieldset");
-//
-//        for (let i: number = 0; i < fieldsets.length; i++) {
-//            let fieldset: HTMLFieldSetElement = fieldsets[i];
-//            fieldset.addEventListener("change", handleChange);
-//        }
-//    }
-//
-//    function handleChange(_event: Event): void {
-//        //console.log(_event);
-//        //*/
-//        let target: HTMLInputElement = <HTMLInputElement>_event.target;
-//        console.log("Changed " + target.name + " to " + target.value);
-//        //*/
-//        //*/ note: this == _event.currentTarget in an event-handler
-//        if (this.id == "checkbox")
-//            console.log("Changed " + target.name + " to " + target.checked);
-//        //*/
-//        //*/
-//        if (target.name == "Slider") {
-//            let progress: HTMLProgressElement = <HTMLProgressElement>document.getElementsByTagName("progress")[0];
-//            progress.value = parseFloat(target.value);
-//        }
-//        //*/
-//        //*/
-//        if (target.name == "Stepper") {
-//            let progress: HTMLProgressElement = <HTMLProgressElement>document.getElementsByTagName("meter")[0];
-//            progress.value = parseFloat(target.value);
-//        }
-//        //*/
-//    }
-//}

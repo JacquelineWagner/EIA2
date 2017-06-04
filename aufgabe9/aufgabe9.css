@@ -8,14 +8,14 @@
 	background: #FAFAFA;
 }
 
-.Bestellung {
+#Bestellung {
 	margin-right: 10%;
 	width: 18%;
-/* 	float: right; */
+
 	position: fixed;
 	
 	margin-left: 60%;
-/* 	margin-top: 2em; */
+
 }
 
 body {
@@ -46,18 +46,10 @@ main  {
 
 .auswahl {
 	margin-bottom: 2em;
-/* 	margin-top: -10em; */
-/* 	margin-top: 10em; */
-	/* 	position: relative; */
-	/* float: left; */
-	/* margin-right: 2em; */
+
 }
 
-/* aside { */
-/* 	margin-top: 10em; float : right; */
-/* 	width: 30%; */
-/* 	float: right; */
-/* } */
+
 
 input[type="radio"], input[type="checkbox"], label {
 	display: inline;
@@ -109,12 +101,11 @@ legend {
 	color: #3ED0F5;
 }
    
-
-/* #bestellung { */
-/* 	float: right; */
-/* 	position: fixed; */
-/* /* 	margin-top: 30% */ */
-/* } */
+#gesamtsumme {
+	margin-top: -2.3em;
+	
+	margin-left: 15em;
+}
 
 /*Smartphone*/
 @media screen and (max-width: 570px) {
@@ -122,19 +113,30 @@ legend {
 -webkit-column-count:1;
 -moz-column-count:1;
 
-html {}
+html {
+	
+}
 
 
 aside {
-margin-right: 15em;
+		margin-left: 40%;
+	width: 18%;
+
 	position: fixed;
-	padding-left: 5em;
+	
+	margin-left: 60%;
+
 }
 
 
 main {
-	padding-top: 7em;
-	margin-left: -10em;
+	padding-top: 20em;
+	margin-left: 5em;
 }
 
+
+#Bestellung {
+	margin-top: -12em;
+	margin-left: 23%;
+}
 

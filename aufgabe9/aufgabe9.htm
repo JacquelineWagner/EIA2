@@ -1,3 +1,15 @@
+<!--  
+Aufgabe: 9
+Name: Jacqueline Wagner
+Matrikel: 254786
+Datum: 04.06.2017
+    
+
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
+Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jacqueline und Selina erstellt*/
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,11 +35,12 @@
 
 	<main>
 
-	<fieldset class="Bestellung">
+	<fieldset id="Bestellung">
 		<legend> Bestellübersicht </legend>
+		<p id="bestellbox"> </p>
 		<hr>
-		<p>aktueller Preis</p> 
-		<p id="gesamtsumme"> XX</p>
+		<p>Gesamtpreis:</p> 
+		<p id="gesamtsumme"> </p>
 		<button id="button">Bestellung überprüfen</button>
 	</fieldset>
 
@@ -77,24 +90,22 @@
 	<fieldset class="auswahl">
 		<legend> Adresse </legend>
 
-		<input type="text" name="Vorname" placeholder="Vorname" required /> <input
-			type="text" name="Nachname" placeholder="Nachname" required />
+		<input type="text" class="proof" name="Vorname" placeholder="Vorname" required /> 
+		<input type="text" class="proof" name="Nachname" placeholder="Nachname" required />
 		<!-- 		<hr/> -->
-		<!-- 		Password -->
-		<!-- 		<input type="password" name="Password" placeholder="type password here"/> -->
-
-		<input type="text" name="Postleitzahl" pattern="[0-9]{5}"
-			placeholder="Postleitzahl" /> <input type="text" name="Ort"
-			placeholder="Ort" required />
+		
+		<input type="text" class="proof" name="Postleitzahl" pattern="[0-9]{5}"
+			placeholder="Postleitzahl" /> 
+		<input type="text" class="proof" name="Ort" placeholder="Ort" required />
 
 
 		<hr />
-		Mail <input type="email" name="Mail" placeholder="place @ between" />
+		Mail <input type="email" class="proof" name="Mail" placeholder="place @ between" />
 
 
 		<hr />
 		Nachricht
-		<textarea name="Area" cols="30" rows="3" placeholder="long text here"></textarea>
+		<textarea name="Area" class="proof" cols="30" rows="3" placeholder="long text here"></textarea>
 
 	</fieldset>
 	</main>
