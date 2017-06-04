@@ -6,7 +6,7 @@
 //    
 //
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
-//Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jacqueline und Selina erstellt*/
+//Er wurde nicht kopiert und auch nicht diktiert. Teile der Aufgabe zusammen mit Jana und Selina erstellt*/
 var Form;
 (function (Form) {
     window.addEventListener("load", init);
