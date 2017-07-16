@@ -6,6 +6,23 @@ var a_Canvas;
             this.x = _x;
             this.y = _y;
         }
+        drawRaube(_x, _y) {
+            a_Canvas.crc2.beginPath();
+            a_Canvas.crc2.moveTo(_x, _y);
+            a_Canvas.crc2.strokeStyle = "green";
+            a_Canvas.crc2.fillStyle = "green";
+            a_Canvas.crc2.arc(_x, _y, 2, 0, Math.PI * 2, true);
+            a_Canvas.crc2.arc(_x + 4, _y - 2.5, 2, 0, Math.PI * 2, true);
+            a_Canvas.crc2.arc(_x + 8, _y, 2, 0, Math.PI * 2, true);
+            a_Canvas.crc2.arc(_x + 10, _y - 2.5, 2, 0, Math.PI * 2, true);
+            a_Canvas.crc2.moveTo(_x + 9, _y - 3);
+            a_Canvas.crc2.lineTo(_x + 10, _y - 7);
+            a_Canvas.crc2.moveTo(_x + 12, _y - 3);
+            a_Canvas.crc2.lineTo(_x + 13, _y - 7);
+            a_Canvas.crc2.closePath();
+            a_Canvas.crc2.fill();
+            a_Canvas.crc2.stroke();
+        }
         drawAmeisenhaufen(_x, _y) {
             a_Canvas.crc2.beginPath();
             a_Canvas.crc2.moveTo(_x, _y);

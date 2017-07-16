@@ -1,5 +1,5 @@
 //
-//Aufgabe: 8
+//Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
 //Matrikel: 254786
 //Datum: 20
@@ -10,15 +10,14 @@
 //Er wurde nicht kopiert und auch nicht diktiert.
 
 
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
 
 namespace a_Canvas {
     export var crc2: CanvasRenderingContext2D;
     var canvas: HTMLCanvasElement;
 
-    
-  
+
+
 
 
     export let beeData: Bienen[] = [];
@@ -54,7 +53,7 @@ namespace a_Canvas {
 
 
 
-            
+
 
 
             s.drawlake(30, 305);
@@ -87,6 +86,8 @@ namespace a_Canvas {
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
+            s.drawRaube(180, 220);
+
 
             s.drawKuchen(440, 236);
 
@@ -113,7 +114,7 @@ namespace a_Canvas {
         //            }
         //        }
 
-       
+
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
 
 
@@ -131,8 +132,8 @@ namespace a_Canvas {
 
         for (let i: number = 0; i < 5; i++) {
 
-//            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-//            beeData.push(r);
+            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+            //            beeData.push(r);
 
             var b: DummeBienen = new DummeBienen(225, 360);
             beeData.push(b);

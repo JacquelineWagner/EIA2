@@ -1,5 +1,5 @@
 //
-//Aufgabe: 8
+//Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
 //Matrikel: 254786
 //Datum: 20
@@ -7,7 +7,6 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 var a_Canvas;
 (function (a_Canvas) {
     var canvas;
@@ -63,6 +62,7 @@ var a_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
+            s.drawRaube(180, 220);
             s.drawKuchen(440, 236);
             f.drawfisch(120, 320);
         }

@@ -10,7 +10,26 @@ namespace a_Canvas {
             this.y = _y;
 
         }
-        
+
+        drawRaube(_x: number, _y: number): void {
+            crc2.beginPath();
+            crc2.moveTo(_x, _y);
+            crc2.strokeStyle = "green";
+            crc2.fillStyle = "green";
+            crc2.arc(_x, _y, 2, 0, Math.PI * 2, true);
+            crc2.arc(_x + 4, _y - 2.5, 2, 0, Math.PI * 2, true);
+            crc2.arc(_x + 8, _y, 2, 0, Math.PI * 2, true);
+            crc2.arc(_x + 10, _y - 2.5, 2, 0, Math.PI * 2, true);
+            crc2.moveTo(_x + 9, _y - 3);
+            crc2.lineTo(_x + 10, _y - 7);
+            crc2.moveTo(_x + 12, _y - 3);
+            crc2.lineTo(_x + 13, _y - 7);
+
+            crc2.closePath();
+            crc2.fill();
+            crc2.stroke();
+
+        }
 
         drawAmeisenhaufen(_x: number, _y: number): void {
 
@@ -298,5 +317,5 @@ namespace a_Canvas {
 
 
 
-}
+    }
 }
