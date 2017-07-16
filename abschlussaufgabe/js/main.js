@@ -32,6 +32,7 @@ var a07_Canvas;
         a07_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
         for (var i = 0; i < 2; i++) {
             let s = new a07_Canvas.Hintergrund2(0, 0);
+            let f = new a07_Canvas.Fisch(0, 0);
             s.drawlake(30, 305);
             s.drawsonne(580, 30);
             s.drawwolke(80, 50);
@@ -62,6 +63,7 @@ var a07_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
+            f.drawfisch(180, 320);
         }
         console.log(flower);
         imgData = a07_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
@@ -76,10 +78,12 @@ var a07_Canvas;
     //Funktionen 
     function animate() {
         a07_Canvas.crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < flower.length; i++) {
-            let s = flower[i];
-            s.update();
-        }
+        //        for (let i: number = 0; i < flower.length; i++) {
+        //            let s: Fisch = flower[i];
+        //            s.update();
+        //
+        //
+        //        }
         for (let i = 0; i < beeData.length; i++) {
             beeData[i].update();
         }

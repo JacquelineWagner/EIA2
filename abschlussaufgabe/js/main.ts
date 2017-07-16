@@ -44,10 +44,12 @@ namespace a07_Canvas {
 
         for (var i: number = 0; i < 2; i++) {
             let s: Hintergrund2 = new Hintergrund2(0, 0);
+  let f: Fisch = new Fisch(0, 0);
 
 
 
-
+                      
+            
             s.drawlake(30, 305);
             s.drawsonne(580, 30);
             s.drawwolke(80, 50);
@@ -78,9 +80,13 @@ namespace a07_Canvas {
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
+            
+            
+            f.drawfisch(180, 320);
+            
+            
+            
         }
-
-
 
         console.log(flower);
 
@@ -105,12 +111,12 @@ namespace a07_Canvas {
     function animate(): void {
         crc2.putImageData(imgData, 0, 0);
 
-        for (let i: number = 0; i < flower.length; i++) {
-            let s: Flower2 = flower[i];
-            s.update();
-
-
-        }
+//        for (let i: number = 0; i < flower.length; i++) {
+//            let s: Fisch = flower[i];
+//            s.update();
+//
+//
+//        }
 
 
 
