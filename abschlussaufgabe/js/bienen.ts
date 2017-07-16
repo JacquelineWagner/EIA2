@@ -12,7 +12,7 @@
 
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
-namespace a07_Canvas {
+namespace abschluss_Canvas {
     export class Bee {
         x: number;
         y: number;

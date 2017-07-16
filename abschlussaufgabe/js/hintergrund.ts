@@ -1,4 +1,4 @@
-namespace a07_Canvas {
+namespace abschluss_Canvas {
     export class Hintergrund2 {
         x: number;
         y: number;
@@ -75,6 +75,22 @@ namespace a07_Canvas {
 
         }
 
+        drawKuchen(_x: number, _y: number): void {
+
+            crc2.beginPath();
+            crc2.moveTo(_x, _y - 10 / 2);
+            crc2.bezierCurveTo(_x + 10, _y - 10 / 2, _x + 10 / 2, _y + 10 / 2, _x, _y + 10 / 2);
+            crc2.bezierCurveTo(_x - 10, _y + 10 / 2, _x - 10 / 2, _y - 10 / 2, _x, _y - 10 / 2);
+            crc2.fillStyle = "#362217";
+            crc2.fill();
+            crc2.closePath();
+
+
+
+
+
+        }
+
         drawKorb(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y);
@@ -106,9 +122,9 @@ namespace a07_Canvas {
 
 
         }
-        
+
         blume(_x: number, _y: number): void {
-          
+
 
             //        Bl�ten
             crc2.beginPath();
@@ -136,8 +152,8 @@ namespace a07_Canvas {
             crc2.fill();
             crc2.stroke();
         }
-        
-        
+
+
         drawTeller(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y - 20 / 2);

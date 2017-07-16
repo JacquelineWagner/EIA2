@@ -8,10 +8,10 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-var a07_Canvas;
-(function (a07_Canvas) {
+var abschluss_Canvas;
+(function (abschluss_Canvas) {
     var canvas;
-    let flower = [];
+    //    let flower: Flower[] = [];
     let beeData = [];
     let n = 10;
     let imgData;
@@ -20,19 +20,19 @@ var a07_Canvas;
         let x;
         let y;
         canvas = document.getElementsByTagName("canvas")[0];
-        a07_Canvas.crc2 = canvas.getContext("2d");
+        abschluss_Canvas.crc2 = canvas.getContext("2d");
         //Wiese
-        a07_Canvas.crc2.fillStyle = "#8ACA36";
-        a07_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
+        abschluss_Canvas.crc2.fillStyle = "#8ACA36";
+        abschluss_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
         //Himmel
-        var ombre = a07_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
+        var ombre = abschluss_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
         ombre.addColorStop(0, "#A9D0F5");
         ombre.addColorStop(1, "white");
-        a07_Canvas.crc2.fillStyle = ombre;
-        a07_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
+        abschluss_Canvas.crc2.fillStyle = ombre;
+        abschluss_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
         for (var i = 0; i < 2; i++) {
-            let s = new a07_Canvas.Hintergrund2(0, 0);
-            let f = new a07_Canvas.Fisch(0, 0);
+            let s = new abschluss_Canvas.Hintergrund2(0, 0);
+            let f = new abschluss_Canvas.Fisch(0, 0);
             s.drawlake(30, 305);
             s.drawsonne(580, 30);
             s.drawwolke(80, 50);
@@ -63,13 +63,14 @@ var a07_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
-            f.drawfisch(180, 320);
+            //            s.drawKuchen(440, 236);
+            f.drawfisch(120, 320);
         }
-        console.log(flower);
-        imgData = a07_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
+        //        console.log(flower);
+        imgData = abschluss_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //        
         for (let i = 0; i < 10; i++) {
-            beeData.push(new a07_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+            beeData.push(new abschluss_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
         }
         window.setTimeout(animate, 30);
         canvas.addEventListener("click", addBee);
@@ -77,7 +78,7 @@ var a07_Canvas;
     }
     //Funktionen 
     function animate() {
-        a07_Canvas.crc2.putImageData(imgData, 0, 0);
+        abschluss_Canvas.crc2.putImageData(imgData, 0, 0);
         //        for (let i: number = 0; i < flower.length; i++) {
         //            let s: Fisch = flower[i];
         //            s.update();
@@ -90,8 +91,8 @@ var a07_Canvas;
         window.setTimeout(animate, 20);
     }
     function addBee() {
-        beeData.push(new a07_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        beeData.push(new abschluss_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
         n++;
     }
-})(a07_Canvas || (a07_Canvas = {}));
+})(abschluss_Canvas || (abschluss_Canvas = {}));
 //# sourceMappingURL=main.js.map

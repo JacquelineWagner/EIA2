@@ -8,8 +8,8 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-var a07_Canvas;
-(function (a07_Canvas) {
+var abschluss_Canvas;
+(function (abschluss_Canvas) {
     class Bee {
         constructor(_x, _y, _size, _color) {
             console.log("Hey, I'm Bob!");
@@ -24,47 +24,47 @@ var a07_Canvas;
         }
         draw() {
             //Fl�gel
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x + 3, this.y - this.size / 2 - 3 - 3 / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3, this.y - 3 + 3 / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x + 3 - 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3 - 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3, this.y - 3 - 5 / 2);
-            a07_Canvas.crc2.fillStyle = "rgba(255,255,255, 0.8)";
-            a07_Canvas.crc2.fill();
-            a07_Canvas.crc2.closePath();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x + 3, this.y - this.size / 2 - 3 - 3 / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3, this.y - 3 + 3 / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x + 3 - 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3 - 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3, this.y - 3 - 5 / 2);
+            abschluss_Canvas.crc2.fillStyle = "rgba(255,255,255, 0.8)";
+            abschluss_Canvas.crc2.fill();
+            abschluss_Canvas.crc2.closePath();
             //K�rper der Biene
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x, this.y - this.size / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 2, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y + this.size / 2, this.x - this.size / 2, this.y - this.size / 2, this.x, this.y - this.size / 2);
-            a07_Canvas.crc2.fillStyle = this.color;
-            a07_Canvas.crc2.fill();
-            a07_Canvas.crc2.closePath();
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x, this.y - this.size / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 4, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y + this.size / 4, this.x - this.size / 2, this.y - this.size / 2, this.x, this.y - this.size / 2);
-            a07_Canvas.crc2.strokeStyle = "black";
-            a07_Canvas.crc2.stroke();
-            a07_Canvas.crc2.closePath();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x, this.y - this.size / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 2, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y + this.size / 2, this.x - this.size / 2, this.y - this.size / 2, this.x, this.y - this.size / 2);
+            abschluss_Canvas.crc2.fillStyle = this.color;
+            abschluss_Canvas.crc2.fill();
+            abschluss_Canvas.crc2.closePath();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x, this.y - this.size / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 4, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y + this.size / 4, this.x - this.size / 2, this.y - this.size / 2, this.x, this.y - this.size / 2);
+            abschluss_Canvas.crc2.strokeStyle = "black";
+            abschluss_Canvas.crc2.stroke();
+            abschluss_Canvas.crc2.closePath();
             //Kopf
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x - 1, this.y + this.size / 2);
-            a07_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y, this.x - 5, this.y - this.size / 2, this.x - 1, this.y - this.size / 2);
-            a07_Canvas.crc2.fillStyle = "black";
-            a07_Canvas.crc2.fill();
-            a07_Canvas.crc2.closePath();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x - 1, this.y + this.size / 2);
+            abschluss_Canvas.crc2.bezierCurveTo(this.x - this.size, this.y, this.x - 5, this.y - this.size / 2, this.x - 1, this.y - this.size / 2);
+            abschluss_Canvas.crc2.fillStyle = "black";
+            abschluss_Canvas.crc2.fill();
+            abschluss_Canvas.crc2.closePath();
             //Streifen
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x + 0.25, this.y + this.size / 2);
-            a07_Canvas.crc2.lineTo(this.x, this.y - this.size / 2);
-            a07_Canvas.crc2.strokeStyle = "black";
-            a07_Canvas.crc2.stroke();
-            a07_Canvas.crc2.closePath();
-            a07_Canvas.crc2.beginPath();
-            a07_Canvas.crc2.moveTo(this.x + 2.25, this.y + this.size / 2);
-            a07_Canvas.crc2.lineTo(this.x + 2.25, this.y - this.size / 2);
-            a07_Canvas.crc2.strokeStyle = "black";
-            a07_Canvas.crc2.stroke();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x + 0.25, this.y + this.size / 2);
+            abschluss_Canvas.crc2.lineTo(this.x, this.y - this.size / 2);
+            abschluss_Canvas.crc2.strokeStyle = "black";
+            abschluss_Canvas.crc2.stroke();
+            abschluss_Canvas.crc2.closePath();
+            abschluss_Canvas.crc2.beginPath();
+            abschluss_Canvas.crc2.moveTo(this.x + 2.25, this.y + this.size / 2);
+            abschluss_Canvas.crc2.lineTo(this.x + 2.25, this.y - this.size / 2);
+            abschluss_Canvas.crc2.strokeStyle = "black";
+            abschluss_Canvas.crc2.stroke();
         }
         move() {
             this.x += Math.random() * 5 - 3;
@@ -88,6 +88,6 @@ var a07_Canvas;
             this.color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
         }
     }
-    a07_Canvas.Bee = Bee;
-})(a07_Canvas || (a07_Canvas = {}));
+    abschluss_Canvas.Bee = Bee;
+})(abschluss_Canvas || (abschluss_Canvas = {}));
 //# sourceMappingURL=bienen.js.map
