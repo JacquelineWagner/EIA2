@@ -66,30 +66,7 @@ var a_Canvas;
             s.drawKuchen(440, 236);
             f.drawfisch(120, 320);
         }
-        //        //Flowers
-        //        for (let i: number = 0; i < n; i++) {
-        //            y = Math.floor(Math.random() * ((canvas.height / 2 + canvas.height / 5) - (canvas.height / 2 + 20) + 1)) + canvas.height / 2 + 20;
-        //
-        //            switch (Math.floor((Math.random() * 4) + 0)) {
-        //                case 0:
-        //                    new Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "blume");
-        //                    break;
-        //                case 1:
-        //                    new Blumen(Math.floor(Math.random() * (canvas.width - 0 + 1)), y, "tulpe");
-        //                    break;
-        //                default:
-        //                    break;
-        //            }
-        //        }
         imgData = a_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "tulpe"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume"));
-        //        flower.push(new Blumen((Math.random() * (240 + 20)) + 0, (Math.random() * (240 - 130)) + 130, "blume3"));
-        //        flower.push(new Blumen((Math.random() * (240  0random() * (240 - 130)) + 130, "blume3"));
         for (let i = 0; i < 5; i++) {
             //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
             //            beeData.push(r);
