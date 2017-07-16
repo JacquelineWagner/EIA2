@@ -61,8 +61,8 @@ namespace abschluss_Canvas {
 
             crc2.beginPath();
             crc2.moveTo(_x, _y);
-            crc2.strokeStyle = "#BF2D40";
-            crc2.fillStyle = "#BF2D40";
+            crc2.strokeStyle = "#F8ADFB";
+            crc2.fillStyle = "#F8ADFB";
             crc2.lineTo(_x - 20, _y + 140);
 
             crc2.lineTo(_x + 150, _y + 140);
@@ -112,8 +112,8 @@ namespace abschluss_Canvas {
             crc2.stroke();
             crc2.beginPath();
             crc2.moveTo(_x + 22, _y - 22);
-            crc2.strokeStyle = "#BF2D40";
-            crc2.fillStyle = "#BF2D40";
+            crc2.strokeStyle = "#F8ADFB";
+            crc2.fillStyle = "#F8ADFB";
             crc2.arc(_x + 22, _y - 22, 8, 0, Math.PI, true);
             crc2.closePath();
             crc2.fill();
@@ -159,7 +159,7 @@ namespace abschluss_Canvas {
             crc2.moveTo(_x, _y - 20 / 2);
             crc2.bezierCurveTo(_x + 20, _y - 20 / 2, _x + 20 / 2, _y + 20 / 2, _x, _y + 20 / 2);
             crc2.bezierCurveTo(_x - 20, _y + 20 / 2, _x - 20 / 2, _y - 20 / 2, _x, _y - 20 / 2);
-            crc2.fillStyle = "#C9C9C9";
+            crc2.fillStyle = "#94959A";
             crc2.fill();
             crc2.closePath();
 

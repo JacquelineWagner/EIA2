@@ -13,7 +13,7 @@ var abschluss_Canvas;
     var canvas;
     //    let flower: Flower[] = [];
     let beeData = [];
-    let n = 10;
+    let n = 3;
     let imgData;
     window.addEventListener("load", init);
     function init(_event) {
@@ -63,14 +63,14 @@ var abschluss_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
-            //            s.drawKuchen(440, 236);
+            s.drawKuchen(440, 236);
             f.drawfisch(120, 320);
         }
         //        console.log(flower);
         imgData = abschluss_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //        
-        for (let i = 0; i < 10; i++) {
-            beeData.push(new abschluss_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        for (let i = 0; i < n; i++) {
+            beeData.push(new abschluss_Canvas.Bee2(225, 360));
         }
         window.setTimeout(animate, 30);
         canvas.addEventListener("click", addBee);
@@ -88,10 +88,10 @@ var abschluss_Canvas;
         for (let i = 0; i < beeData.length; i++) {
             beeData[i].update();
         }
-        window.setTimeout(animate, 20);
+        window.setTimeout(animate, 50);
     }
     function addBee() {
-        beeData.push(new abschluss_Canvas.Bee(310, 150, Math.random() * 10 + 5, "hsl(" + Math.random() * 180 + ", 80%, 50%)"));
+        beeData.push(new abschluss_Canvas.Bee2(225, 360));
         n++;
     }
 })(abschluss_Canvas || (abschluss_Canvas = {}));

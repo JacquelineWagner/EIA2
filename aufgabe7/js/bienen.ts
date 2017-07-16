@@ -82,12 +82,12 @@ namespace a07_Canvas {
             this.y += Math.random() * 4 - 2;
 
             if (this.x < 0) {
-                this.x = 400;
+                this.x = 620;
             }
             if (this.y < 0) {
-                this.y = 250;
+                this.y = 400;
             }
-            if (this.y > 300) {
+            if (this.y > 600) {
                 this.y = 0;
             }
         }
