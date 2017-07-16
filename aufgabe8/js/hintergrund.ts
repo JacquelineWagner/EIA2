@@ -281,6 +281,8 @@ namespace a08_Canvas {
         crc2.moveTo(_x - 15, _y + 15);
         crc2.lineTo(_x - 30, _y + 25);
 
+         
+         
 
         crc2.closePath();
         crc2.fill();

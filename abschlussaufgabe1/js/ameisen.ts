@@ -12,21 +12,21 @@
 
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
-namespace a08_Canvas {
+namespace a_Canvas {
     export class Bienen {
         x: number;
         y: number;
-        size: number;
-        color: string;
-
-        constructor(_x: number, _y: number, _size: number, _color: string) {
+        
+        
+        
+    
+        constructor(_x: number, _y: number) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
-            this.setRandomStyle();
+           
             this.x = _x;
             this.y = _y;
-            this.size = _size;
-            this.color = _color;
+        
         }
 
         update(): void {
@@ -50,8 +50,6 @@ namespace a08_Canvas {
 
         }
 
-        
-        
        
     }
 

@@ -72,6 +72,8 @@ namespace a08_Canvas {
             }
         }
 
+        
+        
         setRandomPosition(): void {
             this.x = Math.random() * 200;
             this.y = Math.random() * 200;

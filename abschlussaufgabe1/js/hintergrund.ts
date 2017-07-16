@@ -1,4 +1,4 @@
-namespace abschluss_Canvas {
+namespace a_Canvas {
     export class Hintergrund2 {
         x: number;
         y: number;
@@ -10,6 +10,7 @@ namespace abschluss_Canvas {
             this.y = _y;
 
         }
+        
 
         drawAmeisenhaufen(_x: number, _y: number): void {
 
