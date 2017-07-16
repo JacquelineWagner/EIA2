@@ -114,4 +114,4 @@ var abschluss_Canvas;
     }
     abschluss_Canvas.Bee2 = Bee2;
 })(abschluss_Canvas || (abschluss_Canvas = {}));
-//# sourceMappingURL=bienen.js.map
+//# sourceMappingURL=dummeAmeisen.js.map

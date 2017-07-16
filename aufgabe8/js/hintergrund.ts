@@ -130,7 +130,7 @@ namespace a08_Canvas {
 
      drawhaus(_x: number, _y: number): void {
 
-        //        Gebäude
+        //        GebÃ¤ude
         crc2.beginPath();
         crc2.moveTo(_x, _y);
         crc2.strokeStyle = "#D8C8AE";
@@ -169,7 +169,7 @@ namespace a08_Canvas {
 
 
 
-        //        Tür
+        //        TÃ¼r
         crc2.beginPath();
         crc2.moveTo(_x + 5, _y);
         crc2.strokeStyle = "#3F130A";

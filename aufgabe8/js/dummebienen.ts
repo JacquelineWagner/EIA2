@@ -13,7 +13,7 @@ namespace a08_Canvas {
 //        }
 
         draw(): void {
-            //Flügel
+            //FlÃ¼gel
             crc2.beginPath();
             crc2.moveTo(this.x + 3, this.y - this.size / 2 - 3 - 3 / 2);
             crc2.bezierCurveTo(this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3, this.y - 3 + 3 / 2);
@@ -21,7 +21,7 @@ namespace a08_Canvas {
             crc2.fillStyle = "rgba(255,255,255, 0.8)";
             crc2.fill();
             crc2.closePath();
-            //Körper der Biene
+            //KÃ¶rper der Biene
             crc2.beginPath();
             crc2.moveTo(this.x, this.y - this.size / 2);
             crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 2, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);

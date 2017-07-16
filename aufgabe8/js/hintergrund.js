@@ -105,7 +105,7 @@ var a08_Canvas;
             a08_Canvas.crc2.stroke();
         }
         drawhaus(_x, _y) {
-            //        Geb�ude
+            //        Gebäude
             a08_Canvas.crc2.beginPath();
             a08_Canvas.crc2.moveTo(_x, _y);
             a08_Canvas.crc2.strokeStyle = "#D8C8AE";
@@ -137,7 +137,7 @@ var a08_Canvas;
             a08_Canvas.crc2.closePath();
             a08_Canvas.crc2.fill();
             a08_Canvas.crc2.stroke();
-            //        T�r
+            //        Tür
             a08_Canvas.crc2.beginPath();
             a08_Canvas.crc2.moveTo(_x + 5, _y);
             a08_Canvas.crc2.strokeStyle = "#3F130A";
