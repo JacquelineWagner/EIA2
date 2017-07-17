@@ -241,6 +241,46 @@ var a_Canvas;
             a_Canvas.crc2.fill();
             a_Canvas.crc2.stroke();
         }
+        drawsBubble(_x, _y) {
+            var r = _x + 310;
+            var b = _y + 20;
+            a_Canvas.crc2.beginPath();
+            a_Canvas.crc2.strokeStyle = "#FFFFFF";
+            a_Canvas.crc2.fillStyle = "#FFFFFF";
+            a_Canvas.crc2.lineTo(_x + 3, _y);
+            a_Canvas.crc2.lineTo(r - 5, _y);
+            a_Canvas.crc2.quadraticCurveTo(r, _y, r, _y + 5);
+            a_Canvas.crc2.lineTo(r, _y + 20 - 5);
+            a_Canvas.crc2.quadraticCurveTo(r, b, r - 5, b);
+            a_Canvas.crc2.lineTo(_x + 5, b);
+            a_Canvas.crc2.quadraticCurveTo(_x, b, _x, b - 5);
+            a_Canvas.crc2.lineTo(_x, _y + 5);
+            a_Canvas.crc2.quadraticCurveTo(_x, _y, _x + 5, _y);
+            //            crc2.fillText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?",10,50);
+            a_Canvas.crc2.fill();
+            a_Canvas.crc2.stroke();
+            a_Canvas.crc2.closePath();
+            a_Canvas.crc2.beginPath();
+            a_Canvas.crc2.strokeStyle = "#FFFFFF";
+            a_Canvas.crc2.fillStyle = "#FFFFFF";
+            a_Canvas.crc2.moveTo(_x + 10, _y);
+            a_Canvas.crc2.lineTo(_x + 7, _y + 28);
+            a_Canvas.crc2.lineTo(_x + 28, _y);
+            a_Canvas.crc2.lineTo(_x + 10, _y);
+            a_Canvas.crc2.fill();
+            a_Canvas.crc2.stroke();
+            a_Canvas.crc2.closePath();
+            a_Canvas.crc2.beginPath();
+            a_Canvas.crc2.strokeStyle = "#000000";
+            a_Canvas.crc2.fillStyle = "#000000";
+            //             crc2.moveTo(_x + 100, _y + 40);
+            a_Canvas.crc2.textAlign = "start";
+            //            crc2.measureText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?");
+            a_Canvas.crc2.fillText("Klick mal auf den Ameisenhaufen, die Fische oder auf die Vögel!", 190, 182);
+            a_Canvas.crc2.fill();
+            a_Canvas.crc2.stroke();
+            a_Canvas.crc2.closePath();
+        }
     }
     a_Canvas.Hintergrund2 = Hintergrund2;
 })(a_Canvas || (a_Canvas = {}));

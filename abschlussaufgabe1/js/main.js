@@ -62,12 +62,13 @@ var a_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
-            s.drawRaube(180, 220);
+            s.drawRaube(180, 210);
+            s.drawsBubble(190, 170);
             s.drawKuchen(440, 236);
             f.drawfisch(120, 320);
         }
         imgData = a_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 3; i++) {
             //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
             //            beeData.push(r);
             var b = new a_Canvas.DummeBienen(225, 360);

@@ -316,6 +316,55 @@ namespace a_Canvas {
         }
 
 
+        drawsBubble(_x: number, _y: number): void {
+            var r: number = _x + 310;
+            var b: number = _y + 20;
+
+            crc2.beginPath();
+            crc2.strokeStyle = "#FFFFFF";
+                        crc2.fillStyle = "#FFFFFF";
+            crc2.lineTo(_x + 3, _y);
+            crc2.lineTo(r - 5, _y);
+            crc2.quadraticCurveTo(r, _y, r, _y + 5);
+            crc2.lineTo(r, _y + 20 - 5);
+            crc2.quadraticCurveTo(r, b, r - 5, b);
+            crc2.lineTo(_x + 5, b);
+            crc2.quadraticCurveTo(_x, b, _x, b - 5);
+            crc2.lineTo(_x, _y + 5);
+            crc2.quadraticCurveTo(_x, _y, _x + 5, _y);
+            
+//            crc2.fillText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?",10,50);
+             crc2.fill();
+            crc2.stroke();
+            crc2.closePath();
+             crc2.beginPath();
+            crc2.strokeStyle = "#FFFFFF";
+                        crc2.fillStyle = "#FFFFFF";
+            
+            crc2.moveTo(_x + 10, _y );
+            crc2.lineTo(_x + 7, _y + 28);
+            crc2.lineTo(_x + 28, _y );
+            crc2.lineTo(_x + 10 , _y );
+            crc2.fill();
+            crc2.stroke();
+            crc2.closePath();
+
+             crc2.beginPath();
+            crc2.strokeStyle = "#000000";
+                        crc2.fillStyle = "#000000";
+//             crc2.moveTo(_x + 100, _y + 40);
+            crc2.textAlign = "start";
+//            crc2.measureText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?");
+              crc2.fillText("Klick mal auf den Ameisenhaufen, die Fische oder auf die Vögel!",190,182);
+              crc2.fill();
+            crc2.stroke();
+            crc2.closePath();
+            
+            
+        }
+
+
+
 
     }
 }
