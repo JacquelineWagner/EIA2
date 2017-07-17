@@ -76,11 +76,10 @@ namespace a_Canvas {
             s.drawTeller(460, 310);
             s.drawTeller(490, 320);
             s.drawKorb(510, 290);
-            s.blume(200, 200);
             s.blume(220, 260);
             s.blume(260, 300);
             s.blume(320, 360);
-            s.blume(350, 210);
+            s.blume(350, 220);
             s.blume(310, 240);
             s.blume(360, 280);
             s.blume(400, 400);
@@ -88,6 +87,7 @@ namespace a_Canvas {
             s.blume(480, 200);
             s.drawRaube(180, 210);
 
+            
             s.drawsBubble(190,170);
 
             s.drawKuchen(440, 236);
