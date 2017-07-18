@@ -1,6 +1,8 @@
 #ameise {
-	margin-top: -9.5em;
-	margin-left: -39em;
+	margin-top: -8.5em;
+	margin-left: -32.7em;
+/* 	margin-top: -9.5em; */
+/* 	margin-left: -39em; */
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;
@@ -13,8 +15,10 @@
 }
 
 #fischis {
-	margin-top: -38em;
+	margin-top: -33em;
 	margin-left: -34em;
+/* 	margin-top: -38em; */
+/* 	margin-left: -34em; */
 	width: 370px;
 	height: 370px;
 	border-radius: 50%;
@@ -26,10 +30,10 @@
 	overflow: hidden;
 }
 
-canvas {
-	width: 750;
-	height: 530;
-}
+/* canvas { */
+/* 	width: 750; */
+/* 	height: 530; */
+/* } */
 
 
 /* *Smartphone*/ */
