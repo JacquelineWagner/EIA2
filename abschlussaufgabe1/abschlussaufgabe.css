@@ -9,7 +9,7 @@
 	height: 700px;
 	border-radius: 50%;
 	cursor: pointer;
-	background-color: red;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	border: none;
 	cursor: pointer;
@@ -159,18 +159,14 @@
 /* }	 */
 
 /* /*Tablet Portrait*/ */
-@media screen and (max-width: 570px) {
+/* @media screen and (max-width: 570px) { */
 
--webkit-column-count:3;
-	-moz-column-count:3;
+/* -webkit-column-count:3; */
+/* 	-moz-column-count:3; */
 	
 
-html {}	
+/* html {}	 */
 
-#ameise {
-/*  	margin-top: -50em;  */
-/* 	margin-left: -40em; */
-/* 	background-color: green; } */
 /* canvas { */
 /* 	width: 55%; */
 /* 	height: 20%; */
