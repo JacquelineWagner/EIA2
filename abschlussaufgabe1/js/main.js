@@ -75,9 +75,9 @@ var a_Canvas;
         }
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
-        document.getElementById("ameise").addEventListener("push", addAmeise);
-        document.getElementById("fischis").addEventListener("push", addFisch);
-        document.getElementById("fischis").addEventListener("touchstart", addFisch);
+        document.getElementById("ameise").addEventListener("touch", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addFisch);
+        document.getElementById("fischis").addEventListener("touch", addFisch);
         document.getElementById("vogel").addEventListener("click", addAmeise);
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
