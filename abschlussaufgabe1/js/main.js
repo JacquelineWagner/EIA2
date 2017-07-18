@@ -21,7 +21,7 @@ var a_Canvas;
         canvas = document.getElementsByTagName("canvas")[0];
         a_Canvas.crc2 = canvas.getContext("2d");
         //Wiese
-        a_Canvas.crc2.fillStyle = "red";
+        a_Canvas.crc2.fillStyle = "#8ACA36";
         a_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
         //Himmel
         var ombre = a_Canvas.crc2.createLinearGradient(10, 20, -2, 100);

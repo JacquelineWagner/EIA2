@@ -34,7 +34,7 @@ namespace a_Canvas {
         canvas = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
         //Wiese
-        crc2.fillStyle = "red";
+        crc2.fillStyle = "#8ACA36";
         crc2.fillRect(0, 0, canvas.width, canvas.height);
         //Himmel
         var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
