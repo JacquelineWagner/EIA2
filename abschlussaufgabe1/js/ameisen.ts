@@ -16,17 +16,17 @@ namespace a_Canvas {
     export class Ameisen {
         x: number;
         y: number;
-        
-        
-        
-    
+
+
+
+
         constructor(_x: number, _y: number) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
-           
+
             this.x = _x;
             this.y = _y;
-        
+
         }
 
         update(): void {
@@ -35,22 +35,24 @@ namespace a_Canvas {
         }
 
         draw(): void {
-//         Draw Funktion
-        }
-        
-        move(): void {
-//        Move Funktion
+            //         Draw Funktion
         }
 
-          setRandomPosition(): void {
-//        Move Funktion
+        move(): void {
+            //        Move Funktion
+        }
+
+        setRandomPosition(): void {
+            //        Move Funktion
         }
         setRandomStyle(): void {
             //setRandomStyle Funktion
 
         }
 
-       
+        behindert(): void {
+            //           hgjh
+        }
     }
 
-  }
+}

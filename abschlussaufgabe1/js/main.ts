@@ -16,23 +16,19 @@ namespace a_Canvas {
     export var crc2: CanvasRenderingContext2D;
     var canvas: HTMLCanvasElement;
 
-
-
-
-
     export let ameisenData: Ameisen[] = [];
     export let n: number = 10;
     let imgData: ImageData;
 
 
-
-
-
     window.addEventListener("load", init);
     function init(_event: Event): void {
 
-        let x: number;
-        let y: number;
+
+
+        //        let x: number;
+        //        let y: number;
+
 
         canvas = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
@@ -123,9 +119,12 @@ namespace a_Canvas {
 
 
         window.setTimeout(animate, 50);
-        canvas.addEventListener("click", addAmeise);
-        canvas.addEventListener("push", addAmeise);
-
+        document.getElementById("ameise").addEventListener("click", addAmeise);
+        document.getElementById("ameise").addEventListener("touchstart", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addAmeise);
+        document.getElementById("fischis").addEventListener("touchstart", addAmeise);
+        document.getElementById("vogel").addEventListener("click", addAmeise);
+        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
 
 

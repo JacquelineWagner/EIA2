@@ -62,6 +62,13 @@ var a_Canvas;
             a_Canvas.crc2.fillStyle = "#825A403";
             a_Canvas.crc2.fill();
             a_Canvas.crc2.closePath();
+            //              crc2.beginPath();
+            //            crc2.moveTo(_x, _y);
+            //            crc2.fillStyle = "red";
+            //           crc2.arc(_x , _y , 30, 0, Math.PI * 2, true);
+            //    crc2.fillStyle = "red";
+            //            crc2.fill();
+            //            crc2.closePath();
         }
         drawDecke(_x, _y) {
             a_Canvas.crc2.beginPath();

@@ -1,0 +1,27 @@
+#ameise {
+	margin-top: -7em;
+	margin-left: -32.5em;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+/* 	background-color: Transparent; */
+/* 	background-repeat: no-repeat; */
+/* 	border: none; */
+/* 	cursor: pointer; */
+/* 	overflow: hidden; */
+}
+
+#fischis {
+	margin-top: -30em;
+	margin-left: -28em;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+}

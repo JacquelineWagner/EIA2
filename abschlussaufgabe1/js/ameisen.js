@@ -33,6 +33,9 @@ var a_Canvas;
         setRandomStyle() {
             //setRandomStyle Funktion
         }
+        behindert() {
+            //           hgjh
+        }
     }
     a_Canvas.Ameisen = Ameisen;
 })(a_Canvas || (a_Canvas = {}));

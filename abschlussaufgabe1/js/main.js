@@ -15,8 +15,8 @@ var a_Canvas;
     let imgData;
     window.addEventListener("load", init);
     function init(_event) {
-        let x;
-        let y;
+        //        let x: number;
+        //        let y: number;
         canvas = document.getElementsByTagName("canvas")[0];
         a_Canvas.crc2 = canvas.getContext("2d");
         //Wiese
@@ -74,8 +74,12 @@ var a_Canvas;
             a_Canvas.ameisenData.push(b);
         }
         window.setTimeout(animate, 50);
-        canvas.addEventListener("click", addAmeise);
-        canvas.addEventListener("push", addAmeise);
+        document.getElementById("ameise").addEventListener("click", addAmeise);
+        document.getElementById("ameise").addEventListener("touchstart", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addAmeise);
+        document.getElementById("fischis").addEventListener("touchstart", addAmeise);
+        document.getElementById("vogel").addEventListener("click", addAmeise);
+        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
     //Funktionen
     function animate() {

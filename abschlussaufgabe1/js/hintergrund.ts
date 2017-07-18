@@ -73,6 +73,13 @@ namespace a_Canvas {
             crc2.fill();
             crc2.closePath();
 
+//              crc2.beginPath();
+//            crc2.moveTo(_x, _y);
+//            crc2.fillStyle = "red";
+//           crc2.arc(_x , _y , 30, 0, Math.PI * 2, true);
+//    crc2.fillStyle = "red";
+//            crc2.fill();
+//            crc2.closePath();
 
         }
 
