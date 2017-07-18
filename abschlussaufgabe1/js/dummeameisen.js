@@ -1,6 +1,6 @@
 var a_Canvas;
 (function (a_Canvas) {
-    class DummeBienen extends a_Canvas.Bienen {
+    class DummeAmeisen extends a_Canvas.Ameisen {
         constructor(_x, _y) {
             super(_x, _y);
         }
@@ -100,6 +100,6 @@ var a_Canvas;
             this.y = Math.random() * 200;
         }
     }
-    a_Canvas.DummeBienen = DummeBienen;
+    a_Canvas.DummeAmeisen = DummeAmeisen;
 })(a_Canvas || (a_Canvas = {}));
 //# sourceMappingURL=dummeameisen.js.map

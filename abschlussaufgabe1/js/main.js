@@ -1,7 +1,7 @@
 //
 //Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
-//Matrikel: 254786
+//Matrikelnummer: 254786
 //Datum: 20
 //21.05.2017
 //    
@@ -10,7 +10,7 @@
 var a_Canvas;
 (function (a_Canvas) {
     var canvas;
-    a_Canvas.beeData = [];
+    a_Canvas.ameisenData = [];
     a_Canvas.n = 10;
     let imgData;
     window.addEventListener("load", init);
@@ -69,25 +69,25 @@ var a_Canvas;
         imgData = a_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < 3; i++) {
             //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            beeData.push(r);
-            var b = new a_Canvas.DummeBienen(225, 360);
-            a_Canvas.beeData.push(b);
+            //            ameisenData.push(r);
+            var b = new a_Canvas.DummeAmeisen(225, 360);
+            a_Canvas.ameisenData.push(b);
         }
         window.setTimeout(animate, 50);
-        canvas.addEventListener("click", addBee);
-        canvas.addEventListener("push", addBee);
+        canvas.addEventListener("click", addAmeise);
+        canvas.addEventListener("push", addAmeise);
     }
     //Funktionen
     function animate() {
         a_Canvas.crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < a_Canvas.beeData.length; i++) {
-            let b = a_Canvas.beeData[i];
-            a_Canvas.beeData[i].update();
+        for (let i = 0; i < a_Canvas.ameisenData.length; i++) {
+            let b = a_Canvas.ameisenData[i];
+            a_Canvas.ameisenData[i].update();
         }
         window.setTimeout(animate, 50);
     }
-    function addBee() {
-        a_Canvas.beeData.push(new a_Canvas.DummeBienen(225, 360));
+    function addAmeise() {
+        a_Canvas.ameisenData.push(new a_Canvas.DummeAmeisen(225, 360));
         a_Canvas.n++;
     }
 })(a_Canvas || (a_Canvas = {}));

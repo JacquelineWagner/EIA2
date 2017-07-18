@@ -1,21 +1,21 @@
 namespace a_Canvas {
 
-    
-    export class DummeBienen extends Bienen {
 
-         constructor(_x: number, _y: number) {
-             super (_x, _y);
-           
-             
-            
+    export class DummeAmeisen extends Ameisen {
+
+        constructor(_x: number, _y: number) {
+            super(_x, _y);
+
+
+
         }
 
-//        update(): void {
-//            this.move(); 
-//            this.draw();
-//        }
+        //        update(): void {
+        //            this.move(); 
+        //            this.draw();
+        //        }
 
-         draw(): void {
+        draw(): void {
             //K�rper 
             crc2.beginPath();
             crc2.moveTo(this.x, this.y - 5 / 2);
@@ -98,8 +98,8 @@ namespace a_Canvas {
             //            crc2.stroke();
         }
 
-         move(): void {
-             this.x += Math.random() * 5 - 1;
+        move(): void {
+            this.x += Math.random() * 5 - 1;
             this.y += Math.random() * 4 - 2.5;
 
             if (this.x < 0) {
@@ -118,13 +118,13 @@ namespace a_Canvas {
             this.y = Math.random() * 200;
         }
 
-//        setRandomStyle(): void {
-//            this.size = Math.random() * 30 + 10;
-//            this.color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
-//        }
+        //        setRandomStyle(): void {
+        //            this.size = Math.random() * 30 + 10;
+        //            this.color = "hsl(" + Math.random() * 360 + ", 100;
+        //        }
         
 
-        }
+    }
 
 
 

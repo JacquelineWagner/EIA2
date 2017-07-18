@@ -1,7 +1,7 @@
 //
 //Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
-//Matrikel: 254786
+//Matrikelnummer: 254786
 //Datum: 20
 //21.05.2017
 //    
@@ -20,7 +20,7 @@ namespace a_Canvas {
 
 
 
-    export let beeData: Bienen[] = [];
+    export let ameisenData: Ameisen[] = [];
     export let n: number = 10;
     let imgData: ImageData;
 
@@ -87,8 +87,8 @@ namespace a_Canvas {
             s.blume(480, 200);
             s.drawRaube(180, 210);
 
-            
-            s.drawsBubble(190,170);
+
+            s.drawsBubble(190, 170);
 
             s.drawKuchen(440, 236);
 
@@ -104,15 +104,15 @@ namespace a_Canvas {
 
 
 
-       
+
 
         for (let i: number = 0; i < 3; i++) {
 
             //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            beeData.push(r);
+            //            ameisenData.push(r);
 
-            var b: DummeBienen = new DummeBienen(225, 360);
-            beeData.push(b);
+            var b: DummeAmeisen = new DummeAmeisen(225, 360);
+            ameisenData.push(b);
         }
 
 
@@ -123,8 +123,8 @@ namespace a_Canvas {
 
 
         window.setTimeout(animate, 50);
-        canvas.addEventListener("click", addBee);
-        canvas.addEventListener("push", addBee);
+        canvas.addEventListener("click", addAmeise);
+        canvas.addEventListener("push", addAmeise);
 
     }
 
@@ -142,16 +142,16 @@ namespace a_Canvas {
 
 
 
-        for (let i: number = 0; i < beeData.length; i++) {
-            let b: Bienen = beeData[i];
-            beeData[i].update();
+        for (let i: number = 0; i < ameisenData.length; i++) {
+            let b: Ameisen = ameisenData[i];
+            ameisenData[i].update();
         }
 
         window.setTimeout(animate, 50);
     }
 
-    function addBee(): void {
-        beeData.push(new DummeBienen(225, 360));
+    function addAmeise(): void {
+        ameisenData.push(new DummeAmeisen(225, 360));
         n++;
     }
 

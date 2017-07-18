@@ -10,7 +10,7 @@
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 var a_Canvas;
 (function (a_Canvas) {
-    class Bienen {
+    class Ameisen {
         constructor(_x, _y) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
@@ -34,6 +34,6 @@ var a_Canvas;
             //setRandomStyle Funktion
         }
     }
-    a_Canvas.Bienen = Bienen;
+    a_Canvas.Ameisen = Ameisen;
 })(a_Canvas || (a_Canvas = {}));
 //# sourceMappingURL=ameisen.js.map

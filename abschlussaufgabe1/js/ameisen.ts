@@ -13,7 +13,7 @@
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
 namespace a_Canvas {
-    export class Bienen {
+    export class Ameisen {
         x: number;
         y: number;
         
