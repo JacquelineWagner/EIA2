@@ -100,8 +100,8 @@ var a_Canvas;
     }
     function addFisch() {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-        let _x = (Math.random() * (0 + 110)) + 0;
-        let _y = (Math.random() * (300 + 100)) + 130;
+        let _x = (Math.random() * (0 + 140)) + 0;
+        let _y = (Math.random() * (300 - 150)) + 200;
         a_Canvas.fischData.push(new a_Canvas.Fisch(_x, _y));
         a_Canvas.n++;
     }

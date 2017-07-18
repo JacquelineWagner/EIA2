@@ -18,16 +18,15 @@
 namespace a_Canvas {
 
     export class Fisch {
-     x: number;
+        x: number;
         y: number;
-        size: number;
-        color: string;
+
 
         constructor(_x: number, _y: number) {
             console.log("Hey, I'm jessy!");
             this.x = _x;
             this.y = _y;
-          
+
         }
 
         update(): void {
@@ -59,11 +58,11 @@ namespace a_Canvas {
 
         }
 
- move(): void {
+        move(): void {
             this.x += Math.random() * 5 - 3;
             this.y += Math.random() * 4 - 2;
 
-            
+
         }
 
         setRandomPosition(): void {

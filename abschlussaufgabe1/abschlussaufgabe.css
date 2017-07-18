@@ -19,9 +19,122 @@
 	height: 300px;
 	border-radius: 50%;
 	cursor: pointer;
-	background-color: transparent;
+	background-color: red;
 	background-repeat: no-repeat;
 	border: none;
 	cursor: pointer;
 	overflow: hidden;
+}
+
+canvas {
+	width: 750;
+	height: 530;
+}
+
+
+*Smartphone*/
+@media screen and (max-width: 660px) {
+
+-webkit-column-count:1;
+-moz-column-count:1;
+
+html {
+	
+}
+
+canvas {
+	width: 50%;
+	height: 50%;
+}
+
+#vogel{
+	background-color: red;
+}
+
+/* #fischis { */
+/* 	margin-top: -30em; */
+/* 	margin-left: -28em; */
+/* 	width: 300px; */
+/* 	height: 300px; */
+/* 	border-radius: 50%; */
+/* 	cursor: pointer; */
+/* 	background-color: blue; */
+/* 	background-repeat: no-repeat; */
+/* 	border: none; */
+/* 	cursor: pointer; */
+/* 	overflow: hidden; */
+/* } */
+}
+
+
+
+
+/*Tablet Portrait*/
+@media screen and (max-width: 570px) {
+
+-webkit-column-count:3;
+	-moz-column-count:3;
+	
+
+html {}
+
+#ameise {
+	margin-top: -30em;
+	margin-left: -28em;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: yellow;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+canvas{
+	width: 110%;
+	height: 30%;
+}
+
+/* button { */
+/* 	width: 50%; */
+/* 	height: 50%; */
+/* }	 */
+}
+
+
+
+
+/*Tablet Portrait*/
+@media screen and (max-width: 768px) {
+
+-webkit-column-count:3;
+	-moz-column-count:3;
+	
+
+html {}
+
+#fischis {
+	margin-top: -30em;
+	margin-left: -28em;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: green;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+canvas {
+	width: 75%;
+	height: 40%;
+}
+
+button {
+	width: -10%;
+}		
 }
