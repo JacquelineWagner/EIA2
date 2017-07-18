@@ -13,13 +13,13 @@
 }
 
 #fischis {
-	margin-top: -30em;
-	margin-left: -28em;
-	width: 300px;
-	height: 300px;
+	margin-top: -38em;
+	margin-left: -39em;
+	width: 360px;
+	height: 360px;
 	border-radius: 50%;
 	cursor: pointer;
-	background-color: red;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	border: none;
 	cursor: pointer;
@@ -136,5 +136,23 @@ canvas {
 
 button {
 	width: -10%;
-}		
+}	
+
+/*Tablet Portrait*/
+@media screen and (max-width: 570px) {
+
+-webkit-column-count:3;
+	-moz-column-count:3;
+	
+
+html {}	
+
+canvas {
+	width: 55%;
+	height: 20%;
+}
+
+#fischis {
+	size: -10%;
+}
 }
