@@ -19,6 +19,7 @@ namespace a_Canvas {
     export let ameisenData: Ameisen[] = [];
     export let n: number = 10;
     let imgData: ImageData;
+    export let fischData: Fisch[] = [];
 
 
     window.addEventListener("load", init);
@@ -88,7 +89,7 @@ namespace a_Canvas {
 
             s.drawKuchen(440, 236);
 
-            f.drawfisch(120, 320);
+            //            f.drawfisch(120, 320);
 
 
 
@@ -121,15 +122,15 @@ namespace a_Canvas {
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
-        document.getElementById("fischis").addEventListener("click", addAmeise);
-        document.getElementById("fischis").addEventListener("touchstart", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addFisch);
+        document.getElementById("fischis").addEventListener("touchstart", addFisch);
         document.getElementById("vogel").addEventListener("click", addAmeise);
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
 
 
 
-
+ 
 
 
     //Funktionen
@@ -145,7 +146,10 @@ namespace a_Canvas {
             let b: Ameisen = ameisenData[i];
             ameisenData[i].update();
         }
-
+        for (let i: number = 0; i < fischData.length; i++) {
+            let f: Fisch = fischData[i];
+            fischData[i].update();
+        }
         window.setTimeout(animate, 50);
     }
 
@@ -154,6 +158,12 @@ namespace a_Canvas {
         n++;
     }
 
-
+    function addFisch(): void {
+//         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+            let _x: number = (Math.random() * (0 + 110)) + 0;
+            let _y: number = (Math.random() * (300 + 100)) + 130;
+        fischData.push(new Fisch(_x, _y));
+        n++;
+    }
 
 }

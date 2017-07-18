@@ -80,8 +80,8 @@ namespace a07_Canvas {
 
         for (var i: number = 0; i < 2; i++) {
             let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-            let _x: number = (Math.random() * (240 + 20)) + 0;
-            let _y: number = (Math.random() * (240 - 130)) + 130;
+            let _x: number = (Math.random() * (220)) + 0;
+            let _y: number = (Math.random() * (400)) + 130;
 
             let s: Flower = new Flower(0, 0, "");
 

@@ -13,6 +13,7 @@ var a_Canvas;
     a_Canvas.ameisenData = [];
     a_Canvas.n = 10;
     let imgData;
+    a_Canvas.fischData = [];
     window.addEventListener("load", init);
     function init(_event) {
         //        let x: number;
@@ -64,7 +65,6 @@ var a_Canvas;
             s.drawRaube(180, 210);
             s.drawsBubble(190, 170);
             s.drawKuchen(440, 236);
-            f.drawfisch(120, 320);
         }
         imgData = a_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < 3; i++) {
@@ -76,8 +76,8 @@ var a_Canvas;
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
-        document.getElementById("fischis").addEventListener("click", addAmeise);
-        document.getElementById("fischis").addEventListener("touchstart", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addFisch);
+        document.getElementById("fischis").addEventListener("touchstart", addFisch);
         document.getElementById("vogel").addEventListener("click", addAmeise);
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
@@ -88,10 +88,21 @@ var a_Canvas;
             let b = a_Canvas.ameisenData[i];
             a_Canvas.ameisenData[i].update();
         }
+        for (let i = 0; i < a_Canvas.fischData.length; i++) {
+            let f = a_Canvas.fischData[i];
+            a_Canvas.fischData[i].update();
+        }
         window.setTimeout(animate, 50);
     }
     function addAmeise() {
         a_Canvas.ameisenData.push(new a_Canvas.DummeAmeisen(225, 360));
+        a_Canvas.n++;
+    }
+    function addFisch() {
+        //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+        let _x = (Math.random() * (0 + 110)) + 0;
+        let _y = (Math.random() * (300 + 100)) + 130;
+        a_Canvas.fischData.push(new a_Canvas.Fisch(_x, _y));
         a_Canvas.n++;
     }
 })(a_Canvas || (a_Canvas = {}));

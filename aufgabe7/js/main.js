@@ -61,8 +61,8 @@ var a07_Canvas;
         console.log(flower);
         for (var i = 0; i < 2; i++) {
             let randomFlower = Math.floor((Math.random() * 3) + 0);
-            let _x = (Math.random() * (240 + 20)) + 0;
-            let _y = (Math.random() * (240 - 130)) + 130;
+            let _x = (Math.random() * (220)) + 0;
+            let _y = (Math.random() * (400)) + 130;
             let s = new a07_Canvas.Flower(0, 0, "");
             s.blume(_x - 25, _y - 6, 5);
             s.blume(_x - 10, _y + 5, 6);
