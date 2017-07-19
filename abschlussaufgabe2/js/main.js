@@ -100,6 +100,7 @@ var a2_Canvas;
     }
     function addFisch() {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+        console.log("funktioniert");
         let _x = (Math.random() * (0 + 140)) + 0;
         let _y = (Math.random() * (300 - 150)) + 200;
         a2_Canvas.fischData.push(new a2_Canvas.Fisch(_x, _y));

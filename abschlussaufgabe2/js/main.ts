@@ -161,6 +161,7 @@ namespace a2_Canvas {
 
     function addFisch(): void {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+        console.log("funktioniert");
         let _x: number = (Math.random() * (0 + 140)) + 0;
         let _y: number = (Math.random() * (300 - 150)) + 200;
         fischData.push(new Fisch(_x, _y));
