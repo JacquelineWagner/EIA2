@@ -80,6 +80,7 @@ var a2_Canvas;
     function addAmeiseEntfernen() {
         for (let i = 0; i < a2_Canvas.ameisenData.length; i++) {
             a2_Canvas.ameisenData.splice(i, 1);
+            console.log(a2_Canvas.ameisenData);
         }
     }
     function animate() {
@@ -97,10 +98,11 @@ var a2_Canvas;
     function addAmeise() {
         console.log("test");
         a2_Canvas.ameisenData.push(new a2_Canvas.Ameisen(225, 360));
+        console.log(a2_Canvas.ameisenData);
     }
     function addFisch() {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-        console.log("funktioniert");
+        //        console.log("funktioniert");
         let _x = (Math.random() * (0 + 140)) + 0;
         let _y = (Math.random() * (300 - 150)) + 200;
         a2_Canvas.fischData.push(new a2_Canvas.Fisch(_x, _y));

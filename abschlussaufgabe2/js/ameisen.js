@@ -12,7 +12,7 @@ var a2_Canvas;
 (function (a2_Canvas) {
     class Ameisen {
         constructor(_x, _y) {
-            console.log("Hey, I'm Bob!");
+            //            console.log("Hey, I'm Bob!");
             this.setAnfangPosition();
             this.setPosition();
             this.speed = 0.02;

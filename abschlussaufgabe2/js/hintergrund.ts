@@ -5,7 +5,7 @@ namespace a2_Canvas {
 
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm Bob!");
+//            console.log("Hey, I'm Bob!");
             this.x = _x;
             this.y = _y;
 

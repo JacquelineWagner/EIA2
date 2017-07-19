@@ -132,7 +132,8 @@ namespace a2_Canvas {
 
     function addAmeiseEntfernen(): void {
         for (let i: number = 0; i < ameisenData.length; i++) {
-            ameisenData.splice(i, 1);
+            ameisenData.splice(i,1);
+            console.log(ameisenData);
         }
     }
 
@@ -159,7 +160,7 @@ namespace a2_Canvas {
     function addAmeise(): void {
         console.log("test");
         ameisenData.push(new Ameisen(225, 360));
-
+console.log(ameisenData);
        
 
     }
@@ -171,7 +172,7 @@ namespace a2_Canvas {
 
     function addFisch(): void {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-        console.log("funktioniert");
+//        console.log("funktioniert");
         let _x: number = (Math.random() * (0 + 140)) + 0;
         let _y: number = (Math.random() * (300 - 150)) + 200;
         fischData.push(new Fisch(_x, _y));

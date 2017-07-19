@@ -18,7 +18,7 @@ namespace a2_Canvas {
     export class Ameisen {
         x: number;
         y: number;
-           xPosition: number;
+        xPosition: number;
         yPosition: number;
         speed: number;
 
@@ -27,10 +27,10 @@ namespace a2_Canvas {
 
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm Bob!");
-              this.setAnfangPosition();
+            //            console.log("Hey, I'm Bob!");
+            this.setAnfangPosition();
             this.setPosition();
- this.speed = 0.02;
+            this.speed = 0.02;
             this.x = _x;
             this.y = _y;
 
@@ -41,9 +41,9 @@ namespace a2_Canvas {
             this.draw();
         }
 
-        
-        
-        
+
+
+
         draw(): void {
             //K�rper 
             crc2.beginPath();
@@ -108,7 +108,7 @@ namespace a2_Canvas {
             crc2.stroke();
         }
 
-        
+
         move(): void {
             let xMove: number = this.xPosition - this.x;
             let yMove: number = this.yPosition - this.y;
@@ -119,22 +119,22 @@ namespace a2_Canvas {
                 this.y += yMove * this.speed;
             }
         }
-        
-        
+
+
 
         setPosition(): void {
-           
+
             this.xPosition = 465;
             this.yPosition = 270;
         }
-        
-        
-            setAnfangPosition(): void {
+
+
+        setAnfangPosition(): void {
             this.x = 225;
             this.y = 360;
         }
 
-     
+
     }
 
 }
