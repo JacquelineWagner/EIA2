@@ -51,9 +51,7 @@ namespace a2_Canvas {
 
         }
 
-        behindert(): void {
-            //           hgjh
-        }
+     
     }
 
 }
