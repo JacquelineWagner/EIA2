@@ -4,6 +4,7 @@
 //Matrikel: 254786
 //Datum: 20
 //13.05.2017
+
 //    
 
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
@@ -17,13 +18,11 @@ namespace a2_Canvas {
         x: number;
         y: number;
 
-        
 
 
 
-        
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm XXX!");
+            console.log("Hey, I'm Bob!");
             this.setRandomPosition();
 
             this.x = _x;

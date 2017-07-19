@@ -102,4 +102,4 @@ var a2_Canvas;
     }
     a2_Canvas.DummeAmeisen = DummeAmeisen;
 })(a2_Canvas || (a2_Canvas = {}));
-//# sourceMappingURL=dummeAmeisen.js.map
+//# sourceMappingURL=dummeameisen.js.map

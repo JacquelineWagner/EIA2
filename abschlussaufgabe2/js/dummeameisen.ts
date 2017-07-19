@@ -6,9 +6,8 @@ namespace a2_Canvas {
         constructor(_x: number, _y: number) {
             super(_x, _y);
 
+            
 
-            
-            
 
         }
 

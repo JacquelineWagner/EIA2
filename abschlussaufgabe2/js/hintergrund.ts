@@ -3,15 +3,14 @@ namespace a2_Canvas {
         x: number;
         y: number;
 
-        
-        
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm YYY!");
+            console.log("Hey, I'm Bob!");
             this.x = _x;
             this.y = _y;
 
         }
+        
 
         drawRaube(_x: number, _y: number): void {
             crc2.beginPath();

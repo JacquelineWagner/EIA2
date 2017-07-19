@@ -2,7 +2,7 @@ var a2_Canvas;
 (function (a2_Canvas) {
     class Hintergrund2 {
         constructor(_x, _y) {
-            console.log("Hey, I'm YYY!");
+            console.log("Hey, I'm Bob!");
             this.x = _x;
             this.y = _y;
         }

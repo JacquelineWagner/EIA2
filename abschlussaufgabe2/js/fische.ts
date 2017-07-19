@@ -16,7 +16,6 @@
 
 
 
-
 namespace a2_Canvas {
 
     export class Fisch {
@@ -25,7 +24,7 @@ namespace a2_Canvas {
 
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm jessy2!");
+            console.log("Hey, I'm jessy!");
             this.x = _x;
             this.y = _y;
 
