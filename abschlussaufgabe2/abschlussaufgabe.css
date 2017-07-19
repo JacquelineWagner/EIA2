@@ -6,15 +6,15 @@
 }
 
 #ameise {
-	position: absolut;
+	position: fixed;
 
-	margin-top: -12em;  
+	margin-top: -9em;  
 margin-left: 16.5em;
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
 	cursor: pointer;
-	background-color: transparent;
+	background-color: red;
 	background-repeat: no-repeat;
 	border: none;
 	cursor: pointer;
