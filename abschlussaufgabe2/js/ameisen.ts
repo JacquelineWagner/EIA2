@@ -38,6 +38,7 @@ namespace a2_Canvas {
         }
 
         
+        
         draw(): void {
             //         Draw Funktion
         }
