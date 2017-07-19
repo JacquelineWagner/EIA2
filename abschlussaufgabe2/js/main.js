@@ -65,7 +65,6 @@ var a2_Canvas;
             s.drawRaube(180, 210);
             s.drawTellerGross(465, 270);
             s.drawKuchen(465, 270);
-            s.drawKuchen(445, 270);
             s.drawsBubble(190, 170);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
@@ -74,8 +73,8 @@ var a2_Canvas;
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
-        document.getElementById("vogel").addEventListener("click", addAmeise);
-        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
+        //        document.getElementById("vogel").addEventListener("click", addAmeise);
+        //        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
     //Funktionen
     function animate() {
@@ -91,8 +90,22 @@ var a2_Canvas;
         window.setTimeout(animate, 30);
     }
     function addAmeise() {
-        a2_Canvas.ameisenData.push(new a2_Canvas.DummeAmeisen(225, 360));
-        a2_Canvas.n++;
+        console.log("test");
+        a2_Canvas.ameisenData.push(new a2_Canvas.Ameisen(225, 360));
+        saveEssen();
+    }
+    function saveEssen() {
+        let button = document.createElement("button");
+        //        console.log("arsch");
+        //        let s: CSSStyleDeclaration = div.style;
+        //        s.borderStyle = "solid";
+        //        s.borderColor = "red";
+        //        s.borderWidth = "1px";
+        //        s.width = "50px";
+        //        s.height = "50px";
+        //        s.display = "inline-block";
+        //        s.cssFloat = "left";
+        //        s.overflow = "auto";
     }
     function addFisch() {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);

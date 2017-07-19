@@ -89,8 +89,8 @@ namespace a2_Canvas {
             s.drawTellerGross(465, 270);
 
             s.drawKuchen(465, 270);
-            s.drawKuchen(445, 270);
-            
+
+
 
 
             s.drawsBubble(190, 170);
@@ -111,14 +111,15 @@ namespace a2_Canvas {
 
         window.setTimeout(animate, 30);
         document.getElementById("ameise").addEventListener("click", addAmeise);
+
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
-        document.getElementById("vogel").addEventListener("click", addAmeise);
-        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
+        //        document.getElementById("vogel").addEventListener("click", addAmeise);
+        //        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
 
 
-      
+
 
     }
 
@@ -150,9 +151,34 @@ namespace a2_Canvas {
     }
 
     function addAmeise(): void {
-        ameisenData.push(new DummeAmeisen(225, 360));
-        n++;
+        console.log("test");
+        ameisenData.push(new Ameisen(225, 360));
+
+        saveEssen();
+
     }
+
+
+    function saveEssen(): void {
+        let button: HTMLElement = document.createElement("button");
+
+
+//        console.log("arsch");
+//        let s: CSSStyleDeclaration = div.style;
+//        s.borderStyle = "solid";
+//        s.borderColor = "red";
+//        s.borderWidth = "1px";
+//        s.width = "50px";
+//        s.height = "50px";
+//        s.display = "inline-block";
+//        s.cssFloat = "left";
+//        s.overflow = "auto";
+
+
+
+    }
+
+
 
     function addFisch(): void {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);

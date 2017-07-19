@@ -436,7 +436,6 @@ namespace a2_Canvas {
             crc2.lineTo(_x, _y + 5);
             crc2.quadraticCurveTo(_x, _y, _x + 5, _y);
 
-            //            crc2.fillText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?",10,50);
             crc2.fill();
             crc2.stroke();
             crc2.closePath();
@@ -455,10 +454,9 @@ namespace a2_Canvas {
             crc2.beginPath();
             crc2.strokeStyle = "#000000";
             crc2.fillStyle = "#000000";
-            //             crc2.moveTo(_x + 100, _y + 40);
+          
             crc2.textAlign = "start";
-            //            crc2.measureText("Was passiet, wenn man auf den Ameisenhaufen, die Fische oder auf die Vögel klickt?");
-            crc2.fillText("Klick mal auf den Ameisenhaufen, die Fische oder auf die Vögel!", 190, 182);
+            crc2.fillText("Klick mal auf den Ameisenhaufen, den See oder auf die Vögel!", 190, 182);
             crc2.fill();
             crc2.stroke();
             crc2.closePath();
