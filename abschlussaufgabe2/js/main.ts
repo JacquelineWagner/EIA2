@@ -34,15 +34,15 @@ namespace a2_Canvas {
 
         canvas = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
-//        //Wiese
-//        crc2.fillStyle = "#8ACA36";
-//        crc2.fillRect(0, 0, canvas.width, canvas.height);
-//        //Himmel
-//        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
-//        ombre.addColorStop(0, "#A9D0F5");
-//        ombre.addColorStop(1, "white");
-//        crc2.fillStyle = ombre;
-//        crc2.fillRect(0, 0, canvas.width, 150);
+        //Wiese
+        crc2.fillStyle = "#8ACA36";
+        crc2.fillRect(0, 0, canvas.width, canvas.height);
+        //Himmel
+        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
+        ombre.addColorStop(0, "#A9D0F5");
+        ombre.addColorStop(1, "white");
+        crc2.fillStyle = ombre;
+        crc2.fillRect(0, 0, canvas.width, 150);
         let s: Hintergrund2 = new Hintergrund2(0, 0);
 
         for (var i: number = 0; i < 2; i++) {

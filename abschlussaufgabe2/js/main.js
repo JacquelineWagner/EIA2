@@ -20,15 +20,15 @@ var a2_Canvas;
         //        let y: number;
         canvas = document.getElementsByTagName("canvas")[0];
         a2_Canvas.crc2 = canvas.getContext("2d");
-        //        //Wiese
-        //        crc2.fillStyle = "#8ACA36";
-        //        crc2.fillRect(0, 0, canvas.width, canvas.height);
-        //        //Himmel
-        //        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
-        //        ombre.addColorStop(0, "#A9D0F5");
-        //        ombre.addColorStop(1, "white");
-        //        crc2.fillStyle = ombre;
-        //        crc2.fillRect(0, 0, canvas.width, 150);
+        //Wiese
+        a2_Canvas.crc2.fillStyle = "#8ACA36";
+        a2_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
+        //Himmel
+        var ombre = a2_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
+        ombre.addColorStop(0, "#A9D0F5");
+        ombre.addColorStop(1, "white");
+        a2_Canvas.crc2.fillStyle = ombre;
+        a2_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
         let s = new a2_Canvas.Hintergrund2(0, 0);
         for (var i = 0; i < 2; i++) {
             let s = new a2_Canvas.Hintergrund2(0, 0);
