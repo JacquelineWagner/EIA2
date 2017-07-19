@@ -30,6 +30,7 @@ namespace a2_Canvas {
     window.addEventListener("load", init);
     function init(_event: Event): void {
 
+        
 
 
         //        let x: number;
