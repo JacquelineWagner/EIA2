@@ -31,6 +31,7 @@ namespace a2_Canvas {
     function init(_event: Event): void {
 
         
+        
 
 
         //        let x: number;
