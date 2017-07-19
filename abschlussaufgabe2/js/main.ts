@@ -86,7 +86,7 @@ namespace a2_Canvas {
             s.blume(490, 390);
             s.blume(480, 200);
             s.drawRaube(180, 210);
-//
+
 
             s.drawsBubble(190, 170);
 
@@ -94,6 +94,7 @@ namespace a2_Canvas {
 
             //            f.drawfisch(120, 320);
 
+            
 
 
         }

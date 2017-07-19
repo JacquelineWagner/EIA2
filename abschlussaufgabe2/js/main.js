@@ -62,9 +62,8 @@ var a2_Canvas;
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
-            //            s.drawRaube(180, 210);
-            //
-            //            s.drawsBubble(190, 170);
+            s.drawRaube(180, 210);
+            s.drawsBubble(190, 170);
             s.drawKuchen(440, 236);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
