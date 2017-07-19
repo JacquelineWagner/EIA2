@@ -23,7 +23,7 @@ namespace a2_Canvas {
 
         
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm Bob!");
+            console.log("Hey, I'm XXX!");
             this.setRandomPosition();
 
             this.x = _x;

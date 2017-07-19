@@ -12,7 +12,7 @@ var a2_Canvas;
 (function (a2_Canvas) {
     class Ameisen {
         constructor(_x, _y) {
-            console.log("Hey, I'm Bob!");
+            console.log("Hey, I'm XXX!");
             this.setRandomPosition();
             this.x = _x;
             this.y = _y;
