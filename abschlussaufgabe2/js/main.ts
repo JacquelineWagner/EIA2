@@ -89,6 +89,8 @@ namespace a2_Canvas {
             s.drawTellerGross(465, 270);
 
             s.drawKuchen(465, 270);
+            s.drawKuchen(445, 270);
+            
 
 
             s.drawsBubble(190, 170);
@@ -103,17 +105,6 @@ namespace a2_Canvas {
 
 
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
