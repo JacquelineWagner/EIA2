@@ -115,7 +115,7 @@ namespace a2_Canvas {
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
-        //        document.getElementById("vogel").addEventListener("click", addAmeise);
+        document.getElementById("entfernen").addEventListener("click", addAmeiseEntfernen);
         //        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
 
 
@@ -129,6 +129,12 @@ namespace a2_Canvas {
 
 
     //Funktionen
+
+    function addAmeiseEntfernen(): void {
+        for (let i: number = 0; i < ameisenData.length; i++) {
+            ameisenData.splice(i, 1);
+        }
+    }
 
 
 
@@ -163,16 +169,16 @@ namespace a2_Canvas {
         let button: HTMLElement = document.createElement("button");
 
 
-//        console.log("arsch");
-//        let s: CSSStyleDeclaration = div.style;
-//        s.borderStyle = "solid";
-//        s.borderColor = "red";
-//        s.borderWidth = "1px";
-//        s.width = "50px";
-//        s.height = "50px";
-//        s.display = "inline-block";
-//        s.cssFloat = "left";
-//        s.overflow = "auto";
+        //        console.log("arsch");
+        //        let s: CSSStyleDeclaration = div.style;
+        //        s.borderStyle = "solid";
+        //        s.borderColor = "red";
+        //        s.borderWidth = "1px";
+        //        s.width = "50px";
+        //        s.height = "50px";
+        //        s.display = "inline-block";
+        //        s.cssFloat = "left";
+        //        s.overflow = "auto";
 
 
 

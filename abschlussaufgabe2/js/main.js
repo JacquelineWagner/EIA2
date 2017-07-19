@@ -73,10 +73,15 @@ var a2_Canvas;
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
-        //        document.getElementById("vogel").addEventListener("click", addAmeise);
+        document.getElementById("entfernen").addEventListener("click", addAmeiseEntfernen);
         //        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
     //Funktionen
+    function addAmeiseEntfernen() {
+        for (let i = 0; i < a2_Canvas.ameisenData.length; i++) {
+            a2_Canvas.ameisenData.splice(i, 1);
+        }
+    }
     function animate() {
         a2_Canvas.crc2.putImageData(imgData, 0, 0);
         for (let i = 0; i < a2_Canvas.ameisenData.length; i++) {
