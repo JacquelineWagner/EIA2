@@ -75,12 +75,6 @@ var a2_Canvas;
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
         document.getElementById("vogel").addEventListener("click", addAmeise);
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
-        for (let i = 0; i < 3; i++) {
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-            let b = new a2_Canvas.DummeAmeisen(225, 360);
-            a2_Canvas.ameisenData.push(b);
-        }
     }
     //Funktionen
     function animate() {

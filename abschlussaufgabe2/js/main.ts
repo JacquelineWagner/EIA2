@@ -127,16 +127,7 @@ namespace a2_Canvas {
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
 
 
-        for (let i: number = 0; i < 3; i++) {
-
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-
-            let b: DummeAmeisen = new DummeAmeisen(225, 360);
-            ameisenData.push(b);
-
-        }
-
+      
 
     }
 
