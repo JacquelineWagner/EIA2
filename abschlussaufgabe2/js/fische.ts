@@ -25,7 +25,7 @@ namespace a2_Canvas {
 
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm jessy!");
+            console.log("Hey, I'm jessy2!");
             this.x = _x;
             this.y = _y;
 
