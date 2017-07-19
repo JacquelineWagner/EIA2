@@ -67,14 +67,10 @@ var a2_Canvas;
             s.drawKuchen(440, 236);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        //        for (let i: number = 0; i < 3; i++) {
-        //
-        //            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-        //            //            ameisenData.push(r);
-        //
-        //            var b: DummeAmeisen = new DummeAmeisen(225, 360);
-        //            ameisenData.push(b);
-        //        }
+        for (let i = 0; i < 3; i++) {
+            var b = new a2_Canvas.DummeAmeisen(225, 360);
+            a2_Canvas.ameisenData.push(b);
+        }
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
