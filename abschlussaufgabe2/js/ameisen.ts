@@ -21,6 +21,7 @@ namespace a2_Canvas {
 
 
 
+        
         constructor(_x: number, _y: number) {
             console.log("Hey, I'm Bob!");
             this.setRandomPosition();
