@@ -17,12 +17,16 @@ namespace a2_Canvas {
     export var crc2: CanvasRenderingContext2D;
     var canvas: HTMLCanvasElement;
 
+    
     export let ameisenData: Ameisen[] = [];
     export let n: number = 10;
     let imgData: ImageData;
     export let fischData: Fisch[] = [];
+    
+    
+     
 
-
+    
     window.addEventListener("load", init);
     function init(_event: Event): void {
 

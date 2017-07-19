@@ -41,6 +41,25 @@ margin-left: 16.5em;
 	overflow: hidden;
 }
 
+#vogel2 {
+	position: fixed;
+	
+/* 	margin-top: -33em; normal */
+/* 	margin-left: -34em; */
+/* 	margin-top: -30em; */
+	margin-left: 18em;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 10000;
+}
+
 canvas {
 	width: 750;
 	height: 530;
