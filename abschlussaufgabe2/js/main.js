@@ -33,23 +33,27 @@ var a2_Canvas;
         for (var i = 0; i < 2; i++) {
             let s = new a2_Canvas.Hintergrund2(0, 0);
             let f = new a2_Canvas.Fisch(0, 0);
-            //            s.drawlake(30, 305);
-            //            s.drawsonne(580, 30);
-            //            s.drawwolke(80, 50);
-            //            s.drawwolke(200, 80);
-            //            s.drawwolke(230, 85);
-            //            s.drawwolke(480, 70);
-            //            s.drawwolke(380, 85);
-            //            s.drawvogel(220, 36);
+            s.drawlake(30, 305);
+            s.drawsonne(580, 30);
+            s.drawwolke(80, 50);
+            s.drawwolke(200, 80);
+            s.drawwolke(230, 85);
+            s.drawwolke(480, 70);
+            s.drawwolke(380, 85);
+            s.drawvogel(220, 36);
             s.drawvogel(314, 58);
+            s.drawvogel(160, 82);
+            s.drawvogel(460, 82);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < 3; i++) {
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-            var b = new a2_Canvas.DummeAmeisen(225, 360);
-            a2_Canvas.ameisenData.push(b);
-        }
+        //        for (let i: number = 0; i < 3; i++) {
+        //
+        //            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+        //            //            ameisenData.push(r);
+        //
+        //            var b: DummeAmeisen = new DummeAmeisen(225, 360);
+        //            ameisenData.push(b);
+        //        }
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);

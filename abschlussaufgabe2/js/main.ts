@@ -54,17 +54,17 @@ namespace a2_Canvas {
 
 
 
-//            s.drawlake(30, 305);
-//            s.drawsonne(580, 30);
-//            s.drawwolke(80, 50);
-//            s.drawwolke(200, 80);
-//            s.drawwolke(230, 85);
-//            s.drawwolke(480, 70);
-//            s.drawwolke(380, 85);
-//            s.drawvogel(220, 36);
+            s.drawlake(30, 305);
+            s.drawsonne(580, 30);
+            s.drawwolke(80, 50);
+            s.drawwolke(200, 80);
+            s.drawwolke(230, 85);
+            s.drawwolke(480, 70);
+            s.drawwolke(380, 85);
+            s.drawvogel(220, 36);
             s.drawvogel(314, 58);
-//            s.drawvogel(160, 82);
-//            s.drawvogel(460, 82);
+            s.drawvogel(160, 82);
+            s.drawvogel(460, 82);
 //            s.drawAmeisenhaufen(225, 360);
 //            s.drawDecke(430, 210);
 //            s.drawbusch(120, 170);
@@ -104,14 +104,14 @@ namespace a2_Canvas {
 
 
 
-        for (let i: number = 0; i < 3; i++) {
-
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-
-            var b: DummeAmeisen = new DummeAmeisen(225, 360);
-            ameisenData.push(b);
-        }
+//        for (let i: number = 0; i < 3; i++) {
+//
+//            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+//            //            ameisenData.push(r);
+//
+//            var b: DummeAmeisen = new DummeAmeisen(225, 360);
+//            ameisenData.push(b);
+//        }
 
 
 
