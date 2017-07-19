@@ -8,11 +8,11 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-var abschluss_Canvas;
-(function (abschluss_Canvas) {
+var a2_Canvas;
+(function (a2_Canvas) {
     class Ameisen {
         constructor(_x, _y) {
-            console.log("Hello!");
+            console.log("Hey, I'm Bob!");
             this.setRandomPosition();
             this.x = _x;
             this.y = _y;
@@ -30,7 +30,13 @@ var abschluss_Canvas;
         setRandomPosition() {
             //        Move Funktion
         }
+        setRandomStyle() {
+            //setRandomStyle Funktion
+        }
+        behindert() {
+            //           hgjh
+        }
     }
-    abschluss_Canvas.Ameisen = Ameisen;
-})(abschluss_Canvas || (abschluss_Canvas = {}));
+    a2_Canvas.Ameisen = Ameisen;
+})(a2_Canvas || (a2_Canvas = {}));
 //# sourceMappingURL=ameisen.js.map

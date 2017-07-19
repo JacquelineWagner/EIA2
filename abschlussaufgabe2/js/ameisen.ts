@@ -12,18 +12,22 @@
 
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
-namespace abschluss_Canvas {
+namespace a2_Canvas {
     export class Ameisen {
         x: number;
         y: number;
-      
+
+        
+
+
 
         constructor(_x: number, _y: number) {
-            console.log("Hello!");
+            console.log("Hey, I'm Bob!");
             this.setRandomPosition();
+
             this.x = _x;
             this.y = _y;
-            
+
         }
 
         update(): void {
@@ -32,19 +36,24 @@ namespace abschluss_Canvas {
         }
 
         draw(): void {
-//         Draw Funktion
+            //         Draw Funktion
         }
-        
+
         move(): void {
-//        Move Funktion
+            //        Move Funktion
         }
 
-          setRandomPosition(): void {
-//        Move Funktion
+        setRandomPosition(): void {
+            //        Move Funktion
         }
-        
+        setRandomStyle(): void {
+            //setRandomStyle Funktion
 
-       
+        }
+
+        behindert(): void {
+            //           hgjh
+        }
     }
 
-  }
+}

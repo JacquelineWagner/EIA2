@@ -1,38 +1,38 @@
 //
-//Aufgabe: 7
+//Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
-//Matrikel: 254786
+//Matrikelnummer: 254786
 //Datum: 20
-//13.05.2017
+//21.05.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-var abschluss_Canvas;
-(function (abschluss_Canvas) {
+var a2_Canvas;
+(function (a2_Canvas) {
     var canvas;
-    //    let flower: Flower[] = [];
-    let beeData = [];
-    let n = 3;
+    a2_Canvas.ameisenData = [];
+    a2_Canvas.n = 10;
     let imgData;
+    a2_Canvas.fischData = [];
     window.addEventListener("load", init);
     function init(_event) {
-        let x;
-        let y;
+        //        let x: number;
+        //        let y: number;
         canvas = document.getElementsByTagName("canvas")[0];
-        abschluss_Canvas.crc2 = canvas.getContext("2d");
+        a2_Canvas.crc2 = canvas.getContext("2d");
         //Wiese
-        abschluss_Canvas.crc2.fillStyle = "#8ACA36";
-        abschluss_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
+        a2_Canvas.crc2.fillStyle = "#8ACA36";
+        a2_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
         //Himmel
-        var ombre = abschluss_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
+        var ombre = a2_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
         ombre.addColorStop(0, "#A9D0F5");
         ombre.addColorStop(1, "white");
-        abschluss_Canvas.crc2.fillStyle = ombre;
-        abschluss_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
+        a2_Canvas.crc2.fillStyle = ombre;
+        a2_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
+        let s = new a2_Canvas.Hintergrund2(0, 0);
         for (var i = 0; i < 2; i++) {
-            let s = new abschluss_Canvas.Hintergrund2(0, 0);
-            let f = new abschluss_Canvas.Fisch(0, 0);
+            let s = new a2_Canvas.Hintergrund2(0, 0);
+            let f = new a2_Canvas.Fisch(0, 0);
             s.drawlake(30, 305);
             s.drawsonne(580, 30);
             s.drawwolke(80, 50);
@@ -53,46 +53,58 @@ var abschluss_Canvas;
             s.drawTeller(460, 310);
             s.drawTeller(490, 320);
             s.drawKorb(510, 290);
-            s.blume(200, 200);
             s.blume(220, 260);
             s.blume(260, 300);
             s.blume(320, 360);
-            s.blume(350, 210);
+            s.blume(350, 220);
             s.blume(310, 240);
             s.blume(360, 280);
             s.blume(400, 400);
             s.blume(490, 390);
             s.blume(480, 200);
+            //            s.drawRaube(180, 210);
+            //
+            //            s.drawsBubble(190, 170);
             s.drawKuchen(440, 236);
-            f.drawfisch(120, 320);
         }
-        //        console.log(flower);
-        imgData = abschluss_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        //        
-        for (let i = 0; i < n; i++) {
-            beeData.push(new abschluss_Canvas.Bee2(225, 360));
+        imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < 3; i++) {
+            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+            //            ameisenData.push(r);
+            var b = new a2_Canvas.DummeAmeisen(225, 360);
+            a2_Canvas.ameisenData.push(b);
         }
-        window.setTimeout(animate, 30);
-        canvas.addEventListener("click", addBee);
-        canvas.addEventListener("push", addBee);
+        window.setTimeout(animate, 50);
+        document.getElementById("ameise").addEventListener("click", addAmeise);
+        document.getElementById("ameise").addEventListener("touchstart", addAmeise);
+        document.getElementById("fischis").addEventListener("click", addFisch);
+        document.getElementById("fischis").addEventListener("touchstart", addFisch);
+        document.getElementById("vogel").addEventListener("click", addAmeise);
+        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
     }
-    //Funktionen 
+    //Funktionen
     function animate() {
-        abschluss_Canvas.crc2.putImageData(imgData, 0, 0);
-        //        for (let i: number = 0; i < flower.length; i++) {
-        //            let s: Fisch = flower[i];
-        //            s.update();
-        //
-        //
-        //        }
-        for (let i = 0; i < beeData.length; i++) {
-            beeData[i].update();
+        a2_Canvas.crc2.putImageData(imgData, 0, 0);
+        for (let i = 0; i < a2_Canvas.ameisenData.length; i++) {
+            let b = a2_Canvas.ameisenData[i];
+            a2_Canvas.ameisenData[i].update();
+        }
+        for (let i = 0; i < a2_Canvas.fischData.length; i++) {
+            let f = a2_Canvas.fischData[i];
+            a2_Canvas.fischData[i].update();
         }
         window.setTimeout(animate, 50);
     }
-    function addBee() {
-        beeData.push(new abschluss_Canvas.Bee2(225, 360));
-        n++;
+    function addAmeise() {
+        a2_Canvas.ameisenData.push(new a2_Canvas.DummeAmeisen(225, 360));
+        a2_Canvas.n++;
     }
-})(abschluss_Canvas || (abschluss_Canvas = {}));
+    function addFisch() {
+        //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
+        let _x = (Math.random() * (0 + 140)) + 0;
+        let _y = (Math.random() * (300 - 150)) + 200;
+        a2_Canvas.fischData.push(new a2_Canvas.Fisch(_x, _y));
+        a2_Canvas.n++;
+    }
+})(a2_Canvas || (a2_Canvas = {}));
 //# sourceMappingURL=main.js.map

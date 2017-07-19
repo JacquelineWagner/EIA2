@@ -1,34 +1,20 @@
-//
-//Aufgabe: 7
-//Name: Jacqueline Wagner
-//Matrikel: 254786
-//Datum: 20
-//13.05.2017
-//    
-
-//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
-//Er wurde nicht kopiert und auch nicht diktiert.
+namespace a2_Canvas {
 
 
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-
-namespace abschluss_Canvas {
-    export class Bee2 {
-        x: number;
-        y: number;
-      
+    export class DummeAmeisen extends Ameisen {
 
         constructor(_x: number, _y: number) {
-            console.log("Hey, I'm Bob!");
-            this.x = _x;
-            this.y = _y;
+            super(_x, _y);
+
+
+            
 
         }
 
-        update(): void {
-            this.move();
-            this.draw();
-        }
+        //        update(): void {
+        //            this.move(); 
+        //            this.draw();
+        //        }
 
         draw(): void {
             //K�rper 
@@ -133,10 +119,15 @@ namespace abschluss_Canvas {
             this.y = Math.random() * 200;
         }
 
-//        setRandomStyle(): void {
-//            this.size = Math.random() * 30 + 10;
-//            this.color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
-//        }
+        //        setRandomStyle(): void {
+        //            this.size = Math.random() * 30 + 10;
+        //            this.color = "hsl(" + Math.random() * 360 + ", 100;
+        //        }
+        
+
     }
+
+
+
 
 }

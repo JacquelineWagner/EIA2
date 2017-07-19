@@ -8,36 +8,46 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
 //Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
-var abschluss_Canvas;
-(function (abschluss_Canvas) {
+var a2_Canvas;
+(function (a2_Canvas) {
     class Fisch {
         constructor(_x, _y) {
+            console.log("Hey, I'm jessy!");
             this.x = _x;
             this.y = _y;
         }
-        update(_x, _y) {
-            this.drawfisch(0, 0);
+        update() {
+            this.move();
+            this.drawfisch();
         }
         //       
-        drawfisch(_x, _y) {
-            abschluss_Canvas.crc2.beginPath();
-            abschluss_Canvas.crc2.moveTo(_x + 4, _y);
-            abschluss_Canvas.crc2.strokeStyle = "#58006F";
-            abschluss_Canvas.crc2.fillStyle = "#58006F";
-            abschluss_Canvas.crc2.lineTo(_x + 8, _y - 6);
-            abschluss_Canvas.crc2.lineTo(_x + 8, _y + 4);
-            abschluss_Canvas.crc2.closePath();
-            abschluss_Canvas.crc2.fill();
-            abschluss_Canvas.crc2.stroke();
-            abschluss_Canvas.crc2.beginPath();
-            abschluss_Canvas.crc2.moveTo(_x, _y - 10 / 2);
-            abschluss_Canvas.crc2.bezierCurveTo(_x + 10, _y - 10 / 2, _x + 10 / 2, _y + 10 / 2, _x, _y + 10 / 2);
-            abschluss_Canvas.crc2.bezierCurveTo(_x - 10, _y + 10 / 2, _x - 10 / 2, _y - 10 / 2, _x, _y - 10 / 2);
-            abschluss_Canvas.crc2.fillStyle = "#58006F";
-            abschluss_Canvas.crc2.fill();
-            abschluss_Canvas.crc2.closePath();
+        drawfisch() {
+            a2_Canvas.crc2.beginPath();
+            a2_Canvas.crc2.moveTo(this.x + 4, this.y);
+            a2_Canvas.crc2.strokeStyle = "#58006F";
+            a2_Canvas.crc2.fillStyle = "#58006F";
+            a2_Canvas.crc2.lineTo(this.x + 8, this.y - 6);
+            a2_Canvas.crc2.lineTo(this.x + 8, this.y + 4);
+            a2_Canvas.crc2.closePath();
+            a2_Canvas.crc2.fill();
+            a2_Canvas.crc2.stroke();
+            a2_Canvas.crc2.beginPath();
+            a2_Canvas.crc2.moveTo(this.x, this.y - 10 / 2);
+            a2_Canvas.crc2.bezierCurveTo(this.x + 10, this.y - 10 / 2, this.x + 10 / 2, this.y + 10 / 2, this.x, this.y + 10 / 2);
+            a2_Canvas.crc2.bezierCurveTo(this.x - 10, this.y + 10 / 2, this.x - 10 / 2, this.y - 10 / 2, this.x, this.y - 10 / 2);
+            a2_Canvas.crc2.fillStyle = "#58006F";
+            a2_Canvas.crc2.fill();
+            a2_Canvas.crc2.closePath();
+        }
+        move() {
+            this.x += Math.random() * 5 - 3;
+            this.y += Math.random() * 4 - 2;
+        }
+        setRandomPosition() {
+            this.x = Math.random() * 200;
+            this.y = Math.random() * 200;
         }
     }
-    abschluss_Canvas.Fisch = Fisch;
-})(abschluss_Canvas || (abschluss_Canvas = {}));
+    a2_Canvas.Fisch = Fisch;
+})(a2_Canvas || (a2_Canvas = {}));
 //# sourceMappingURL=fische.js.map
