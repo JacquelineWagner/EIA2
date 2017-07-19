@@ -44,6 +44,27 @@ var a2_Canvas;
             s.drawvogel(314, 58);
             s.drawvogel(160, 82);
             s.drawvogel(460, 82);
+            s.drawAmeisenhaufen(225, 360);
+            s.drawDecke(430, 210);
+            s.drawbusch(120, 170);
+            s.drawbusch(140, 175);
+            s.drawTeller(440, 235);
+            s.drawTeller(480, 265);
+            s.drawTeller(460, 310);
+            s.drawTeller(490, 320);
+            s.drawKorb(510, 290);
+            s.blume(220, 260);
+            s.blume(260, 300);
+            s.blume(320, 360);
+            s.blume(350, 220);
+            s.blume(310, 240);
+            s.blume(360, 280);
+            s.blume(400, 400);
+            s.blume(490, 390);
+            s.blume(480, 200);
+            s.drawRaube(180, 210);
+            s.drawsBubble(190, 170);
+            s.drawKuchen(440, 236);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //        for (let i: number = 0; i < 3; i++) {
