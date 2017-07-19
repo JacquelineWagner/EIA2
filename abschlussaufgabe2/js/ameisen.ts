@@ -37,13 +37,17 @@ namespace a2_Canvas {
             this.draw();
         }
 
+        
         draw(): void {
             //         Draw Funktion
         }
 
+        
         move(): void {
             //        Move Funktion
         }
+        
+        
 
         setRandomPosition(): void {
             //        Move Funktion
