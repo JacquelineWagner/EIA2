@@ -20,27 +20,39 @@ var a2_Canvas;
         //        let y: number;
         canvas = document.getElementsByTagName("canvas")[0];
         a2_Canvas.crc2 = canvas.getContext("2d");
-        //Wiese
-        a2_Canvas.crc2.fillStyle = "#8ACA36";
-        a2_Canvas.crc2.fillRect(0, 0, canvas.width, canvas.height);
-        //Himmel
-        var ombre = a2_Canvas.crc2.createLinearGradient(10, 20, -2, 100);
-        ombre.addColorStop(0, "#A9D0F5");
-        ombre.addColorStop(1, "white");
-        a2_Canvas.crc2.fillStyle = ombre;
-        a2_Canvas.crc2.fillRect(0, 0, canvas.width, 150);
+        //        //Wiese
+        //        crc2.fillStyle = "#8ACA36";
+        //        crc2.fillRect(0, 0, canvas.width, canvas.height);
+        //        //Himmel
+        //        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
+        //        ombre.addColorStop(0, "#A9D0F5");
+        //        ombre.addColorStop(1, "white");
+        //        crc2.fillStyle = ombre;
+        //        crc2.fillRect(0, 0, canvas.width, 150);
         let s = new a2_Canvas.Hintergrund2(0, 0);
         for (var i = 0; i < 2; i++) {
             let s = new a2_Canvas.Hintergrund2(0, 0);
             let f = new a2_Canvas.Fisch(0, 0);
+            //            s.drawlake(30, 305);
+            //            s.drawsonne(580, 30);
+            //            s.drawwolke(80, 50);
+            //            s.drawwolke(200, 80);
+            //            s.drawwolke(230, 85);
+            //            s.drawwolke(480, 70);
+            //            s.drawwolke(380, 85);
+            //            s.drawvogel(220, 36);
+            s.drawvogel(314, 58);
         }
         imgData = a2_Canvas.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < 3; i++) {
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-            var b = new a2_Canvas.DummeAmeisen(225, 360);
-            a2_Canvas.ameisenData.push(b);
-        }
+        //
+        //        for (let i: number = 0; i < 3; i++) {
+        //
+        //            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+        //            //            ameisenData.push(r);
+        //
+        //            var b: DummeAmeisen = new DummeAmeisen(225, 360);
+        //            ameisenData.push(b);
+        //        }
         window.setTimeout(animate, 50);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);

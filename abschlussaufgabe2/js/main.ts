@@ -34,15 +34,15 @@ namespace a2_Canvas {
 
         canvas = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
-        //Wiese
-        crc2.fillStyle = "#8ACA36";
-        crc2.fillRect(0, 0, canvas.width, canvas.height);
-        //Himmel
-        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
-        ombre.addColorStop(0, "#A9D0F5");
-        ombre.addColorStop(1, "white");
-        crc2.fillStyle = ombre;
-        crc2.fillRect(0, 0, canvas.width, 150);
+//        //Wiese
+//        crc2.fillStyle = "#8ACA36";
+//        crc2.fillRect(0, 0, canvas.width, canvas.height);
+//        //Himmel
+//        var ombre: any = crc2.createLinearGradient(10, 20, -2, 100);
+//        ombre.addColorStop(0, "#A9D0F5");
+//        ombre.addColorStop(1, "white");
+//        crc2.fillStyle = ombre;
+//        crc2.fillRect(0, 0, canvas.width, 150);
         let s: Hintergrund2 = new Hintergrund2(0, 0);
 
         for (var i: number = 0; i < 2; i++) {
@@ -62,7 +62,7 @@ namespace a2_Canvas {
 //            s.drawwolke(480, 70);
 //            s.drawwolke(380, 85);
 //            s.drawvogel(220, 36);
-//            s.drawvogel(314, 58);
+            s.drawvogel(314, 58);
 //            s.drawvogel(160, 82);
 //            s.drawvogel(460, 82);
 //            s.drawAmeisenhaufen(225, 360);
@@ -103,15 +103,15 @@ namespace a2_Canvas {
 
 
 
-
-        for (let i: number = 0; i < 3; i++) {
-
-            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
-            //            ameisenData.push(r);
-
-            var b: DummeAmeisen = new DummeAmeisen(225, 360);
-            ameisenData.push(b);
-        }
+//
+//        for (let i: number = 0; i < 3; i++) {
+//
+//            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+//            //            ameisenData.push(r);
+//
+//            var b: DummeAmeisen = new DummeAmeisen(225, 360);
+//            ameisenData.push(b);
+//        }
 
 
 
