@@ -160,29 +160,12 @@ namespace a2_Canvas {
         console.log("test");
         ameisenData.push(new Ameisen(225, 360));
 
-        saveEssen();
+       
 
     }
 
 
-    function saveEssen(): void {
-        let button: HTMLElement = document.createElement("button");
-
-
-        //        console.log("arsch");
-        //        let s: CSSStyleDeclaration = div.style;
-        //        s.borderStyle = "solid";
-        //        s.borderColor = "red";
-        //        s.borderWidth = "1px";
-        //        s.width = "50px";
-        //        s.height = "50px";
-        //        s.display = "inline-block";
-        //        s.cssFloat = "left";
-        //        s.overflow = "auto";
-
-
-
-    }
+ 
 
 
 

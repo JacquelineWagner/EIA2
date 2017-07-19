@@ -97,20 +97,6 @@ var a2_Canvas;
     function addAmeise() {
         console.log("test");
         a2_Canvas.ameisenData.push(new a2_Canvas.Ameisen(225, 360));
-        saveEssen();
-    }
-    function saveEssen() {
-        let button = document.createElement("button");
-        //        console.log("arsch");
-        //        let s: CSSStyleDeclaration = div.style;
-        //        s.borderStyle = "solid";
-        //        s.borderColor = "red";
-        //        s.borderWidth = "1px";
-        //        s.width = "50px";
-        //        s.height = "50px";
-        //        s.display = "inline-block";
-        //        s.cssFloat = "left";
-        //        s.overflow = "auto";
     }
     function addFisch() {
         //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
