@@ -24,10 +24,12 @@ margin-left: 16.5em;
 }
 
 #fischis {
+	position: fixed;
+	
 /* 	margin-top: -33em; normal */
 /* 	margin-left: -34em; */
-	margin-top: -40em;
-	margin-left: -35em;
+	margin-top: -24em;
+	margin-left: -11em;
 	width: 370px;
 	height: 370px;
 	border-radius: 50%;
