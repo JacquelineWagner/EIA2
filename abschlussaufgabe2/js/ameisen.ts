@@ -18,6 +18,7 @@ namespace a2_Canvas {
     export class Ameisen {
         x: number;
         y: number;
+        
 
 
 
