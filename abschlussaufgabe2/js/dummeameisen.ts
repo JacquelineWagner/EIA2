@@ -3,12 +3,19 @@ namespace a2_Canvas {
 
     export class DummeAmeisen extends Ameisen {
 
+        xPosition: number;
+        yPosition: number;
+        speed: number;
+
         constructor(_x: number, _y: number) {
             super(_x, _y);
+            this.speed = 0.02;
+            this.setAnfangPosition();
+            this.setRandomPosition();
 
-            
 
-            
+
+
 
         }
 
@@ -79,52 +86,38 @@ namespace a2_Canvas {
             crc2.closePath();
             crc2.fill();
             crc2.stroke();
-            //            //Kopf
-            //            crc2.beginPath();
-            //            crc2.moveTo(this.x - 1, this.y + this.size / 2);
-            //            crc2.bezierCurveTo(this.x - this.size, this.y, this.x - 5, this.y - this.size / 2, this.x - 1, this.y - this.size / 2);
-            //            crc2.fillStyle = "black";
-            //            crc2.fill();
-            //            crc2.closePath();
-            //            //Streifen
-            //            crc2.beginPath();
-            //            crc2.moveTo(this.x + 0.25, this.y + this.size / 2);
-            //            crc2.lineTo(this.x, this.y - this.size / 2);
-            //            crc2.strokeStyle = "black";
-            //            crc2.stroke();
-            //            crc2.closePath();
-            //            crc2.beginPath();
-            //            crc2.moveTo(this.x + 2.25, this.y + this.size / 2);
-            //            crc2.lineTo(this.x + 2.25, this.y - this.size / 2);
-            //            crc2.strokeStyle = "black";
-            //            crc2.stroke();
+
         }
 
         move(): void {
-            this.x += Math.random() * 5 - 1;
-            this.y += Math.random() * 4 - 2.5;
-
-            if (this.x < 0) {
-                this.x = 620;
-            }
-            if (this.y < 0) {
-                this.y = 400;
-            }
-            if (this.y > 600) {
-                this.y = 0;
+            let xMove: number = this.xPosition - this.x;
+            let yMove: number = this.yPosition - this.y;
+            if (Math.abs(xMove) < 0.5 && Math.abs(yMove) < 0.5)
+                this.setRandomPosition();
+            else {
+                this.x += xMove * this.speed;
+                this.y += yMove * this.speed;
             }
         }
 
+
+
         setRandomPosition(): void {
-            this.x = Math.random() * 200;
-            this.y = Math.random() * 200;
+
+            this.xPosition = 465;
+            this.yPosition = 270;
+
+        }
+        setAnfangPosition(): void {
+            this.x = 225;
+            this.y = 360;
         }
 
         //        setRandomStyle(): void {
         //            this.size = Math.random() * 30 + 10;
         //            this.color = "hsl(" + Math.random() * 360 + ", 100;
         //        }
-        
+
 
     }
 

@@ -17,21 +17,20 @@ namespace a2_Canvas {
     export var crc2: CanvasRenderingContext2D;
     var canvas: HTMLCanvasElement;
 
-    
+
     export let ameisenData: Ameisen[] = [];
     export let n: number = 10;
     let imgData: ImageData;
     export let fischData: Fisch[] = [];
-    
-    
-     
 
-    
+
+
+
+
     window.addEventListener("load", init);
     function init(_event: Event): void {
 
-        
-        
+
 
 
         //        let x: number;
@@ -57,9 +56,6 @@ namespace a2_Canvas {
 
 
 
-
-
-
             s.drawlake(30, 305);
             s.drawsonne(580, 30);
             s.drawwolke(80, 50);
@@ -75,10 +71,10 @@ namespace a2_Canvas {
             s.drawDecke(430, 210);
             s.drawbusch(120, 170);
             s.drawbusch(140, 175);
-            s.drawTeller(440, 235);
-            s.drawTeller(480, 265);
-            s.drawTeller(460, 310);
-            s.drawTeller(490, 320);
+            s.drawTellerklein(440, 235);
+            s.drawTellerklein(500, 245);
+            s.drawTellerklein(460, 310);
+            s.drawTellerklein(490, 320);
             s.drawKorb(510, 290);
             s.blume(220, 260);
             s.blume(260, 300);
@@ -90,14 +86,16 @@ namespace a2_Canvas {
             s.blume(490, 390);
             s.blume(480, 200);
             s.drawRaube(180, 210);
+            s.drawTellerGross(465, 270);
+
+            s.drawKuchen(465, 270);
 
 
             s.drawsBubble(190, 170);
 
-            s.drawKuchen(440, 236);
+            //            s.drawKuchen(440, 236);
 
             //            f.drawfisch(120, 320);
-
 
 
         }
@@ -110,12 +108,6 @@ namespace a2_Canvas {
 
 
 
-        for (let i: number = 0; i < 3; i++) {
-
-
-            var b: DummeAmeisen = new DummeAmeisen(225, 360);
-            ameisenData.push(b);
-        }
 
 
 
@@ -124,13 +116,28 @@ namespace a2_Canvas {
 
 
 
-        window.setTimeout(animate, 50);
+
+
+        window.setTimeout(animate, 30);
         document.getElementById("ameise").addEventListener("click", addAmeise);
         document.getElementById("ameise").addEventListener("touchstart", addAmeise);
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
         document.getElementById("vogel").addEventListener("click", addAmeise);
         document.getElementById("vogel").addEventListener("touchstart", addAmeise);
+
+
+        for (let i: number = 0; i < 3; i++) {
+
+            //            var r: Honeybees = new Honeybees(325, 120, Math.random() * 10 + 5, "yellow");
+            //            ameisenData.push(r);
+
+            let b: DummeAmeisen = new DummeAmeisen(225, 360);
+            ameisenData.push(b);
+
+        }
+
+
     }
 
 
@@ -139,6 +146,8 @@ namespace a2_Canvas {
 
 
     //Funktionen
+
+
 
 
     function animate(): void {
@@ -155,7 +164,7 @@ namespace a2_Canvas {
             let f: Fisch = fischData[i];
             fischData[i].update();
         }
-        window.setTimeout(animate, 50);
+        window.setTimeout(animate, 30);
     }
 
     function addAmeise(): void {

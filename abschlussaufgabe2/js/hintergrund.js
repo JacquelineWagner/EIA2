@@ -147,9 +147,9 @@ var a2_Canvas;
         }
         drawKuchen(_x, _y) {
             a2_Canvas.crc2.beginPath();
-            a2_Canvas.crc2.moveTo(_x, _y - 10 / 2);
-            a2_Canvas.crc2.bezierCurveTo(_x + 10, _y - 10 / 2, _x + 10 / 2, _y + 10 / 2, _x, _y + 10 / 2);
-            a2_Canvas.crc2.bezierCurveTo(_x - 10, _y + 10 / 2, _x - 10 / 2, _y - 10 / 2, _x, _y - 10 / 2);
+            a2_Canvas.crc2.moveTo(_x, _y - 15 / 2);
+            a2_Canvas.crc2.bezierCurveTo(_x + 15, _y - 15 / 2, _x + 15 / 2, _y + 15 / 2, _x, _y + 15 / 2);
+            a2_Canvas.crc2.bezierCurveTo(_x - 15, _y + 15 / 2, _x - 15 / 2, _y - 15 / 2, _x, _y - 15 / 2);
             a2_Canvas.crc2.fillStyle = "#362217";
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();
@@ -208,11 +208,20 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawTeller(_x, _y) {
+        drawTellerklein(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y - 20 / 2);
             a2_Canvas.crc2.bezierCurveTo(_x + 20, _y - 20 / 2, _x + 20 / 2, _y + 20 / 2, _x, _y + 20 / 2);
             a2_Canvas.crc2.bezierCurveTo(_x - 20, _y + 20 / 2, _x - 20 / 2, _y - 20 / 2, _x, _y - 20 / 2);
+            a2_Canvas.crc2.fillStyle = "#94959A";
+            a2_Canvas.crc2.fill();
+            a2_Canvas.crc2.closePath();
+        }
+        drawTellerGross(_x, _y) {
+            a2_Canvas.crc2.beginPath();
+            a2_Canvas.crc2.moveTo(_x, _y - 25 / 2);
+            a2_Canvas.crc2.bezierCurveTo(_x + 25, _y - 25 / 2, _x + 25 / 2, _y + 25 / 2, _x, _y + 25 / 2);
+            a2_Canvas.crc2.bezierCurveTo(_x - 25, _y + 25 / 2, _x - 25 / 2, _y - 25 / 2, _x, _y - 25 / 2);
             a2_Canvas.crc2.fillStyle = "#94959A";
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();

@@ -187,9 +187,9 @@ namespace a2_Canvas {
         drawKuchen(_x: number, _y: number): void {
 
             crc2.beginPath();
-            crc2.moveTo(_x, _y - 10 / 2);
-            crc2.bezierCurveTo(_x + 10, _y - 10 / 2, _x + 10 / 2, _y + 10 / 2, _x, _y + 10 / 2);
-            crc2.bezierCurveTo(_x - 10, _y + 10 / 2, _x - 10 / 2, _y - 10 / 2, _x, _y - 10 / 2);
+            crc2.moveTo(_x, _y - 15 / 2);
+            crc2.bezierCurveTo(_x + 15, _y - 15 / 2, _x + 15 / 2, _y + 15 / 2, _x, _y + 15 / 2);
+            crc2.bezierCurveTo(_x - 15, _y + 15 / 2, _x - 15 / 2, _y - 15 / 2, _x, _y - 15 / 2);
             crc2.fillStyle = "#362217";
             crc2.fill();
             crc2.closePath();
@@ -263,11 +263,25 @@ namespace a2_Canvas {
         }
 
 
-        drawTeller(_x: number, _y: number): void {
+        drawTellerklein(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y - 20 / 2);
             crc2.bezierCurveTo(_x + 20, _y - 20 / 2, _x + 20 / 2, _y + 20 / 2, _x, _y + 20 / 2);
             crc2.bezierCurveTo(_x - 20, _y + 20 / 2, _x - 20 / 2, _y - 20 / 2, _x, _y - 20 / 2);
+            crc2.fillStyle = "#94959A";
+            crc2.fill();
+            crc2.closePath();
+
+
+        }
+        
+        
+        
+         drawTellerGross(_x: number, _y: number): void {
+            crc2.beginPath();
+            crc2.moveTo(_x, _y - 25 / 2);
+            crc2.bezierCurveTo(_x + 25, _y - 25 / 2, _x + 25 / 2, _y + 25 / 2, _x, _y + 25 / 2);
+            crc2.bezierCurveTo(_x - 25, _y + 25 / 2, _x - 25 / 2, _y - 25 / 2, _x, _y - 25 / 2);
             crc2.fillStyle = "#94959A";
             crc2.fill();
             crc2.closePath();

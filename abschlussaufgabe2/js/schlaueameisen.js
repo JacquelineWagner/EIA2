@@ -1,11 +1,8 @@
 var a2_Canvas;
 (function (a2_Canvas) {
-    class DummeAmeisen extends a2_Canvas.Ameisen {
+    class SchlaueAmeisen extends a2_Canvas.Ameisen {
         constructor(_x, _y) {
             super(_x, _y);
-            this.speed = 0.02;
-            this.setAnfangPosition();
-            this.setRandomPosition();
         }
         //        update(): void {
         //            this.move(); 
@@ -67,24 +64,23 @@ var a2_Canvas;
             a2_Canvas.crc2.stroke();
         }
         move() {
-            let xMove = this.xPosition - this.x;
-            let yMove = this.yPosition - this.y;
-            if (Math.abs(xMove) < 0.5 && Math.abs(yMove) < 0.5)
-                this.setRandomPosition();
-            else {
-                this.x += xMove * this.speed;
-                this.y += yMove * this.speed;
+            this.x += Math.random() * 5 - 1;
+            this.y += Math.random() * 4 - 2.5;
+            if (this.x < 0) {
+                this.x = 620;
+            }
+            if (this.y < 0) {
+                this.y = 400;
+            }
+            if (this.y > 600) {
+                this.y = 0;
             }
         }
         setRandomPosition() {
-            this.xPosition = 465;
-            this.yPosition = 270;
-        }
-        setAnfangPosition() {
-            this.x = 225;
-            this.y = 360;
+            this.x = Math.random() * 200;
+            this.y = Math.random() * 200;
         }
     }
-    a2_Canvas.DummeAmeisen = DummeAmeisen;
+    a2_Canvas.SchlaueAmeisen = SchlaueAmeisen;
 })(a2_Canvas || (a2_Canvas = {}));
-//# sourceMappingURL=dummeameisen.js.map
+//# sourceMappingURL=schlaueameisen.js.map
