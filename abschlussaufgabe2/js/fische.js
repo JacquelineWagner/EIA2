@@ -1,13 +1,12 @@
 //
-//Aufgabe: 7
+//Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
-//Matrikel: 254786
+//Matrikelnummer: 254786
 //Datum: 20
-//13.05.2017
+//20.07.2017
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 var a2_Canvas;
 (function (a2_Canvas) {
     class Fisch {

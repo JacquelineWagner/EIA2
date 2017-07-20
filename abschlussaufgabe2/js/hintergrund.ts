@@ -1,3 +1,14 @@
+//
+//Aufgabe: Abschlussaufgabe
+//Name: Jacqueline Wagner
+//Matrikelnummer: 254786
+//Datum: 20
+//20.07.2017
+//    
+
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
+
 namespace a2_Canvas {
     export class Hintergrund2 {
         x: number;
@@ -5,14 +16,14 @@ namespace a2_Canvas {
 
 
         constructor(_x: number, _y: number) {
-//            console.log("Hey, I'm Bob!");
+            //            console.log("Hey, I'm Bob!");
             this.x = _x;
             this.y = _y;
 
         }
-        
 
-        drawRaube(_x: number, _y: number): void {
+
+        drawWorm(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y);
             crc2.strokeStyle = "green";
@@ -32,8 +43,7 @@ namespace a2_Canvas {
 
         }
 
-        drawAmeisenhaufen(_x: number, _y: number): void {
-
+        drawAnthill(_x: number, _y: number): void {
 
             crc2.beginPath();
             crc2.moveTo(_x, _y);
@@ -74,18 +84,10 @@ namespace a2_Canvas {
             crc2.fill();
             crc2.closePath();
 
-//              crc2.beginPath();
-//            crc2.moveTo(_x, _y);
-//            crc2.fillStyle = "red";
-//           crc2.arc(_x , _y , 30, 0, Math.PI * 2, true);
-//    crc2.fillStyle = "red";
-//            crc2.fill();
-//            crc2.closePath();
-
         }
 
 
-        drawDecke(_x: number, _y: number): void {
+        drawBlanket(_x: number, _y: number): void {
 
             crc2.beginPath();
             crc2.moveTo(_x - 3.5, _y + 10);
@@ -175,16 +177,14 @@ namespace a2_Canvas {
             crc2.lineTo(_x + 168.5, _y + 20);
             crc2.lineTo(_x - 4.5, _y + 20);
 
-
-
             crc2.closePath();
             crc2.fill();
             crc2.stroke();
 
-
         }
 
-        drawKuchen(_x: number, _y: number): void {
+        
+        drawCake(_x: number, _y: number): void {
 
             crc2.beginPath();
             crc2.moveTo(_x, _y - 15 / 2);
@@ -193,14 +193,10 @@ namespace a2_Canvas {
             crc2.fillStyle = "#362217";
             crc2.fill();
             crc2.closePath();
-
-
-
-
-
         }
 
-        drawKorb(_x: number, _y: number): void {
+        
+        drawBasket(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y);
             crc2.strokeStyle = "#B19158";
@@ -229,10 +225,9 @@ namespace a2_Canvas {
             crc2.stroke();
             //           
 
-
         }
 
-        blume(_x: number, _y: number): void {
+        drawFlower(_x: number, _y: number): void {
 
 
             //        Bl�ten
@@ -263,7 +258,7 @@ namespace a2_Canvas {
         }
 
 
-        drawTellerklein(_x: number, _y: number): void {
+        drawPlateSmall(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y - 20 / 2);
             crc2.bezierCurveTo(_x + 20, _y - 20 / 2, _x + 20 / 2, _y + 20 / 2, _x, _y + 20 / 2);
@@ -271,13 +266,10 @@ namespace a2_Canvas {
             crc2.fillStyle = "#94959A";
             crc2.fill();
             crc2.closePath();
-
-
         }
-        
-        
-        
-         drawTellerGross(_x: number, _y: number): void {
+
+
+         drawPlateBig(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y - 25 / 2);
             crc2.bezierCurveTo(_x + 25, _y - 25 / 2, _x + 25 / 2, _y + 25 / 2, _x, _y + 25 / 2);
@@ -285,13 +277,10 @@ namespace a2_Canvas {
             crc2.fillStyle = "#94959A";
             crc2.fill();
             crc2.closePath();
-
-
         }
 
-        drawvogel(_x: number, _y: number): void {
 
-
+        drawBird(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y);
             crc2.strokeStyle = "#000000";
@@ -307,8 +296,7 @@ namespace a2_Canvas {
         }
 
 
-        drawwolke(_x: number, _y: number): void {
-
+        drawCloud(_x: number, _y: number): void {
 
             crc2.beginPath();
             crc2.moveTo(_x, _y);
@@ -326,7 +314,6 @@ namespace a2_Canvas {
             crc2.closePath();
             crc2.fill();
             crc2.stroke();
-
         }
 
 
@@ -341,7 +328,7 @@ namespace a2_Canvas {
             crc2.stroke();
         }
 
-        drawbusch(_x: number, _y: number): void {
+        drawBush(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.moveTo(_x, _y);
             crc2.strokeStyle = "#5C7139";
@@ -361,7 +348,8 @@ namespace a2_Canvas {
             crc2.stroke();
         }
 
-        drawsonne(_x: number, _y: number): void {
+
+        drawSun(_x: number, _y: number): void {
             crc2.beginPath();
             crc2.strokeStyle = "#FFFF00";
             crc2.fillStyle = "#FFFF00";
@@ -414,8 +402,6 @@ namespace a2_Canvas {
             crc2.closePath();
             crc2.fill();
             crc2.stroke();
-
-
         }
 
 
@@ -454,17 +440,14 @@ namespace a2_Canvas {
             crc2.beginPath();
             crc2.strokeStyle = "#000000";
             crc2.fillStyle = "#000000";
-          
+
             crc2.textAlign = "start";
             crc2.fillText("Klick mal auf den Ameisenhaufen, den See oder auf die Vögel!", 190, 182);
             crc2.fill();
             crc2.stroke();
             crc2.closePath();
 
-
         }
-
-
 
 
     }

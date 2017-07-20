@@ -3,14 +3,11 @@
 //Name: Jacqueline Wagner
 //Matrikelnummer: 254786
 //Datum: 20
-//21.05.2017
+//20.07.2017
 //    
 
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-
-
-
 
 
 namespace a2_Canvas {
@@ -24,17 +21,8 @@ namespace a2_Canvas {
     export let fischData: Fisch[] = [];
 
 
-
-
-
     window.addEventListener("load", init);
     function init(_event: Event): void {
-
-
-
-
-        //        let x: number;
-        //        let y: number;
 
 
         canvas = document.getElementsByTagName("canvas")[0];
@@ -55,59 +43,44 @@ namespace a2_Canvas {
             let f: Fisch = new Fisch(0, 0);
 
 
-
             s.drawlake(30, 305);
-            s.drawsonne(580, 30);
-            s.drawwolke(80, 50);
-            s.drawwolke(200, 80);
-            s.drawwolke(230, 85);
-            s.drawwolke(480, 70);
-            s.drawwolke(380, 85);
-            s.drawvogel(220, 36);
-            s.drawvogel(314, 58);
-            s.drawvogel(160, 82);
-            s.drawvogel(460, 82);
-            s.drawAmeisenhaufen(225, 360);
-            s.drawDecke(430, 210);
-            s.drawbusch(120, 170);
-            s.drawbusch(140, 175);
-            s.drawTellerklein(440, 235);
-            s.drawTellerklein(500, 245);
-            s.drawTellerklein(460, 310);
-            s.drawTellerklein(490, 320);
-            s.drawKorb(510, 290);
-            s.blume(220, 260);
-            s.blume(260, 300);
-            s.blume(320, 360);
-            s.blume(350, 220);
-            s.blume(310, 240);
-            s.blume(360, 280);
-            s.blume(400, 400);
-            s.blume(490, 390);
-            s.blume(480, 200);
-            s.drawRaube(180, 210);
-            s.drawTellerGross(465, 270);
+            s.drawSun(580, 30);
+            s. drawCloud(80, 50);
+            s. drawCloud(200, 80);
+            s. drawCloud(230, 85);
+            s. drawCloud(480, 70);
+            s. drawCloud(380, 85);
+            s.drawBird(220, 36);
+            s.drawBird(314, 58);
+            s.drawBird(160, 82);
+            s.drawBird(460, 82);
+            s.drawAnthill(225, 360);
+            s.drawBlanket(430, 210);
+            s.drawBush(120, 170);
+            s.drawBush(140, 175);
+            s. drawPlateSmall(440, 235);
+            s. drawPlateSmall(500, 245);
+            s. drawPlateSmall(460, 310);
+            s. drawPlateSmall(490, 320);
+            s.drawBasket(510, 290);
+            s.drawFlower(220, 260);
+            s.drawFlower(260, 300);
+            s.drawFlower(320, 360);
+            s.drawFlower(350, 220);
+            s.drawFlower(310, 240);
+            s.drawFlower(360, 280);
+            s.drawFlower(400, 400);
+            s.drawFlower(490, 390);
+            s.drawFlower(480, 200);
+            s.drawWorm(180, 210);
+            s.drawPlateBig(465, 270);
 
-            s.drawKuchen(465, 270);
-
-
-
-
+            s.drawCake(465, 270);
             s.drawsBubble(190, 170);
-
-            //            s.drawKuchen(440, 236);
-
-            //            f.drawfisch(120, 320);
-
-
         }
 
 
-
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
-
-
-
 
         window.setTimeout(animate, 30);
         document.getElementById("ameise").addEventListener("click", addAmeise);
@@ -116,23 +89,17 @@ namespace a2_Canvas {
         document.getElementById("fischis").addEventListener("click", addFisch);
         document.getElementById("fischis").addEventListener("touchstart", addFisch);
         document.getElementById("entfernen").addEventListener("click", addAmeiseEntfernen);
-        //        document.getElementById("vogel").addEventListener("touchstart", addAmeise);
-
-
-
-
     }
 
-
-
-
-
+    
+    
+    
 
     //Funktionen
 
     function addAmeiseEntfernen(): void {
         for (let i: number = 0; i < ameisenData.length; i++) {
-            ameisenData.splice(i,1);
+            ameisenData.splice(i, 1);
             console.log(ameisenData);
         }
     }
@@ -142,9 +109,6 @@ namespace a2_Canvas {
 
     function animate(): void {
         crc2.putImageData(imgData, 0, 0);
-
-
-
 
         for (let i: number = 0; i < ameisenData.length; i++) {
             let b: Ameisen = ameisenData[i];
@@ -157,22 +121,17 @@ namespace a2_Canvas {
         window.setTimeout(animate, 30);
     }
 
+
+
+
     function addAmeise(): void {
         console.log("test");
         ameisenData.push(new Ameisen(225, 360));
-console.log(ameisenData);
-       
-
+        console.log(ameisenData);
     }
 
 
- 
-
-
-
     function addFisch(): void {
-        //         let randomFlower: number = Math.floor((Math.random() * 3) + 0);
-//        console.log("funktioniert");
         let _x: number = (Math.random() * (0 + 140)) + 0;
         let _y: number = (Math.random() * (300 - 150)) + 200;
         fischData.push(new Fisch(_x, _y));

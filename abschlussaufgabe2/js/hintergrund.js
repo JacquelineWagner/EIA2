@@ -1,3 +1,12 @@
+//
+//Aufgabe: Abschlussaufgabe
+//Name: Jacqueline Wagner
+//Matrikelnummer: 254786
+//Datum: 20
+//20.07.2017
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
 var a2_Canvas;
 (function (a2_Canvas) {
     class Hintergrund2 {
@@ -6,7 +15,7 @@ var a2_Canvas;
             this.x = _x;
             this.y = _y;
         }
-        drawRaube(_x, _y) {
+        drawWorm(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.strokeStyle = "green";
@@ -23,7 +32,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawAmeisenhaufen(_x, _y) {
+        drawAnthill(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.fillStyle = "#825A40";
@@ -62,15 +71,8 @@ var a2_Canvas;
             a2_Canvas.crc2.fillStyle = "#825A403";
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();
-            //              crc2.beginPath();
-            //            crc2.moveTo(_x, _y);
-            //            crc2.fillStyle = "red";
-            //           crc2.arc(_x , _y , 30, 0, Math.PI * 2, true);
-            //    crc2.fillStyle = "red";
-            //            crc2.fill();
-            //            crc2.closePath();
         }
-        drawDecke(_x, _y) {
+        drawBlanket(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x - 3.5, _y + 10);
             a2_Canvas.crc2.strokeStyle = "#F8ADFB";
@@ -145,7 +147,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawKuchen(_x, _y) {
+        drawCake(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y - 15 / 2);
             a2_Canvas.crc2.bezierCurveTo(_x + 15, _y - 15 / 2, _x + 15 / 2, _y + 15 / 2, _x, _y + 15 / 2);
@@ -154,7 +156,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();
         }
-        drawKorb(_x, _y) {
+        drawBasket(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.strokeStyle = "#B19158";
@@ -183,7 +185,7 @@ var a2_Canvas;
             a2_Canvas.crc2.stroke();
             //           
         }
-        blume(_x, _y) {
+        drawFlower(_x, _y) {
             //        Bl�ten
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x + 0.5, _y - 15);
@@ -208,7 +210,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawTellerklein(_x, _y) {
+        drawPlateSmall(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y - 20 / 2);
             a2_Canvas.crc2.bezierCurveTo(_x + 20, _y - 20 / 2, _x + 20 / 2, _y + 20 / 2, _x, _y + 20 / 2);
@@ -217,7 +219,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();
         }
-        drawTellerGross(_x, _y) {
+        drawPlateBig(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y - 25 / 2);
             a2_Canvas.crc2.bezierCurveTo(_x + 25, _y - 25 / 2, _x + 25 / 2, _y + 25 / 2, _x, _y + 25 / 2);
@@ -226,7 +228,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.closePath();
         }
-        drawvogel(_x, _y) {
+        drawBird(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.strokeStyle = "#000000";
@@ -239,7 +241,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawwolke(_x, _y) {
+        drawCloud(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.strokeStyle = "#ffffff";
@@ -267,7 +269,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawbusch(_x, _y) {
+        drawBush(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.moveTo(_x, _y);
             a2_Canvas.crc2.strokeStyle = "#5C7139";
@@ -286,7 +288,7 @@ var a2_Canvas;
             a2_Canvas.crc2.fill();
             a2_Canvas.crc2.stroke();
         }
-        drawsonne(_x, _y) {
+        drawSun(_x, _y) {
             a2_Canvas.crc2.beginPath();
             a2_Canvas.crc2.strokeStyle = "#FFFF00";
             a2_Canvas.crc2.fillStyle = "#FFFF00";

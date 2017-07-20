@@ -1,18 +1,13 @@
 //
-//Aufgabe: 8
+//Aufgabe: Abschlussaufgabe
 //Name: Jacqueline Wagner
-//Matrikel: 254786
+//Matrikelnummer: 254786
 //Datum: 20
-//13.05.2017
-
-
+//20.07.2017
 //    
 
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-
-
-//Die Aufgabe wurde in Zusammenarbeit mit Selina Mazzaro und Jana Burger erstellt.*/
 
 namespace a2_Canvas {
     export class Ameisen {
@@ -21,9 +16,6 @@ namespace a2_Canvas {
         xPosition: number;
         yPosition: number;
         speed: number;
-
-
-
 
 
         constructor(_x: number, _y: number) {
@@ -40,7 +32,6 @@ namespace a2_Canvas {
             this.move();
             this.draw();
         }
-
 
 
 
