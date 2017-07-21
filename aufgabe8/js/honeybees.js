@@ -12,7 +12,7 @@ var a08_Canvas;
         //            this.draw();
         //        }
         draw() {
-            //Fl�gel
+            //Flügel
             a08_Canvas.crc2.beginPath();
             a08_Canvas.crc2.moveTo(this.x + 3, this.y - this.size / 2 - 3 - 3 / 2);
             a08_Canvas.crc2.bezierCurveTo(this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 - 3 / 2, this.x + 3 + 10 / 2, this.y - this.size / 2 - 3 + 3 / 2, this.x + 3, this.y - 3 + 3 / 2);
@@ -20,7 +20,7 @@ var a08_Canvas;
             a08_Canvas.crc2.fillStyle = "rgba(255,255,255, 0.8)";
             a08_Canvas.crc2.fill();
             a08_Canvas.crc2.closePath();
-            //K�rper der Biene
+            //Körper der Biene
             a08_Canvas.crc2.beginPath();
             a08_Canvas.crc2.moveTo(this.x, this.y - this.size / 2);
             a08_Canvas.crc2.bezierCurveTo(this.x + this.size, this.y - this.size / 2, this.x + this.size / 2, this.y + this.size / 2, this.x, this.y + this.size / 2);
